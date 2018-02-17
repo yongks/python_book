@@ -21976,7 +21976,10 @@ r3  103  Charles  31000  2017</pre>
 
 <pre><code>DataFrame(  { 'column1': list1,
               'column2': list2,
-              'column3': list3 } , index=row_label_list)</code></pre>
+              'column3': list3 } , 
+              index    = row_label_list, 
+              columns  = np.arrange)</code></pre>
+<p>By default, DataFrame will <strong>arrange the columns alphabetically</strong>, unless <strong>columns</strong> is specified</p>
 
 </div>
 </div>
@@ -21992,13 +21995,13 @@ r3  103  Charles  31000  2017</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[505]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;empID&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">100</span><span class="p">,</span>      <span class="mi">101</span><span class="p">,</span>    <span class="mi">102</span><span class="p">,</span>      <span class="mi">103</span><span class="p">,</span>     <span class="mi">104</span><span class="p">],</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span>  <span class="s1">&#39;Charles&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Eric&#39;</span><span class="p">],</span>
         <span class="s1">&#39;year&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="mi">2017</span><span class="p">,</span>     <span class="mi">2017</span><span class="p">,</span>   <span class="mi">2017</span><span class="p">,</span>      <span class="mi">2018</span><span class="p">,</span>    <span class="mi">2018</span><span class="p">],</span>
-        <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">40000</span><span class="p">,</span>    <span class="mi">24000</span><span class="p">,</span>  <span class="mi">31000</span><span class="p">,</span>     <span class="mi">20000</span><span class="p">,</span>   <span class="mi">30000</span><span class="p">]</span> <span class="p">}</span>
+        <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">40000</span><span class="p">,</span>    <span class="mi">24000</span><span class="p">,</span>  <span class="mi">31000</span><span class="p">,</span>     <span class="mi">20000</span><span class="p">,</span>   <span class="mi">30000</span><span class="p">],</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span>  <span class="s1">&#39;Charles&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Eric&#39;</span><span class="p">]}</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
@@ -22012,7 +22015,7 @@ r3  103  Charles  31000  2017</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[177]:</div>
+<div class="prompt output_prompt">Out[505]:</div>
 
 
 
@@ -22144,34 +22147,24 @@ empID
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Column-Manipulation">Column Manipulation<a class="anchor-link" href="#Column-Manipulation">&#182;</a></h3><p><strong>Get Single Column</strong> Return Series</p>
-
-<pre><code>dataframe.columnName               # single column, name based, return Series object
-dataframe[ single_col_name ]       # single column, name based, return Series object</code></pre>
-<p><strong>Get Single/Multiple Columns</strong> Return DataFrame</p>
-
-<pre><code>dataframe[ list_of_col_names ]                              # name based, return Dataframe object
-dataframe.loc [ :, single/list/range_of_column_name ]       # name based, return dataframe object
-dataframe.iloc[ :, single/list/range_list_of_col_number  ]  # row number based, return Data Frame object</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Data-Used">Data Used<a class="anchor-link" href="#Data-Used">&#182;</a></h4><p>Section below will use this dataframe</p>
+<h3 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h3><p>Columns are intentionaly ordered in a messy way</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[495]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span> <span class="s1">&#39;empID&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">100</span><span class="p">,</span>      <span class="mi">101</span><span class="p">,</span>    <span class="mi">102</span><span class="p">,</span>      <span class="mi">103</span><span class="p">,</span>     <span class="mi">104</span><span class="p">],</span>
+      <span class="s1">&#39;year1&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="mi">2017</span><span class="p">,</span>     <span class="mi">2017</span><span class="p">,</span>   <span class="mi">2017</span><span class="p">,</span>      <span class="mi">2018</span><span class="p">,</span>    <span class="mi">2018</span><span class="p">],</span>
+      <span class="s1">&#39;name&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span>  <span class="s1">&#39;Bob&#39;</span><span class="p">,</span>  <span class="s1">&#39;Charles&#39;</span><span class="p">,</span><span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Eric&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;year2&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="mi">2001</span><span class="p">,</span>     <span class="mi">1907</span><span class="p">,</span>   <span class="mi">2003</span><span class="p">,</span>      <span class="mi">1998</span><span class="p">,</span>    <span class="mi">2011</span><span class="p">],</span>
+      <span class="s1">&#39;salary&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">40000</span><span class="p">,</span>    <span class="mi">24000</span><span class="p">,</span>  <span class="mi">31000</span><span class="p">,</span>     <span class="mi">20000</span><span class="p">,</span>   <span class="mi">30000</span><span class="p">]},</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;year1&#39;</span><span class="p">,</span><span class="s1">&#39;salary&#39;</span><span class="p">,</span><span class="s1">&#39;year2&#39;</span><span class="p">,</span><span class="s1">&#39;empID&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+<span class="n">df</span>
 </pre></div>
 
 </div>
@@ -22184,19 +22177,18 @@ dataframe.iloc[ :, single/list/range_list_of_col_number  ]  # row number based, 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[180]:</div>
+<div class="prompt output_prompt">Out[495]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  salary  year
-empID                       
-100      Alice   40000  2017
-101        Bob   24000  2017
-102    Charles   31000  2017
-103      David   20000  2018
-104       Eric   30000  2018</pre>
+<pre>   year1  salary  year2  empID     name
+0   2017   40000   2001    100    Alice
+1   2017   24000   1907    101      Bob
+2   2017   31000   2003    102  Charles
+3   2018   20000   1998    103    David
+4   2018   30000   2011    104     Eric</pre>
 </div>
 
 </div>
@@ -22209,14 +22201,31 @@ empID
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Getting-Single-Column">Getting Single Column<a class="anchor-link" href="#Getting-Single-Column">&#182;</a></h4><p>Return Series or Dataframe object, depends on method used</p>
+<h3 id="Column-Selection">Column Selection<a class="anchor-link" href="#Column-Selection">&#182;</a></h3><p><strong>Select Single Column</strong> Return <strong>Series</strong></p>
+
+<pre><code>dataframe.columnName               # single column, name based, return Series object
+dataframe[ single_col_name ]       # single column, name based, return Series object</code></pre>
+<p><strong>Select Single/Multiple Columns</strong> Return <strong>DataFrame</strong></p>
+
+<pre><code>dataframe[ single/list_of_col_names ]                       # name based, return Dataframe object
+dataframe.loc [ :, single/list/range_of_column_name ]       # name based, return dataframe object
+dataframe.iloc[ :, single/list/range_list_of_col_number  ]  # row number based, return Data Frame object</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Select-Single-Column">Select Single Column<a class="anchor-link" href="#Select-Single-Column">&#182;</a></h4><p>Selecting single column always return as panda::Series</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[424]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">name</span>
@@ -22232,18 +22241,17 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[181]:</div>
+<div class="prompt output_prompt">Out[424]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>empID
-100      Alice
-101        Bob
-102    Charles
-103      David
-104       Eric
+<pre>0      Alice
+1        Bob
+2    Charles
+3      David
+4       Eric
 Name: name, dtype: object</pre>
 </div>
 
@@ -22255,7 +22263,7 @@ Name: name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[459]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -22271,18 +22279,17 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[182]:</div>
+<div class="prompt output_prompt">Out[459]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>empID
-100      Alice
-101        Bob
-102    Charles
-103      David
-104       Eric
+<pre>0      Alice
+1        Bob
+2    Charles
+3      David
+4       Eric
 Name: name, dtype: object</pre>
 </div>
 
@@ -22294,7 +22301,7 @@ Name: name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[431]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -22310,18 +22317,17 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[183]:</div>
+<div class="prompt output_prompt">Out[431]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>empID
-100      Alice
-101        Bob
-102    Charles
-103      David
-104       Eric
+<pre>0      Alice
+1        Bob
+2    Charles
+3      David
+4       Eric
 Name: name, dtype: object</pre>
 </div>
 
@@ -22333,7 +22339,7 @@ Name: name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[429]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
@@ -22349,19 +22355,18 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[184]:</div>
+<div class="prompt output_prompt">Out[429]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>empID
-100      Alice
-101        Bob
-102    Charles
-103      David
-104       Eric
-Name: name, dtype: object</pre>
+<pre>0    100
+1    101
+2    102
+3    103
+4    104
+Name: empID, dtype: int64</pre>
 </div>
 
 </div>
@@ -22374,17 +22379,17 @@ Name: name, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Getting-Multiple-Columns">Getting Multiple Columns<a class="anchor-link" href="#Getting-Multiple-Columns">&#182;</a></h4><p>Always return Dataframe object`</p>
+<h4 id="Getting-Multiple-Columns">Getting Multiple Columns<a class="anchor-link" href="#Getting-Multiple-Columns">&#182;</a></h4><p>Multiple columns return as <strong>panda::Dataframe</strong> object`</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[443]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year1&#39;</span><span class="p">]]</span>
 </pre></div>
 
 </div>
@@ -22397,19 +22402,18 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[185]:</div>
+<div class="prompt output_prompt">Out[443]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  year
-empID               
-100      Alice  2017
-101        Bob  2017
-102    Charles  2017
-103      David  2018
-104       Eric  2018</pre>
+<pre>      name  year1
+0    Alice   2017
+1      Bob   2017
+2  Charles   2017
+3    David   2018
+4     Eric   2018</pre>
 </div>
 
 </div>
@@ -22420,10 +22424,10 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="prompt input_prompt">In&nbsp;[453]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">]]</span>
 </pre></div>
 
 </div>
@@ -22436,19 +22440,42 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[186]:</div>
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\ProgramData\Anaconda3\lib\site-packages\ipykernel_launcher.py:1: FutureWarning: 
+Passing list-likes to .loc or [] with any missing label will raise
+KeyError in the future, you can use .reindex() as an alternative.
+
+See the documentation here:
+http://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex-listlike
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\indexing.py:1367: FutureWarning: 
+Passing list-likes to .loc or [] with any missing label will raise
+KeyError in the future, you can use .reindex() as an alternative.
+
+See the documentation here:
+http://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex-listlike
+  return self._getitem_tuple(key)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[453]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  year
-empID               
-100      Alice  2017
-101        Bob  2017
-102    Charles  2017
-103      David  2018
-104       Eric  2018</pre>
+<pre>      name  year
+0    Alice   NaN
+1      Bob   NaN
+2  Charles   NaN
+3    David   NaN
+4     Eric   NaN</pre>
 </div>
 
 </div>
@@ -22459,10 +22486,10 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[454]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;year&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;year1&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -22475,19 +22502,18 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[187]:</div>
+<div class="prompt output_prompt">Out[454]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  salary  year
-empID                       
-100      Alice   40000  2017
-101        Bob   24000  2017
-102    Charles   31000  2017
-103      David   20000  2018
-104       Eric   30000  2018</pre>
+<pre>      name  salary  year1
+0    Alice   40000   2017
+1      Bob   24000   2017
+2  Charles   31000   2017
+3    David   20000   2018
+4     Eric   30000   2018</pre>
 </div>
 
 </div>
@@ -22498,10 +22524,10 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[456]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
 </pre></div>
 
 </div>
@@ -22514,19 +22540,18 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[188]:</div>
+<div class="prompt output_prompt">Out[456]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  year
-empID               
-100      Alice  2017
-101        Bob  2017
-102    Charles  2017
-103      David  2018
-104       Eric  2018</pre>
+<pre>   empID  year1
+0    100   2017
+1    101   2017
+2    102   2017
+3    103   2018
+4    104   2018</pre>
 </div>
 
 </div>
@@ -22537,7 +22562,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="prompt input_prompt">In&nbsp;[450]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
@@ -22553,19 +22578,321 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[189]:</div>
+<div class="prompt output_prompt">Out[450]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  salary  year
-empID                       
-100      Alice   40000  2017
-101        Bob   24000  2017
-102    Charles   31000  2017
-103      David   20000  2018
-104       Eric   30000  2018</pre>
+<pre>   empID     name  salary
+0    100    Alice   40000
+1    101      Bob   24000
+2    102  Charles   31000
+3    103    David   20000
+4    104     Eric   30000</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Selection-by-Data-Type">Selection by Data Type<a class="anchor-link" href="#Selection-by-Data-Type">&#182;</a></h4>
+<pre><code>df.select_dtypes(include=None, exclude=None)</code></pre>
+<p>Always return <strong>panda::DataFrame</strong>, even though only single column matches.<br>
+Allowed types are:</p>
+<ul>
+<li>number (integer and float)  </li>
+<li>integer / float </li>
+<li>datetime  </li>
+<li>timedelta  </li>
+<li>category  </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[460]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">get_dtype_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[460]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>int64     4
+object    1
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[481]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[481]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>      name
+0    Alice
+1      Bob
+2  Charles
+3    David
+4     Eric</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Selection-by-Name-Filter">Selection by Name Filter<a class="anchor-link" href="#Selection-by-Name-Filter">&#182;</a></h4><p><strong>like = Substring Matches</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>regex = Regular Expression</strong><br>
+Select column names that contain integer</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[483]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;\d&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[483]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>   year1  year2
+0   2017   2001
+1   2017   1907
+2   2017   2003
+3   2018   1998
+4   2018   2011</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Manipulating-Columns">Manipulating Columns<a class="anchor-link" href="#Manipulating-Columns">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Reordering-Columns">Reordering Columns<a class="anchor-link" href="#Reordering-Columns">&#182;</a></h4><p>Insepct the current order of columns</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[496]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[496]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;year1&#39;, &#39;salary&#39;, &#39;year2&#39;, &#39;empID&#39;, &#39;name&#39;], dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Construct the new order, <strong>check if there is no missing</strong> column names</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[501]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;empID&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;salary&#39;</span><span class="p">,</span><span class="s1">&#39;year1&#39;</span><span class="p">,</span><span class="s1">&#39;year2&#39;</span><span class="p">]</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">new_columns</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[501]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Change the Column Order</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[503]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[503]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>   empID   name  salary  year1    year2
+0   2017  40000    2001    100    Alice
+1   2017  24000    1907    101      Bob
+2   2017  31000    2003    102  Charles
+3   2018  20000    1998    103    David
+4   2018  30000    2011    104     Eric</pre>
 </div>
 
 </div>
@@ -28619,7 +28946,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_677_0.png"
+<img src="index_files/index_691_0.png"
 >
 </div>
 
@@ -28661,7 +28988,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_678_0.png"
+<img src="index_files/index_692_0.png"
 >
 </div>
 
@@ -28696,7 +29023,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_679_0.png"
+<img src="index_files/index_693_0.png"
 >
 </div>
 
@@ -28756,7 +29083,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_681_1.png"
+<img src="index_files/index_695_1.png"
 >
 </div>
 
@@ -28793,7 +29120,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_682_0.png"
+<img src="index_files/index_696_0.png"
 >
 </div>
 
@@ -28840,7 +29167,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_684_0.png"
+<img src="index_files/index_698_0.png"
 >
 </div>
 
@@ -28874,7 +29201,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_685_0.png"
+<img src="index_files/index_699_0.png"
 >
 </div>
 
@@ -28921,7 +29248,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_687_0.png"
+<img src="index_files/index_701_0.png"
 >
 </div>
 
@@ -28981,7 +29308,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_689_1.png"
+<img src="index_files/index_703_1.png"
 >
 </div>
 
@@ -29019,7 +29346,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_690_0.png"
+<img src="index_files/index_704_0.png"
 >
 </div>
 
@@ -29066,7 +29393,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_692_0.png"
+<img src="index_files/index_706_0.png"
 >
 </div>
 
@@ -29130,7 +29457,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_696_0.png"
+<img src="index_files/index_710_0.png"
 >
 </div>
 
@@ -29262,7 +29589,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_703_0.png"
+<img src="index_files/index_717_0.png"
 >
 </div>
 
@@ -29325,7 +29652,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_706_0.png"
+<img src="index_files/index_720_0.png"
 >
 </div>
 
@@ -29386,7 +29713,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_708_0.png"
+<img src="index_files/index_722_0.png"
 >
 </div>
 
@@ -29433,7 +29760,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_709_0.png"
+<img src="index_files/index_723_0.png"
 >
 </div>
 
@@ -29483,7 +29810,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_710_0.png"
+<img src="index_files/index_724_0.png"
 >
 </div>
 
@@ -29541,7 +29868,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_712_0.png"
+<img src="index_files/index_726_0.png"
 >
 </div>
 
@@ -29610,7 +29937,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_714_1.png"
+<img src="index_files/index_728_1.png"
 >
 </div>
 
@@ -29663,7 +29990,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_715_0.png"
+<img src="index_files/index_729_0.png"
 >
 </div>
 
@@ -29726,7 +30053,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_718_0.png"
+<img src="index_files/index_732_0.png"
 >
 </div>
 
@@ -29781,7 +30108,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_720_0.png"
+<img src="index_files/index_734_0.png"
 >
 </div>
 
@@ -29828,7 +30155,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_721_0.png"
+<img src="index_files/index_735_0.png"
 >
 </div>
 
@@ -29883,7 +30210,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_723_0.png"
+<img src="index_files/index_737_0.png"
 >
 </div>
 
@@ -30025,7 +30352,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_728_0.png"
+<img src="index_files/index_742_0.png"
 >
 </div>
 
@@ -30070,13 +30397,71 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[388]:</div>
+<div class="prompt input_prompt">In&nbsp;[415]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!jupyter nbconvert python_book.ipynb --to html_toc --output-dir=&#39;./docs&#39; --output index.html  </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert python_book.ipynb --to html_toc --output-dir<span class="o">=</span><span class="s1">&#39;./docs&#39;</span> --output index.html  
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[NbConvertApp] Converting notebook python_book.ipynb to html_toc
+[NbConvertApp] Support files will be in index_files\
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Making directory ./docs\index_files
+[NbConvertApp] Writing 1201765 bytes to ./docs\index.html
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[415]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
