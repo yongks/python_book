@@ -13065,7 +13065,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tuple">Tuple<a class="anchor-link" href="#Tuple">&#182;</a></h2><p>Tuple is an immutable list. Any attempt to change/update tuple will return erro.</p>
+<h2 id="Tuple">Tuple<a class="anchor-link" href="#Tuple">&#182;</a></h2><p>Tuple is an immutable list. Any attempt to change/update tuple will return error.</p>
 <p>Benefits of tuple against List are:</p>
 <ul>
 <li>Faster than list</li>
@@ -13076,14 +13076,30 @@ True
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Assignment">Assignment<a class="anchor-link" href="#Assignment">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="(item1,-item2,-item3)">(item1, item2, item3)<a class="anchor-link" href="#(item1,-item2,-item3)">&#182;</a></h4><p>This is a formal syntax for defining tuple, items inside (  ) notation</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[413]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;apple&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="nb">type</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">t</span>
 </pre></div>
 
 </div>
@@ -13096,18 +13112,40 @@ True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[413]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 2, 3, &#39;o&#39;, &#39;apple&#39;)
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1, 2, 3, &#39;o&#39;, &#39;apple&#39;)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[397]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[397]:</div>
 
 
 
@@ -13122,12 +13160,24 @@ True
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="item1,-item2,-item3">item1, item2, item3<a class="anchor-link" href="#item1,-item2,-item3">&#182;</a></h4><ul>
+<li>Without (  ) notation, it is also considered as tuple  </li>
+<li>However, some functions may not consider this method </li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[412]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;apple&#39;</span>
 </pre></div>
 
 </div>
@@ -13140,13 +13190,13 @@ True
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[412]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>5</pre>
+<pre>(1, 2, 3, &#39;o&#39;, &#39;apple&#39;)</pre>
 </div>
 
 </div>
@@ -28569,7 +28619,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_673_0.png"
+<img src="index_files/index_677_0.png"
 >
 </div>
 
@@ -28611,7 +28661,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_674_0.png"
+<img src="index_files/index_678_0.png"
 >
 </div>
 
@@ -28646,7 +28696,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_675_0.png"
+<img src="index_files/index_679_0.png"
 >
 </div>
 
@@ -28706,7 +28756,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_677_1.png"
+<img src="index_files/index_681_1.png"
 >
 </div>
 
@@ -28743,7 +28793,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_678_0.png"
+<img src="index_files/index_682_0.png"
 >
 </div>
 
@@ -28790,7 +28840,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_680_0.png"
+<img src="index_files/index_684_0.png"
 >
 </div>
 
@@ -28824,7 +28874,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_681_0.png"
+<img src="index_files/index_685_0.png"
 >
 </div>
 
@@ -28871,7 +28921,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_683_0.png"
+<img src="index_files/index_687_0.png"
 >
 </div>
 
@@ -28931,7 +28981,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_685_1.png"
+<img src="index_files/index_689_1.png"
 >
 </div>
 
@@ -28969,7 +29019,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_686_0.png"
+<img src="index_files/index_690_0.png"
 >
 </div>
 
@@ -29016,7 +29066,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_688_0.png"
+<img src="index_files/index_692_0.png"
 >
 </div>
 
@@ -29080,7 +29130,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_692_0.png"
+<img src="index_files/index_696_0.png"
 >
 </div>
 
@@ -29212,7 +29262,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_699_0.png"
+<img src="index_files/index_703_0.png"
 >
 </div>
 
@@ -29275,7 +29325,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_702_0.png"
+<img src="index_files/index_706_0.png"
 >
 </div>
 
@@ -29336,7 +29386,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_704_0.png"
+<img src="index_files/index_708_0.png"
 >
 </div>
 
@@ -29383,7 +29433,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_705_0.png"
+<img src="index_files/index_709_0.png"
 >
 </div>
 
@@ -29433,7 +29483,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_706_0.png"
+<img src="index_files/index_710_0.png"
 >
 </div>
 
@@ -29491,7 +29541,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_708_0.png"
+<img src="index_files/index_712_0.png"
 >
 </div>
 
@@ -29560,7 +29610,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_710_1.png"
+<img src="index_files/index_714_1.png"
 >
 </div>
 
@@ -29613,7 +29663,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_711_0.png"
+<img src="index_files/index_715_0.png"
 >
 </div>
 
@@ -29676,7 +29726,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_714_0.png"
+<img src="index_files/index_718_0.png"
 >
 </div>
 
@@ -29731,7 +29781,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_716_0.png"
+<img src="index_files/index_720_0.png"
 >
 </div>
 
@@ -29778,7 +29828,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_717_0.png"
+<img src="index_files/index_721_0.png"
 >
 </div>
 
@@ -29833,7 +29883,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_719_0.png"
+<img src="index_files/index_723_0.png"
 >
 </div>
 
@@ -29975,7 +30025,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_724_0.png"
+<img src="index_files/index_728_0.png"
 >
 </div>
 
