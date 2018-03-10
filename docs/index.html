@@ -23923,13 +23923,14 @@ memory usage: 168.0+ bytes
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Notebook-Setup">Notebook Setup<a class="anchor-link" href="#Notebook-Setup">&#182;</a></h2>
+<h2>Notebook Setup <a class="tocSkip"></h2>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
@@ -23962,7 +23963,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -23986,7 +23987,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span> <span class="s1">&#39;display.notebook_repr_html&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># render Series and DataFrame as text, not HTML</span>
@@ -24071,7 +24072,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
@@ -24100,7 +24101,7 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -24126,7 +24127,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
@@ -24142,7 +24143,7 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -24172,7 +24173,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]))</span>  <span class="c1"># from np.array</span>
@@ -24188,7 +24189,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -24210,7 +24211,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span>           <span class="c1"># from Python list</span>
@@ -24226,7 +24227,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -24266,7 +24267,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mf">0.</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">:</span> <span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mf">2.</span><span class="p">})</span>  <span class="c1"># from Python dict, autosort by default key</span>
@@ -24282,7 +24283,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -24312,7 +24313,7 @@ Objerve that <strong>missing data</strong> (index without value) will be marked 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mf">0.</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">:</span> <span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mf">2.</span><span class="p">},</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>  <span class="c1"># from Python Dict, index specified, no auto sort</span>
@@ -24328,7 +24329,7 @@ Objerve that <strong>missing data</strong> (index without value) will be marked 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -24357,7 +24358,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">])</span>
@@ -24373,7 +24374,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -24415,7 +24416,7 @@ series.iloc( single/list/range_of_row_number )</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span> 
@@ -24432,7 +24433,7 @@ series.iloc( single/list/range_of_row_number )</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -24471,7 +24472,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -24487,7 +24488,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -24513,7 +24514,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span> 
@@ -24529,7 +24530,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -24557,7 +24558,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
@@ -24573,7 +24574,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -24602,7 +24603,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
@@ -24618,7 +24619,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -24647,7 +24648,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
@@ -24663,7 +24664,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -24698,7 +24699,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> 
@@ -24715,7 +24716,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -24741,7 +24742,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]]</span>
@@ -24757,7 +24758,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -24785,7 +24786,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
@@ -24801,7 +24802,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -24837,7 +24838,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">index</span>
@@ -24853,7 +24854,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -24891,7 +24892,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -24907,7 +24908,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -24929,7 +24930,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">index</span>
@@ -24945,7 +24946,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -24987,7 +24988,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">]</span> <span class="p">)</span>
@@ -25010,7 +25011,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">100</span> <span class="o">-</span> <span class="n">s2</span>
@@ -25026,7 +25027,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -25057,7 +25058,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span> <span class="o">-</span> <span class="n">s2</span>
@@ -25073,7 +25074,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -25107,7 +25108,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -25124,7 +25125,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -25151,7 +25152,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">bs</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>
@@ -25194,7 +25195,7 @@ dtype: bool
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">~</span><span class="p">((</span><span class="n">bs</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">bs</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">))</span>
@@ -25210,7 +25211,7 @@ dtype: bool
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -25250,7 +25251,7 @@ dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Aaba&#39;</span><span class="p">,</span> <span class="s1">&#39;Baca&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;CABA&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">])</span>
@@ -25274,7 +25275,7 @@ SeriesObj.str.lower()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
@@ -25290,7 +25291,7 @@ SeriesObj.str.lower()</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -25324,7 +25325,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
@@ -25340,7 +25341,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -25374,7 +25375,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Aaba&#39;</span><span class="p">,</span> <span class="s1">&#39;Baca&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="s1">&#39;CABA&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">])</span>
@@ -25391,7 +25392,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -25417,7 +25418,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># return char-1 (second char) of every item</span>
@@ -25433,7 +25434,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[36]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -25476,7 +25477,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a_b_c&#39;</span><span class="p">,</span> <span class="s1">&#39;c_d_e&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;f_g_h&#39;</span><span class="p">])</span>
@@ -25499,7 +25500,7 @@ Result is a SeriesObj with list of splitted characters</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
@@ -25516,7 +25517,7 @@ Result is a SeriesObj with list of splitted characters</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -25547,7 +25548,7 @@ Use <strong>.str.get()</strong> to retrieve splitted elments</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
@@ -25563,7 +25564,7 @@ Use <strong>.str.get()</strong> to retrieve splitted elments</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -25593,7 +25594,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -25609,7 +25610,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -25638,7 +25639,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># limit expansion into n columns</span>
@@ -25654,7 +25655,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[41]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -25692,7 +25693,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a1&#39;</span><span class="p">,</span> <span class="s1">&#39;b2&#39;</span><span class="p">,</span> <span class="s1">&#39;c3&#39;</span><span class="p">])</span>
@@ -25709,7 +25710,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[42]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -25739,7 +25740,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;([ab])(\d)&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
@@ -25755,7 +25756,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -25788,7 +25789,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span>
@@ -25828,7 +25829,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
@@ -25844,7 +25845,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[45]:</div>
+<div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -25866,7 +25867,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
@@ -25882,7 +25883,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -25904,7 +25905,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span>
@@ -25920,7 +25921,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[47]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -25942,7 +25943,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">weekday</span>
@@ -25958,7 +25959,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[48]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -25980,7 +25981,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">weekday_name</span>
@@ -25996,7 +25997,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[49]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -26018,7 +26019,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span>
@@ -26034,7 +26035,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -26056,7 +26057,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">daysinmonth</span>
@@ -26072,7 +26073,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[51]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -26102,7 +26103,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">time</span>   <span class="c1"># extract time as time Object</span>
@@ -26118,7 +26119,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[52]:</div>
+<div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -26140,7 +26141,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>  <span class="c1"># extract hour as integer</span>
@@ -26156,7 +26157,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[53]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -26178,7 +26179,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">minute</span> <span class="c1"># extract minute as integer</span>
@@ -26194,7 +26195,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[54]:</div>
+<div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -26254,7 +26255,7 @@ DataFrame( [row_list1, row_list2, row_list3], index=row_label_list )</code></pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="p">([[</span><span class="mi">101</span><span class="p">,</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="mi">40000</span><span class="p">,</span><span class="mi">2017</span><span class="p">],</span>
@@ -26272,7 +26273,7 @@ DataFrame( [row_list1, row_list2, row_list3], index=row_label_list )</code></pre
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[55]:</div>
+<div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -26301,7 +26302,7 @@ DataFrame( [row_list1, row_list2, row_list3], index=row_label_list )</code></pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="p">([[</span><span class="mi">101</span><span class="p">,</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="mi">40000</span><span class="p">,</span><span class="mi">2017</span><span class="p">],</span>
@@ -26319,7 +26320,7 @@ DataFrame( [row_list1, row_list2, row_list3], index=row_label_list )</code></pre
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[56]:</div>
+<div class="prompt output_prompt">Out[53]:</div>
 
 
 
@@ -26348,7 +26349,7 @@ DataFrame( [row_list1, row_list2, row_list3], index=row_label_list )</code></pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="p">([[</span><span class="mi">101</span><span class="p">,</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="mi">40000</span><span class="p">,</span><span class="mi">2017</span><span class="p">],</span>
@@ -26366,7 +26367,7 @@ DataFrame( [row_list1, row_list2, row_list3], index=row_label_list )</code></pre
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[57]:</div>
+<div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -26411,7 +26412,7 @@ r3  103  Charles  31000  2017</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;empID&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">100</span><span class="p">,</span>      <span class="mi">101</span><span class="p">,</span>    <span class="mi">102</span><span class="p">,</span>      <span class="mi">103</span><span class="p">,</span>     <span class="mi">104</span><span class="p">],</span>
@@ -26431,7 +26432,7 @@ r3  103  Charles  31000  2017</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[58]:</div>
+<div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -26462,7 +26463,7 @@ r3  103  Charles  31000  2017</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;empID&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">100</span><span class="p">,</span>      <span class="mi">101</span><span class="p">,</span>    <span class="mi">102</span><span class="p">,</span>      <span class="mi">103</span><span class="p">,</span>     <span class="mi">104</span><span class="p">],</span>
@@ -26482,7 +26483,7 @@ r3  103  Charles  31000  2017</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -26513,7 +26514,7 @@ r5    104     Eric   30000  2018</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
@@ -26577,7 +26578,7 @@ RangeIndex(start=0, stop=5, step=1)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
@@ -26593,7 +26594,7 @@ RangeIndex(start=0, stop=5, step=1)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[61]:</div>
+<div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -26622,7 +26623,7 @@ RangeIndex(start=0, stop=5, step=1)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;empID&#39;</span><span class="p">)</span> <span class="c1"># return new DataFrameObj</span>
@@ -26639,7 +26640,7 @@ RangeIndex(start=0, stop=5, step=1)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[62]:</div>
+<div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -26662,7 +26663,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">index</span>
@@ -26678,7 +26679,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[63]:</div>
+<div class="prompt output_prompt">Out[60]:</div>
 
 
 
@@ -26708,7 +26709,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -26724,7 +26725,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[64]:</div>
+<div class="prompt output_prompt">Out[61]:</div>
 
 
 
@@ -26761,7 +26762,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">]</span>
@@ -26778,7 +26779,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[65]:</div>
+<div class="prompt output_prompt">Out[62]:</div>
 
 
 
@@ -26821,7 +26822,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">104</span><span class="p">,</span><span class="mi">105</span><span class="p">]</span>
@@ -26838,7 +26839,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[66]:</div>
+<div class="prompt output_prompt">Out[63]:</div>
 
 
 
@@ -26869,7 +26870,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="mi">103</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">104</span><span class="p">,</span><span class="mi">105</span><span class="p">])</span>
@@ -26885,7 +26886,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[67]:</div>
+<div class="prompt output_prompt">Out[64]:</div>
 
 
 
@@ -26933,7 +26934,7 @@ dataframe.iloc[ :, single/list/range_list_of_col_number  ]  # row number based, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">name</span>
@@ -26949,7 +26950,7 @@ dataframe.iloc[ :, single/list/range_list_of_col_number  ]  # row number based, 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[68]:</div>
+<div class="prompt output_prompt">Out[65]:</div>
 
 
 
@@ -26971,7 +26972,7 @@ Name: name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -26987,7 +26988,7 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[69]:</div>
+<div class="prompt output_prompt">Out[66]:</div>
 
 
 
@@ -27009,7 +27010,7 @@ Name: name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -27025,7 +27026,7 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[70]:</div>
+<div class="prompt output_prompt">Out[67]:</div>
 
 
 
@@ -27047,7 +27048,7 @@ Name: name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
@@ -27063,7 +27064,7 @@ Name: name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[71]:</div>
+<div class="prompt output_prompt">Out[68]:</div>
 
 
 
@@ -27094,7 +27095,7 @@ Name: year1, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year1&#39;</span><span class="p">]]</span>
@@ -27110,7 +27111,7 @@ Name: year1, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[72]:</div>
+<div class="prompt output_prompt">Out[69]:</div>
 
 
 
@@ -27132,7 +27133,7 @@ Name: year1, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">]]</span>
@@ -27172,7 +27173,7 @@ http://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex-
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[73]:</div>
+<div class="prompt output_prompt">Out[70]:</div>
 
 
 
@@ -27194,7 +27195,7 @@ http://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;year1&#39;</span><span class="p">]</span>
@@ -27210,7 +27211,7 @@ http://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex-
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[74]:</div>
+<div class="prompt output_prompt">Out[71]:</div>
 
 
 
@@ -27229,7 +27230,7 @@ Index: [0, 1, 2, 3, 4]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
@@ -27245,7 +27246,7 @@ Index: [0, 1, 2, 3, 4]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[75]:</div>
+<div class="prompt output_prompt">Out[72]:</div>
 
 
 
@@ -27267,7 +27268,7 @@ Index: [0, 1, 2, 3, 4]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
@@ -27283,7 +27284,7 @@ Index: [0, 1, 2, 3, 4]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[76]:</div>
+<div class="prompt output_prompt">Out[73]:</div>
 
 
 
@@ -27324,7 +27325,7 @@ Allowed types are:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">get_dtype_counts</span><span class="p">()</span>
@@ -27340,7 +27341,7 @@ Allowed types are:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[77]:</div>
+<div class="prompt output_prompt">Out[74]:</div>
 
 
 
@@ -27359,7 +27360,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
@@ -27375,7 +27376,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[78]:</div>
+<div class="prompt output_prompt">Out[75]:</div>
 
 
 
@@ -27406,7 +27407,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
@@ -27422,7 +27423,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[79]:</div>
+<div class="prompt output_prompt">Out[76]:</div>
 
 
 
@@ -27454,7 +27455,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;\d&#39;</span><span class="p">)</span>
@@ -27470,7 +27471,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[80]:</div>
+<div class="prompt output_prompt">Out[77]:</div>
 
 
 
@@ -27508,7 +27509,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
@@ -27524,7 +27525,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[81]:</div>
+<div class="prompt output_prompt">Out[78]:</div>
 
 
 
@@ -27568,7 +27569,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;year.1&#39;</span><span class="p">,</span><span class="s1">&#39;salary&#39;</span><span class="p">,</span><span class="s1">&#39;year.2&#39;</span><span class="p">,</span><span class="s1">&#39;empID&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -27598,7 +27599,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[82]:</div>
+<div class="prompt output_prompt">Out[79]:</div>
 
 
 
@@ -27631,7 +27632,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span> <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;year.1&#39;</span><span class="p">:</span><span class="s1">&#39;year1&#39;</span><span class="p">,</span> <span class="s1">&#39;year.2&#39;</span><span class="p">:</span><span class="s1">&#39;year2&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -27648,7 +27649,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[83]:</div>
+<div class="prompt output_prompt">Out[80]:</div>
 
 
 
@@ -27681,7 +27682,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_colorder</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;empID&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;year1&#39;</span><span class="p">,</span> <span class="s1">&#39;year2&#39;</span><span class="p">]</span>
@@ -27698,7 +27699,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[84]:</div>
+<div class="prompt output_prompt">Out[81]:</div>
 
 
 
@@ -27729,7 +27730,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_colorder</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;empID&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;year1&#39;</span><span class="p">,</span> <span class="s1">&#39;year2&#39;</span><span class="p">]</span>
@@ -27746,7 +27747,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[85]:</div>
+<div class="prompt output_prompt">Out[82]:</div>
 
 
 
@@ -27780,7 +27781,7 @@ Select column names that contain integer</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">year1</span>
@@ -27797,7 +27798,7 @@ Select column names that contain integer</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[86]:</div>
+<div class="prompt output_prompt">Out[83]:</div>
 
 
 
@@ -27843,7 +27844,7 @@ dataframe.drop( index= list_of_row_labels, inplace=True/False)   # delete multip
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;year1&#39;</span><span class="p">)</span> <span class="c1"># drop single column</span>
@@ -27859,7 +27860,7 @@ dataframe.drop( index= list_of_row_labels, inplace=True/False)   # delete multip
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[87]:</div>
+<div class="prompt output_prompt">Out[84]:</div>
 
 
 
@@ -27881,7 +27882,7 @@ dataframe.drop( index= list_of_row_labels, inplace=True/False)   # delete multip
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year2&#39;</span><span class="p">,</span><span class="s1">&#39;year3&#39;</span><span class="p">])</span>  <span class="c1"># drop multiple columns</span>
@@ -27897,7 +27898,7 @@ dataframe.drop( index= list_of_row_labels, inplace=True/False)   # delete multip
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[88]:</div>
+<div class="prompt output_prompt">Out[85]:</div>
 
 
 
@@ -27929,7 +27930,7 @@ Use dataframe.columns to produce interim list of column names</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span> <span class="p">)</span>   <span class="c1"># delete columns by list of column number</span>
@@ -27945,7 +27946,7 @@ Use dataframe.columns to produce interim list of column names</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[89]:</div>
+<div class="prompt output_prompt">Out[86]:</div>
 
 
 
@@ -27967,7 +27968,7 @@ Use dataframe.columns to produce interim list of column names</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="p">)</span>       <span class="c1"># delete columns by range of column number</span>
@@ -27983,7 +27984,7 @@ Use dataframe.columns to produce interim list of column names</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[90]:</div>
+<div class="prompt output_prompt">Out[87]:</div>
 
 
 
@@ -28026,7 +28027,7 @@ dataframe.sample(frac=) # frac = 0.6 means sampling 60% of rows randomly</code><
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span> <span class="p">[</span><span class="n">new_colorder</span><span class="p">]</span>
@@ -28044,7 +28045,7 @@ dataframe.sample(frac=) # frac = 0.6 means sampling 60% of rows randomly</code><
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[91]:</div>
+<div class="prompt output_prompt">Out[88]:</div>
 
 
 
@@ -28084,7 +28085,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">102</span><span class="p">]</span>  <span class="c1"># by single row label</span>
@@ -28100,7 +28101,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[92]:</div>
+<div class="prompt output_prompt">Out[89]:</div>
 
 
 
@@ -28121,7 +28122,7 @@ Name: 102, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># by single row number</span>
@@ -28137,7 +28138,7 @@ Name: 102, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[93]:</div>
+<div class="prompt output_prompt">Out[90]:</div>
 
 
 
@@ -28167,10 +28168,122 @@ Name: 102, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[91]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>          name  salary  year1  year2
+empID                               
+100      Alice   40000   2017   2001
+101        Bob   24000   2017   1907
+102    Charles   31000   2017   2003
+103      David   20000   2018   1998</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">103</span><span class="p">]</span> <span class="p">]</span>  <span class="c1"># by row labels</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[92]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>        name  salary  year1  year2
+empID                             
+100    Alice   40000   2017   2001
+103    David   20000   2018   1998</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>  <span class="mi">100</span><span class="p">:</span><span class="mi">103</span>  <span class="p">]</span>  <span class="c1"># by row label range</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[93]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>          name  salary  year1  year2
+empID                               
+100      Alice   40000   2017   2001
+101        Bob   24000   2017   1907
+102    Charles   31000   2017   2003
+103      David   20000   2018   1998</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>    <span class="c1"># by row numbers</span>
 </pre></div>
 
 </div>
@@ -28189,12 +28302,10 @@ Name: 102, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          name  salary  year1  year2
-empID                               
-100      Alice   40000   2017   2001
-101        Bob   24000   2017   1907
-102    Charles   31000   2017   2003
-103      David   20000   2018   1998</pre>
+<pre>        name  salary  year1  year2
+empID                             
+100    Alice   40000   2017   2001
+103    David   20000   2018   1998</pre>
 </div>
 
 </div>
@@ -28206,116 +28317,6 @@ empID
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[95]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">103</span><span class="p">]</span> <span class="p">]</span>  <span class="c1"># by row labels</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[95]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>        name  salary  year1  year2
-empID                             
-100    Alice   40000   2017   2001
-103    David   20000   2018   1998</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>  <span class="mi">100</span><span class="p">:</span><span class="mi">103</span>  <span class="p">]</span>  <span class="c1"># by row label range</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[96]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>          name  salary  year1  year2
-empID                               
-100      Alice   40000   2017   2001
-101        Bob   24000   2017   1907
-102    Charles   31000   2017   2003
-103      David   20000   2018   1998</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>    <span class="c1"># by row numbers</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[97]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>        name  salary  year1  year2
-empID                             
-100    Alice   40000   2017   2001
-103    David   20000   2018   1998</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span>  <span class="mi">0</span><span class="p">:</span><span class="mi">3</span>  <span class="p">]</span>    <span class="c1"># by row number range</span>
@@ -28331,7 +28332,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[98]:</div>
+<div class="prompt output_prompt">Out[95]:</div>
 
 
 
@@ -28360,7 +28361,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
@@ -28377,7 +28378,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[110]:</div>
+<div class="prompt output_prompt">Out[96]:</div>
 
 
 
@@ -28414,7 +28415,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[849]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
@@ -28430,7 +28431,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[849]:</div>
+<div class="prompt output_prompt">Out[97]:</div>
 
 
 
@@ -28470,7 +28471,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[850]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>       <span class="c1"># single row</span>
@@ -28486,7 +28487,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[850]:</div>
+<div class="prompt output_prompt">Out[98]:</div>
 
 
 
@@ -28508,7 +28509,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[851]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">103</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># multiple rows</span>
@@ -28524,7 +28525,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[851]:</div>
+<div class="prompt output_prompt">Out[99]:</div>
 
 
 
@@ -28561,7 +28562,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[852]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
@@ -28577,7 +28578,7 @@ empID
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[852]:</div>
+<div class="prompt output_prompt">Out[100]:</div>
 
 
 
@@ -28620,7 +28621,7 @@ dataframe.iloc[ row_number, col_number ]    # by row and column number</code></p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[853]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;year1&#39;</span><span class="p">])</span>
@@ -28660,7 +28661,7 @@ dataframe.iloc[ row_number, col_number ]    # by row and column number</code></p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[854]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
@@ -28712,7 +28713,7 @@ dataframe.iloc[ list/range_row_numbers,    list/range_col_numbers ]    # by row 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[855]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span><span class="mi">103</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year1&#39;</span><span class="p">]</span> <span class="p">],</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># by list of row label and column names</span>
@@ -28764,7 +28765,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[856]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]],</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>   <span class="c1"># by individual rows/columns</span>
@@ -28824,7 +28825,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[857]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">criteria</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">30000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year1</span><span class="o">==</span><span class="mi">2017</span><span class="p">)</span>
@@ -28879,7 +28880,7 @@ dataframe.iloc [list/range_of_row_numbers] [list/range_of_column_numbers]</code>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[858]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## todo</span>
@@ -28901,7 +28902,7 @@ dataframe.iloc [list/range_of_row_numbers] [list/range_of_column_numbers]</code>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[859]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## todo</span>
@@ -28930,7 +28931,7 @@ dataframe.iloc [list/range_of_row_numbers] [list/range_of_column_numbers]</code>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[860]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
@@ -28946,7 +28947,7 @@ dataframe.iloc [list/range_of_row_numbers] [list/range_of_column_numbers]</code>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[860]:</div>
+<div class="prompt output_prompt">Out[108]:</div>
 
 
 
@@ -28978,7 +28979,7 @@ empID
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[861]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>  <span class="c1"># return text output</span>
@@ -29017,7 +29018,7 @@ memory usage: 360.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[862]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">get_dtype_counts</span><span class="p">()</span> <span class="c1"># return Series</span>
@@ -29033,7 +29034,7 @@ memory usage: 360.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[862]:</div>
+<div class="prompt output_prompt">Out[110]:</div>
 
 
 
@@ -29060,7 +29061,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[863]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="c1"># pandas Index object</span>
@@ -29076,7 +29077,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[863]:</div>
+<div class="prompt output_prompt">Out[111]:</div>
 
 
 
@@ -29093,7 +29094,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[864]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span> <span class="c1"># underlying values are numpy.ndarray</span>
@@ -29109,7 +29110,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[864]:</div>
+<div class="prompt output_prompt">Out[112]:</div>
 
 
 
@@ -29134,7 +29135,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[865]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="c1"># pandas Index object</span>
@@ -29150,7 +29151,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[865]:</div>
+<div class="prompt output_prompt">Out[113]:</div>
 
 
 
@@ -29167,7 +29168,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[866]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>   <span class="c1"># underlying values are numpy.ndarray</span>
@@ -29183,7 +29184,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[866]:</div>
+<div class="prompt output_prompt">Out[114]:</div>
 
 
 
@@ -29208,7 +29209,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[867]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">ndim</span>   <span class="c1"># number of dimension</span>
@@ -29224,7 +29225,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[867]:</div>
+<div class="prompt output_prompt">Out[115]:</div>
 
 
 
@@ -29241,7 +29242,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[868]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>  <span class="c1"># tuple</span>
@@ -29257,7 +29258,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[868]:</div>
+<div class="prompt output_prompt">Out[116]:</div>
 
 
 
@@ -29284,7 +29285,7 @@ Unfortunately there is no single property to find this out, we have to use count
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[869]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -29300,7 +29301,7 @@ Unfortunately there is no single property to find this out, we have to use count
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[869]:</div>
+<div class="prompt output_prompt">Out[117]:</div>
 
 
 
@@ -29317,7 +29318,7 @@ Unfortunately there is no single property to find this out, we have to use count
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[870]:</div>
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -29333,7 +29334,7 @@ Unfortunately there is no single property to find this out, we have to use count
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[870]:</div>
+<div class="prompt output_prompt">Out[118]:</div>
 
 
 
@@ -29360,7 +29361,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[871]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -29376,7 +29377,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[871]:</div>
+<div class="prompt output_prompt">Out[119]:</div>
 
 
 
@@ -29393,7 +29394,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[872]:</div>
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -29409,7 +29410,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[872]:</div>
+<div class="prompt output_prompt">Out[120]:</div>
 
 
 
@@ -29434,7 +29435,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[873]:</div>
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">values</span> <span class="c1"># numpy.ndarray</span>
@@ -29450,7 +29451,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[873]:</div>
+<div class="prompt output_prompt">Out[121]:</div>
 
 
 
@@ -29487,7 +29488,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[874]:</div>
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
@@ -29503,7 +29504,7 @@ Unfortunately there is no single property to find out this, use len(column) or s
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[874]:</div>
+<div class="prompt output_prompt">Out[122]:</div>
 
 
 
@@ -29567,7 +29568,7 @@ You can <strong>customize the percentiles requred</strong>. Notice 0.5 percentil
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[875]:</div>
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -29583,7 +29584,7 @@ You can <strong>customize the percentiles requred</strong>. Notice 0.5 percentil
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[875]:</div>
+<div class="prompt output_prompt">Out[123]:</div>
 
 
 
@@ -29608,7 +29609,7 @@ max    40000.000000  2018.000000  2011.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[876]:</div>
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">percentiles</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span><span class="p">])</span>
@@ -29624,7 +29625,7 @@ max    40000.000000  2018.000000  2011.000000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[876]:</div>
+<div class="prompt output_prompt">Out[124]:</div>
 
 
 
@@ -29660,7 +29661,7 @@ max    40000.000000  2018.000000  2011.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[877]:</div>
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
@@ -29676,24 +29677,24 @@ max    40000.000000  2018.000000  2011.000000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[877]:</div>
+<div class="prompt output_prompt">Out[125]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>        name   salary   year1   year2
-count      5      5.0     5.0     5.0
-unique     5      NaN     NaN     NaN
-top     Eric      NaN     NaN     NaN
-freq       1      NaN     NaN     NaN
-mean     NaN  29000.0  2017.4  1984.0
-...      ...      ...     ...     ...
-min      NaN  20000.0  2017.0  1907.0
-25%      NaN  24000.0  2017.0  1998.0
-50%      NaN  30000.0  2017.0  2001.0
-75%      NaN  31000.0  2018.0  2003.0
-max      NaN  40000.0  2018.0  2011.0
+<pre>       name   salary   year1   year2
+count     5      5.0     5.0     5.0
+unique    5      NaN     NaN     NaN
+top     Bob      NaN     NaN     NaN
+freq      1      NaN     NaN     NaN
+mean    NaN  29000.0  2017.4  1984.0
+...     ...      ...     ...     ...
+min     NaN  20000.0  2017.0  1907.0
+25%     NaN  24000.0  2017.0  1998.0
+50%     NaN  30000.0  2017.0  2001.0
+75%     NaN  31000.0  2018.0  2003.0
+max     NaN  40000.0  2018.0  2011.0
 
 [11 rows x 4 columns]</pre>
 </div>
@@ -29714,7 +29715,7 @@ max      NaN  40000.0  2018.0  2011.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[878]:</div>
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>  <span class="c1"># default axis=0, column-wise</span>
@@ -29730,7 +29731,7 @@ max      NaN  40000.0  2018.0  2011.0
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[878]:</div>
+<div class="prompt output_prompt">Out[126]:</div>
 
 
 
@@ -29751,7 +29752,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[879]:</div>
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># axis=1, row-wise</span>
@@ -29767,7 +29768,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[879]:</div>
+<div class="prompt output_prompt">Out[127]:</div>
 
 
 
@@ -29799,7 +29800,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[880]:</div>
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -29815,7 +29816,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[880]:</div>
+<div class="prompt output_prompt">Out[128]:</div>
 
 
 
@@ -29836,7 +29837,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[881]:</div>
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -29852,7 +29853,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[881]:</div>
+<div class="prompt output_prompt">Out[129]:</div>
 
 
 
@@ -29883,7 +29884,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[882]:</div>
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charles&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Eric&#39;</span><span class="p">],</span>
@@ -29904,7 +29905,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[882]:</div>
+<div class="prompt output_prompt">Out[130]:</div>
 
 
 
@@ -29936,7 +29937,7 @@ Bilbao     Eric   30000  2018</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[883]:</div>
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;salary&gt;30000 &amp; year==2017&#39;</span><span class="p">)</span>
@@ -29952,7 +29953,7 @@ Bilbao     Eric   30000  2018</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[883]:</div>
+<div class="prompt output_prompt">Out[131]:</div>
 
 
 
@@ -29981,7 +29982,7 @@ Bilbao  Charles   31000  2017</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[884]:</div>
+<div class="prompt input_prompt">In&nbsp;[132]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">salary</span> <span class="o">&gt;=</span> <span class="mi">30000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2017</span><span class="p">)]</span>
@@ -29997,7 +29998,7 @@ Bilbao  Charles   31000  2017</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[884]:</div>
+<div class="prompt output_prompt">Out[132]:</div>
 
 
 
@@ -30043,7 +30044,7 @@ In this case, <strong>low(0), high(1), medium(2)</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[885]:</div>
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">]</span>
@@ -30061,7 +30062,7 @@ In this case, <strong>low(0), high(1), medium(2)</strong></p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[885]:</div>
+<div class="prompt output_prompt">Out[133]:</div>
 
 
 
@@ -30079,7 +30080,7 @@ Categories (3, object): [high, low, medium]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[886]:</div>
+<div class="prompt input_prompt">In&nbsp;[134]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span> <span class="n">temp_cat</span> <span class="p">)</span>
@@ -30095,7 +30096,7 @@ Categories (3, object): [high, low, medium]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[886]:</div>
+<div class="prompt output_prompt">Out[134]:</div>
 
 
 
@@ -30122,7 +30123,7 @@ During creation, we can specify mapping of codes to category: <strong>low(0), me
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[887]:</div>
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">])</span>
@@ -30139,7 +30140,7 @@ During creation, we can specify mapping of codes to category: <strong>low(0), me
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[887]:</div>
+<div class="prompt output_prompt">Out[135]:</div>
 
 
 
@@ -30170,7 +30171,7 @@ Categories (3, object): [low, medium, high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[888]:</div>
+<div class="prompt input_prompt">In&nbsp;[136]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">]</span>
@@ -30217,7 +30218,7 @@ Categories (3, object): [low, medium, high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[889]:</div>
+<div class="prompt input_prompt">In&nbsp;[137]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
@@ -30252,7 +30253,7 @@ Categories (3, object): [low, medium, high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[890]:</div>
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
@@ -30268,7 +30269,7 @@ Categories (3, object): [low, medium, high]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[890]:</div>
+<div class="prompt output_prompt">Out[138]:</div>
 
 
 
@@ -30293,7 +30294,7 @@ Categories (3, object): [low, medium, high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[891]:</div>
+<div class="prompt input_prompt">In&nbsp;[139]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">]</span>
@@ -30311,7 +30312,7 @@ Categories (3, object): [low, medium, high]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[891]:</div>
+<div class="prompt output_prompt">Out[139]:</div>
 
 
 
@@ -30329,7 +30330,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[892]:</div>
+<div class="prompt input_prompt">In&nbsp;[140]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">get_values</span><span class="p">()</span>
@@ -30345,7 +30346,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[892]:</div>
+<div class="prompt output_prompt">Out[140]:</div>
 
 
 
@@ -30363,7 +30364,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[893]:</div>
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">codes</span>
@@ -30379,7 +30380,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[893]:</div>
+<div class="prompt output_prompt">Out[141]:</div>
 
 
 
@@ -30396,7 +30397,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[894]:</div>
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">temp_cat</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
@@ -30412,7 +30413,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[894]:</div>
+<div class="prompt output_prompt">Out[142]:</div>
 
 
 
@@ -30448,7 +30449,7 @@ third element's code = 2</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[895]:</div>
+<div class="prompt input_prompt">In&nbsp;[143]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">categories</span>
@@ -30464,7 +30465,7 @@ third element's code = 2</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[895]:</div>
+<div class="prompt output_prompt">Out[143]:</div>
 
 
 
@@ -30490,7 +30491,7 @@ third element's code = 2</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[896]:</div>
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">codes</span>
@@ -30506,7 +30507,7 @@ third element's code = 2</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[896]:</div>
+<div class="prompt output_prompt">Out[144]:</div>
 
 
 
@@ -30540,7 +30541,7 @@ third element's code = 2</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[897]:</div>
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">]</span>
@@ -30558,7 +30559,7 @@ third element's code = 2</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[897]:</div>
+<div class="prompt output_prompt">Out[145]:</div>
 
 
 
@@ -30576,7 +30577,7 @@ Categories (3, object): [sejuk &lt; sederhana &lt; panas]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[898]:</div>
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span>   <span class="c1"># original category object categories not changed</span>
@@ -30592,7 +30593,7 @@ Categories (3, object): [sejuk &lt; sederhana &lt; panas]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[898]:</div>
+<div class="prompt output_prompt">Out[146]:</div>
 
 
 
@@ -30619,7 +30620,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[899]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sejuk&#39;</span><span class="p">,</span><span class="s1">&#39;sederhana&#39;</span><span class="p">,</span><span class="s1">&#39;panas&#39;</span><span class="p">]</span>
@@ -30636,7 +30637,7 @@ Categories (3, object): [low &lt; medium &lt; high]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[899]:</div>
+<div class="prompt output_prompt">Out[147]:</div>
 
 
 
@@ -30663,7 +30664,7 @@ Categories (3, object): [sejuk &lt; sederhana &lt; panas]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[900]:</div>
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat_more</span> <span class="o">=</span> <span class="n">temp_cat</span><span class="o">.</span><span class="n">add_categories</span><span class="p">([</span><span class="s1">&#39;susah&#39;</span><span class="p">,</span><span class="s1">&#39;senang&#39;</span><span class="p">])</span>
@@ -30680,7 +30681,7 @@ Categories (3, object): [sejuk &lt; sederhana &lt; panas]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[900]:</div>
+<div class="prompt output_prompt">Out[148]:</div>
 
 
 
@@ -30716,7 +30717,7 @@ Categories (5, object): [sejuk &lt; sederhana &lt; panas &lt; susah &lt; senang]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[901]:</div>
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">]</span>
@@ -30735,7 +30736,7 @@ Categories (5, object): [sejuk &lt; sederhana &lt; panas &lt; susah &lt; senang]
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[901]:</div>
+<div class="prompt output_prompt">Out[149]:</div>
 
 
 
@@ -30762,7 +30763,7 @@ Categories (2, object): [high, medium]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[902]:</div>
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">temp_cat_more</span><span class="p">)</span>
@@ -30791,7 +30792,7 @@ Categories (5, object): [sejuk &lt; sederhana &lt; panas &lt; susah &lt; senang]
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[902]:</div>
+<div class="prompt output_prompt">Out[150]:</div>
 
 
 
@@ -30817,7 +30818,7 @@ Categories (3, object): [sejuk &lt; sederhana &lt; panas]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[903]:</div>
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">,</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">]</span>
@@ -30835,7 +30836,7 @@ Categories (3, object): [sejuk &lt; sederhana &lt; panas]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[903]:</div>
+<div class="prompt output_prompt">Out[151]:</div>
 
 
 
@@ -30853,7 +30854,7 @@ Categories (3, object): [high &lt; low &lt; medium]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[904]:</div>
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">set_categories</span><span class="p">([</span><span class="s1">&#39;low&#39;</span><span class="p">,</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span><span class="s1">&#39;sederhana&#39;</span><span class="p">,</span><span class="s1">&#39;susah&#39;</span><span class="p">,</span><span class="s1">&#39;senang&#39;</span><span class="p">])</span>
@@ -30869,7 +30870,7 @@ Categories (3, object): [high &lt; low &lt; medium]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[904]:</div>
+<div class="prompt output_prompt">Out[152]:</div>
 
 
 
@@ -30903,7 +30904,7 @@ Categories (5, object): [low &lt; medium &lt; sederhana &lt; susah &lt; senang]<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[905]:</div>
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -30919,7 +30920,7 @@ Categories (5, object): [low &lt; medium &lt; sederhana &lt; susah &lt; senang]<
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[905]:</div>
+<div class="prompt output_prompt">Out[153]:</div>
 
 
 
@@ -30948,7 +30949,7 @@ medium           3  0.333333</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[906]:</div>
+<div class="prompt input_prompt">In&nbsp;[154]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -30964,7 +30965,7 @@ medium           3  0.333333</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[906]:</div>
+<div class="prompt output_prompt">Out[154]:</div>
 
 
 
@@ -30992,7 +30993,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[907]:</div>
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span> <span class="n">temp_cat</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">temp_cat</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">temp_cat</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span> <span class="p">)</span>
@@ -31008,7 +31009,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[907]:</div>
+<div class="prompt output_prompt">Out[155]:</div>
 
 
 
@@ -31043,7 +31044,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[908]:</div>
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_cat</span><span class="o">.</span><span class="n">get_values</span><span class="p">()</span>  <span class="c1">#array</span>
@@ -31059,7 +31060,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[908]:</div>
+<div class="prompt output_prompt">Out[156]:</div>
 
 
 
@@ -31108,7 +31109,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[909]:</div>
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://www.bloomberg.com/markets/currencies&#39;</span><span class="p">)</span>
@@ -31133,17 +31134,17 @@ dtype: int64</pre>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total Table(s) Found :  1
    Currency      Value  Change Net Change Time (EST)  2 Day
-0   EUR-USD     1.2307 -0.0005     -0.04%    4:59 PM    NaN
-1   USD-JPY   106.8200  0.5900     +0.56%    4:59 PM    NaN
-2   GBP-USD     1.3850  0.0039     +0.28%    4:59 PM    NaN
-3   AUD-USD     0.7844  0.0055     +0.71%    4:59 PM    NaN
-4   USD-CAD     1.2812 -0.0084     -0.65%    4:59 PM    NaN
+0   EUR-USD     1.2307 -0.0005     -0.04%   3/9/2018    NaN
+1   USD-JPY   106.8200  0.5900     +0.56%   3/9/2018    NaN
+2   GBP-USD     1.3850  0.0039     +0.28%   3/9/2018    NaN
+3   AUD-USD     0.7844  0.0055     +0.71%   3/9/2018    NaN
+4   USD-CAD     1.2812 -0.0084     -0.65%   3/9/2018    NaN
 ..      ...        ...     ...        ...        ...    ...
-6   EUR-JPY   131.4600  0.6700     +0.51%    4:59 PM    NaN
-7   EUR-GBP     0.8886 -0.0029     -0.33%    4:59 PM    NaN
-8   USD-HKD     7.8364 -0.0043     -0.05%    4:59 PM    NaN
-9   EUR-CHF     1.1712  0.0001     +0.01%    4:59 PM    NaN
-10  USD-KRW  1069.8200 -0.3600     -0.03%    1:29 AM    NaN
+6   EUR-JPY   131.4600  0.6700     +0.51%   3/9/2018    NaN
+7   EUR-GBP     0.8886 -0.0029     -0.33%   3/9/2018    NaN
+8   USD-HKD     7.8364 -0.0043     -0.05%   3/9/2018    NaN
+9   EUR-CHF     1.1712  0.0001     +0.01%   3/9/2018    NaN
+10  USD-KRW  1069.8300 -0.3500     -0.03%   3/9/2018    NaN
 
 [11 rows x 6 columns]
 </pre>
@@ -31199,7 +31200,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[910]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">goo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/goog.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf_8&#39;</span><span class="p">)</span>
@@ -31212,7 +31213,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[911]:</div>
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">goo</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -31228,7 +31229,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[911]:</div>
+<div class="prompt output_prompt">Out[159]:</div>
 
 
 
@@ -31250,7 +31251,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[912]:</div>
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">goo</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -31299,7 +31300,7 @@ memory usage: 2.9+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[913]:</div>
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">goo2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/goog.csv&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
@@ -31312,7 +31313,7 @@ memory usage: 2.9+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[914]:</div>
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">goo2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -31328,7 +31329,7 @@ memory usage: 2.9+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[914]:</div>
+<div class="prompt output_prompt">Out[162]:</div>
 
 
 
@@ -31360,7 +31361,7 @@ Date
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[915]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">goo2</span><span class="o">.</span><span class="n">index</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>  
@@ -31376,7 +31377,7 @@ Date
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[915]:</div>
+<div class="prompt output_prompt">Out[163]:</div>
 
 
 
@@ -31415,7 +31416,7 @@ crosstab( index = &lt;SeriesObj&gt;, columns = &lt;SeriesObj&gt;, margines=True 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[916]:</div>
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">200</span>
@@ -31446,18 +31447,18 @@ crosstab( index = &lt;SeriesObj&gt;, columns = &lt;SeriesObj&gt;, margines=True 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[916]:</div>
+<div class="prompt output_prompt">Out[164]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>  comp dept grp     value1     value2     value3
-0   C1   D2  G2  63.434839  24.762085  14.037684
-1   C3   D2  G1  48.319613  18.965650 -30.215550
-2   C2   D1  G1  52.776620  21.003838  49.610150
-3   C3   D5  G1  44.648475  23.730746  20.963278
-4   C2   D5  G2  45.309311  16.353753  15.269688</pre>
+0   C1   D3  G2  45.132603  20.170157   6.740557
+1   C1   D3  G2  46.180146  19.885813  -7.651088
+2   C2   D2  G2  54.856648  17.716647 -22.138893
+3   C3   D4  G1  56.956977  20.149642  33.682010
+4   C2   D2  G1  50.188809  22.869554  64.539563</pre>
 </div>
 
 </div>
@@ -31476,7 +31477,7 @@ crosstab( index = &lt;SeriesObj&gt;, columns = &lt;SeriesObj&gt;, margines=True 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[917]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">comp</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;counter&#39;</span><span class="p">)</span>
@@ -31492,7 +31493,7 @@ crosstab( index = &lt;SeriesObj&gt;, columns = &lt;SeriesObj&gt;, margines=True 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[917]:</div>
+<div class="prompt output_prompt">Out[165]:</div>
 
 
 
@@ -31500,9 +31501,9 @@ crosstab( index = &lt;SeriesObj&gt;, columns = &lt;SeriesObj&gt;, margines=True 
 <div class="output_text output_subarea output_execute_result">
 <pre>col_0  counter
 comp          
-C1          76
-C2          57
-C3          67</pre>
+C1          78
+C2          62
+C3          60</pre>
 </div>
 
 </div>
@@ -31513,7 +31514,7 @@ C3          67</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[918]:</div>
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">comp</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;counter&#39;</span><span class="p">))</span>
@@ -31529,7 +31530,7 @@ C3          67</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[918]:</div>
+<div class="prompt output_prompt">Out[166]:</div>
 
 
 
@@ -31554,7 +31555,7 @@ C3          67</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[919]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">comp</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">dept</span><span class="p">)</span>
@@ -31570,7 +31571,7 @@ C3          67</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[919]:</div>
+<div class="prompt output_prompt">Out[167]:</div>
 
 
 
@@ -31578,9 +31579,9 @@ C3          67</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>dept  D1  D2  D3  D4  D5
 comp                    
-C1    19  20  12  12  13
-C2    11  17  10   7  12
-C3    11  14  13  13  16</pre>
+C1    13  13  17  21  14
+C2     9  13  13  17  10
+C3    12  13  10  13  12</pre>
 </div>
 
 </div>
@@ -31599,7 +31600,7 @@ C3    11  14  13  13  16</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[920]:</div>
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">comp</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">mydf</span><span class="o">.</span><span class="n">dept</span><span class="p">,</span> <span class="n">mydf</span><span class="o">.</span><span class="n">grp</span><span class="p">])</span>
@@ -31616,18 +31617,18 @@ C3    11  14  13  13  16</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[920]:</div>
+<div class="prompt output_prompt">Out[168]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>dept  D1    D2     D3     D4    D5    
-grp   G1 G2 G1  G2 G1  G2 G1 G2 G1  G2
-comp                                  
-C1    10  9  9  11  3   9  4  8  9   4
-C2     4  7  7  10  4   6  5  2  2  10
-C3     3  8  5   9  3  10  6  7  9   7</pre>
+<pre>dept D1    D2    D3      D4     D5   
+grp  G1 G2 G1 G2 G1  G2  G1  G2 G1 G2
+comp                                 
+C1    7  6  6  7  7  10   9  12  7  7
+C2    5  4  6  7  6   7  10   7  3  7
+C3    4  8  8  5  3   7   4   9  4  8</pre>
 </div>
 
 </div>
@@ -31647,7 +31648,7 @@ C3     3  8  5   9  3  10  6  7  9   7</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[921]:</div>
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span><span class="p">[</span><span class="s1">&#39;D2&#39;</span><span class="p">]</span>
@@ -31663,7 +31664,7 @@ C3     3  8  5   9  3  10  6  7  9   7</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[921]:</div>
+<div class="prompt output_prompt">Out[169]:</div>
 
 
 
@@ -31671,9 +31672,9 @@ C3     3  8  5   9  3  10  6  7  9   7</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>grp   G1  G2
 comp        
-C1     9  11
-C2     7  10
-C3     5   9</pre>
+C1     6   7
+C2     6   7
+C3     8   5</pre>
 </div>
 
 </div>
@@ -31693,7 +31694,7 @@ C3     5   9</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[922]:</div>
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">dept</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">grp</span><span class="p">,</span> <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -31710,7 +31711,7 @@ C3     5   9</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[922]:</div>
+<div class="prompt output_prompt">Out[170]:</div>
 
 
 
@@ -31718,12 +31719,12 @@ C3     5   9</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>grp   G1   G2  All
 dept              
-D1    17   24   41
-D2    21   30   51
-D3    10   25   35
-D4    15   17   32
-D5    20   21   41
-All   83  117  200</pre>
+D1    16   18   34
+D2    20   19   39
+D3    16   24   40
+D4    23   28   51
+D5    14   22   36
+All   89  111  200</pre>
 </div>
 
 </div>
@@ -31734,7 +31735,7 @@ All   83  117  200</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[923]:</div>
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span><span class="p">[</span><span class="s1">&#39;All&#39;</span><span class="p">]</span>   <span class="c1"># row total, return a Series</span>
@@ -31750,18 +31751,18 @@ All   83  117  200</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[923]:</div>
+<div class="prompt output_prompt">Out[171]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>dept
-D1      41
-D2      51
-D3      35
-D4      32
-D5      41
+D1      34
+D2      39
+D3      40
+D4      51
+D5      36
 All    200
 Name: All, dtype: int64</pre>
 </div>
@@ -31774,7 +31775,7 @@ Name: All, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[924]:</div>
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;All&#39;</span><span class="p">]</span> <span class="c1"># column total, return a Series</span>
@@ -31790,15 +31791,15 @@ Name: All, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[924]:</div>
+<div class="prompt output_prompt">Out[172]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>grp
-G1      83
-G2     117
+G1      89
+G2     111
 All    200
 Name: All, dtype: int64</pre>
 </div>
@@ -31820,7 +31821,7 @@ Name: All, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[925]:</div>
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span><span class="o">/</span><span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;All&#39;</span><span class="p">]</span>
@@ -31836,7 +31837,7 @@ Name: All, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[925]:</div>
+<div class="prompt output_prompt">Out[173]:</div>
 
 
 
@@ -31844,11 +31845,11 @@ Name: All, dtype: int64</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>grp         G1        G2    All
 dept                           
-D1    0.204819  0.205128  0.205
-D2    0.253012  0.256410  0.255
-D3    0.120482  0.213675  0.175
-D4    0.180723  0.145299  0.160
-D5    0.240964  0.179487  0.205
+D1    0.179775  0.162162  0.170
+D2    0.224719  0.171171  0.195
+D3    0.179775  0.216216  0.200
+D4    0.258427  0.252252  0.255
+D5    0.157303  0.198198  0.180
 All   1.000000  1.000000  1.000</pre>
 </div>
 
@@ -31874,7 +31875,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[926]:</div>
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -31890,19 +31891,19 @@ All   1.000000  1.000000  1.000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[926]:</div>
+<div class="prompt output_prompt">Out[174]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>grp dept  G1   G2  All
-0     D1  17   24   41
-1     D2  21   30   51
-2     D3  10   25   35
-3     D4  15   17   32
-4     D5  20   21   41
-5    All  83  117  200</pre>
+0     D1  16   18   34
+1     D2  20   19   39
+2     D3  16   24   40
+3     D4  23   28   51
+4     D5  14   22   36
+5    All  89  111  200</pre>
 </div>
 
 </div>
@@ -31925,7 +31926,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[927]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">company</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/company.csv&#39;</span><span class="p">)</span>
@@ -31942,7 +31943,7 @@ All   1.000000  1.000000  1.000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[927]:</div>
+<div class="prompt output_prompt">Out[175]:</div>
 
 
 
@@ -31972,7 +31973,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[928]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span> <span class="o">=</span> <span class="n">company</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Company&#39;</span><span class="p">,</span><span class="s1">&#39;Department&#39;</span><span class="p">])</span>
@@ -31985,7 +31986,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[929]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span>
@@ -32001,13 +32002,13 @@ All   1.000000  1.000000  1.000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[929]:</div>
+<div class="prompt output_prompt">Out[177]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x0000019A881C22E8&gt;</pre>
+<pre>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x000001D2664D9D68&gt;</pre>
 </div>
 
 </div>
@@ -32034,7 +32035,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[930]:</div>
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">ngroups</span>
@@ -32050,7 +32051,7 @@ All   1.000000  1.000000  1.000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[930]:</div>
+<div class="prompt output_prompt">Out[178]:</div>
 
 
 
@@ -32075,7 +32076,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[931]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">groups</span>  <span class="c1"># return Dictionary</span>
@@ -32091,7 +32092,7 @@ All   1.000000  1.000000  1.000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[931]:</div>
+<div class="prompt output_prompt">Out[179]:</div>
 
 
 
@@ -32132,7 +32133,7 @@ All   1.000000  1.000000  1.000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[932]:</div>
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>  <span class="c1"># return panda Series object</span>
@@ -32148,7 +32149,7 @@ All   1.000000  1.000000  1.000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[932]:</div>
+<div class="prompt output_prompt">Out[180]:</div>
 
 
 
@@ -32183,7 +32184,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[933]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>  <span class="c1"># return panda DataFrame object</span>
@@ -32199,7 +32200,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[933]:</div>
+<div class="prompt output_prompt">Out[181]:</div>
 
 
 
@@ -32244,7 +32245,7 @@ C3      D1             1    1       1          1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[934]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -32260,7 +32261,7 @@ C3      D1             1    1       1          1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[934]:</div>
+<div class="prompt output_prompt">Out[182]:</div>
 
 
 
@@ -32298,7 +32299,7 @@ C3      D1             1    1       1          1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[935]:</div>
+<div class="prompt input_prompt">In&nbsp;[183]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">get_group</span><span class="p">((</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;D3&#39;</span><span class="p">))</span>
@@ -32314,7 +32315,7 @@ C3      D1             1    1       1          1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[935]:</div>
+<div class="prompt output_prompt">Out[183]:</div>
 
 
 
@@ -32343,7 +32344,7 @@ C3      D1             1    1       1          1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[936]:</div>
+<div class="prompt input_prompt">In&nbsp;[184]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">nth</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># retireve last row from each group</span>
@@ -32359,7 +32360,7 @@ C3      D1             1    1       1          1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[936]:</div>
+<div class="prompt output_prompt">Out[184]:</div>
 
 
 
@@ -32395,7 +32396,7 @@ C3      D1           44   8/21/1980      Ong   17500
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[937]:</div>
+<div class="prompt input_prompt">In&nbsp;[185]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_groups</span> <span class="p">(</span><span class="n">g</span><span class="p">):</span>
@@ -32462,7 +32463,7 @@ C3      D1           44   8/21/1980      Ong   17500
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[938]:</div>
+<div class="prompt input_prompt">In&nbsp;[186]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span>
@@ -32478,13 +32479,13 @@ C3      D1           44   8/21/1980      Ong   17500
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[938]:</div>
+<div class="prompt output_prompt">Out[186]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x0000019A881C22E8&gt;</pre>
+<pre>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x000001D2664D9D68&gt;</pre>
 </div>
 
 </div>
@@ -32512,7 +32513,7 @@ C3      D1           44   8/21/1980      Ong   17500
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[939]:</div>
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -32528,7 +32529,7 @@ C3      D1           44   8/21/1980      Ong   17500
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[939]:</div>
+<div class="prompt output_prompt">Out[187]:</div>
 
 
 
@@ -32555,7 +32556,7 @@ Name: Age, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[940]:</div>
+<div class="prompt input_prompt">In&nbsp;[188]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="p">[[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;Salary&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -32571,7 +32572,7 @@ Name: Age, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[940]:</div>
+<div class="prompt output_prompt">Out[188]:</div>
 
 
 
@@ -32606,7 +32607,7 @@ C3      D1           44   17500
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[941]:</div>
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
@@ -32622,7 +32623,7 @@ C3      D1           44   17500
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[941]:</div>
+<div class="prompt output_prompt">Out[189]:</div>
 
 
 
@@ -32649,7 +32650,7 @@ C3      D1          44.000000  17500.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[942]:</div>
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">])</span>
@@ -32665,7 +32666,7 @@ C3      D1          44.000000  17500.000000
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[942]:</div>
+<div class="prompt output_prompt">Out[190]:</div>
 
 
 
@@ -32701,7 +32702,7 @@ C3      D1          44.000000   44  17500.000000  17500
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[943]:</div>
+<div class="prompt input_prompt">In&nbsp;[191]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">com_grp</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="s1">&#39;Salary&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">]})</span>
@@ -32717,7 +32718,7 @@ C3      D1          44.000000   44  17500.000000  17500
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[943]:</div>
+<div class="prompt output_prompt">Out[191]:</div>
 
 
 
@@ -32765,7 +32766,7 @@ C3      D1          44.000000  17500  17500
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[944]:</div>
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grp</span> <span class="o">=</span> <span class="n">company</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Company&#39;</span><span class="p">)</span>
@@ -32782,7 +32783,7 @@ C3      D1          44.000000  17500  17500
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[944]:</div>
+<div class="prompt output_prompt">Out[192]:</div>
 
 
 
@@ -32812,7 +32813,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[945]:</div>
+<div class="prompt input_prompt">In&nbsp;[193]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grp</span><span class="p">[[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;Salary&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
@@ -32828,7 +32829,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[945]:</div>
+<div class="prompt output_prompt">Out[193]:</div>
 
 
 
@@ -32858,7 +32859,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[946]:</div>
+<div class="prompt input_prompt">In&nbsp;[194]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grp</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="mi">10</span> <span class="p">)</span>
@@ -32874,7 +32875,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[946]:</div>
+<div class="prompt output_prompt">Out[194]:</div>
 
 
 
@@ -32923,7 +32924,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[947]:</div>
+<div class="prompt input_prompt">In&nbsp;[195]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -32974,7 +32975,7 @@ memory usage: 608.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[948]:</div>
+<div class="prompt input_prompt">In&nbsp;[196]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -32990,18 +32991,18 @@ memory usage: 608.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[948]:</div>
+<div class="prompt output_prompt">Out[196]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>  Currency     Value  Change Net Change Time (EST)  2 Day
-0  EUR-USD    1.2307 -0.0005     -0.04%    4:59 PM    NaN
-1  USD-JPY  106.8200  0.5900     +0.56%    4:59 PM    NaN
-2  GBP-USD    1.3850  0.0039     +0.28%    4:59 PM    NaN
-3  AUD-USD    0.7844  0.0055     +0.71%    4:59 PM    NaN
-4  USD-CAD    1.2812 -0.0084     -0.65%    4:59 PM    NaN</pre>
+0  EUR-USD    1.2307 -0.0005     -0.04%   3/9/2018    NaN
+1  USD-JPY  106.8200  0.5900     +0.56%   3/9/2018    NaN
+2  GBP-USD    1.3850  0.0039     +0.28%   3/9/2018    NaN
+3  AUD-USD    0.7844  0.0055     +0.71%   3/9/2018    NaN
+4  USD-CAD    1.2812 -0.0084     -0.65%   3/9/2018    NaN</pre>
 </div>
 
 </div>
@@ -33036,7 +33037,7 @@ memory usage: 608.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[949]:</div>
+<div class="prompt input_prompt">In&nbsp;[197]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> 
@@ -33058,21 +33059,21 @@ memory usage: 608.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[949]:</div>
+<div class="prompt output_prompt">Out[197]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>        one       two     three four   five
-a -1.380436  0.749387  1.405475  bar  False
+a  0.366083 -0.690501 -0.736248  bar   True
 b       NaN       NaN       NaN  NaN    NaN
-c -1.127060  1.324543  0.984966  bar  False
+c -0.607350  0.800183 -0.412550  bar  False
 d       NaN       NaN       NaN  NaN    NaN
-e -1.510614 -0.917850  2.343032  bar  False
-f -0.953382 -0.240758  1.103042  bar  False
+e  0.684213 -0.148327 -1.432006  bar   True
+f  0.469932  0.420283  0.586002  bar   True
 g       NaN       NaN       NaN  NaN    NaN
-h -0.162720 -0.789632  0.203301  bar  False</pre>
+h -1.700706 -0.289902 -1.803585  bar  False</pre>
 </div>
 
 </div>
@@ -33092,7 +33093,7 @@ h -0.162720 -0.789632  0.203301  bar  False</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[950]:</div>
+<div class="prompt input_prompt">In&nbsp;[198]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -33108,7 +33109,7 @@ h -0.162720 -0.789632  0.203301  bar  False</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[950]:</div>
+<div class="prompt output_prompt">Out[198]:</div>
 
 
 
@@ -33130,7 +33131,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[951]:</div>
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -33146,7 +33147,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[951]:</div>
+<div class="prompt output_prompt">Out[199]:</div>
 
 
 
@@ -33168,7 +33169,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[952]:</div>
+<div class="prompt input_prompt">In&nbsp;[200]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
@@ -33184,7 +33185,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[952]:</div>
+<div class="prompt output_prompt">Out[200]:</div>
 
 
 
@@ -33206,7 +33207,7 @@ h  False  False  False  False  False</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[953]:</div>
+<div class="prompt input_prompt">In&nbsp;[201]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -33222,7 +33223,7 @@ h  False  False  False  False  False</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[953]:</div>
+<div class="prompt output_prompt">Out[201]:</div>
 
 
 
@@ -33230,13 +33231,13 @@ h  False  False  False  False  False</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>            one       two     three
 count  5.000000  5.000000  5.000000
-mean  -1.026843  0.025138  1.207963
-std    0.529436  0.979383  0.774189
-min   -1.510614 -0.917850  0.203301
-25%   -1.380436 -0.789632  0.984966
-50%   -1.127060 -0.240758  1.103042
-75%   -0.953382  0.749387  1.405475
-max   -0.162720  1.324543  2.343032</pre>
+mean  -0.157566  0.018347 -0.759677
+std    0.995005  0.591203  0.931889
+min   -1.700706 -0.690501 -1.803585
+25%   -0.607350 -0.289902 -1.432006
+50%    0.366083 -0.148327 -0.736248
+75%    0.469932  0.420283 -0.412550
+max    0.684213  0.800183  0.586002</pre>
 </div>
 
 </div>
