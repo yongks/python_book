@@ -11864,80 +11864,6 @@ $( document ).ready(function(){
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1013]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">jupyter_core.paths</span> <span class="k">import</span> <span class="n">jupyter_config_dir</span>
-<span class="n">jupyter_dir</span> <span class="o">=</span> <span class="n">jupyter_config_dir</span><span class="p">()</span>
-<span class="n">jupyter_dir</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[1013]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;C:\\Users\\YKS-NIC\\.jupyter&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1014]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
-<span class="n">custom_js_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jupyter_dir</span><span class="p">,</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span> <span class="s1">&#39;custom.js&#39;</span><span class="p">)</span>
-<span class="c1">#  my custom js</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">custom_js_path</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">custom_js_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You don&#39;t have a custom.js file&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>// default is 30s, increase to 1 minute
-window.requirejs.config({waitseconds: 120});
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -22394,7 +22320,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_411_0.png"
+<img src="index_files/index_409_0.png"
 >
 </div>
 
@@ -22436,7 +22362,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_412_0.png"
+<img src="index_files/index_410_0.png"
 >
 </div>
 
@@ -22471,7 +22397,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_413_0.png"
+<img src="index_files/index_411_0.png"
 >
 </div>
 
@@ -22531,7 +22457,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_415_1.png"
+<img src="index_files/index_413_1.png"
 >
 </div>
 
@@ -22568,7 +22494,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_416_0.png"
+<img src="index_files/index_414_0.png"
 >
 </div>
 
@@ -22615,7 +22541,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_418_0.png"
+<img src="index_files/index_416_0.png"
 >
 </div>
 
@@ -22649,7 +22575,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_419_0.png"
+<img src="index_files/index_417_0.png"
 >
 </div>
 
@@ -22696,7 +22622,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_421_0.png"
+<img src="index_files/index_419_0.png"
 >
 </div>
 
@@ -22756,7 +22682,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_423_1.png"
+<img src="index_files/index_421_1.png"
 >
 </div>
 
@@ -22794,7 +22720,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_424_0.png"
+<img src="index_files/index_422_0.png"
 >
 </div>
 
@@ -22841,7 +22767,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_426_0.png"
+<img src="index_files/index_424_0.png"
 >
 </div>
 
@@ -22905,7 +22831,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_430_0.png"
+<img src="index_files/index_428_0.png"
 >
 </div>
 
@@ -22963,7 +22889,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_432_1.png"
+<img src="index_files/index_430_1.png"
 >
 </div>
 
@@ -23010,7 +22936,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_433_0.png"
+<img src="index_files/index_431_0.png"
 >
 </div>
 
@@ -23057,7 +22983,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_434_0.png"
+<img src="index_files/index_432_0.png"
 >
 </div>
 
@@ -23125,7 +23051,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_437_0.png"
+<img src="index_files/index_435_0.png"
 >
 </div>
 
@@ -23188,7 +23114,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_440_0.png"
+<img src="index_files/index_438_0.png"
 >
 </div>
 
@@ -23249,7 +23175,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_442_0.png"
+<img src="index_files/index_440_0.png"
 >
 </div>
 
@@ -23296,7 +23222,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_443_0.png"
+<img src="index_files/index_441_0.png"
 >
 </div>
 
@@ -23346,7 +23272,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_444_0.png"
+<img src="index_files/index_442_0.png"
 >
 </div>
 
@@ -23404,7 +23330,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_446_0.png"
+<img src="index_files/index_444_0.png"
 >
 </div>
 
@@ -23473,7 +23399,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_448_1.png"
+<img src="index_files/index_446_1.png"
 >
 </div>
 
@@ -23526,7 +23452,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_449_0.png"
+<img src="index_files/index_447_0.png"
 >
 </div>
 
@@ -23589,7 +23515,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_452_0.png"
+<img src="index_files/index_450_0.png"
 >
 </div>
 
@@ -23644,7 +23570,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_454_0.png"
+<img src="index_files/index_452_0.png"
 >
 </div>
 
@@ -23691,7 +23617,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_455_0.png"
+<img src="index_files/index_453_0.png"
 >
 </div>
 
@@ -23746,7 +23672,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_457_0.png"
+<img src="index_files/index_455_0.png"
 >
 </div>
 
@@ -23888,7 +23814,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_462_0.png"
+<img src="index_files/index_460_0.png"
 >
 </div>
 
@@ -33254,34 +33180,7 @@ max    0.684213  0.800183  0.586002</pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Notebook-Setup">Notebook Setup<a class="anchor-link" href="#Notebook-Setup">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Jupyter-Display-Setup">Jupyter Display Setup<a class="anchor-link" href="#Jupyter-Display-Setup">&#182;</a></h3>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:75% !important; margin-left:350px; }&lt;/style&gt;&quot;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -33289,8 +33188,7 @@ max    0.684213  0.800183  0.586002</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -33299,67 +33197,6 @@ max    0.684213  0.800183  0.586002</pre>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Essential-Libraries">Essential Libraries<a class="anchor-link" href="#Essential-Libraries">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">math</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pandas-display-setup">Pandas display setup<a class="anchor-link" href="#Pandas-display-setup">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span> <span class="s1">&#39;display.notebook_repr_html&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># render Series and DataFrame as text, not HTML</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span> <span class="s1">&#39;display.max_column&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>    <span class="c1"># number of columns</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span> <span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>     <span class="c1"># number of rows</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span> <span class="s1">&#39;display.width&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>        <span class="c1"># number of characters per row</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -33957,7 +33794,7 @@ X3 -0.038544 -0.030480  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_905_0.png"
+<img src="index_files/index_896_0.png"
 >
 </div>
 
@@ -33995,7 +33832,7 @@ X3 -0.038544 -0.030480  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_906_0.png"
+<img src="index_files/index_897_0.png"
 >
 </div>
 
