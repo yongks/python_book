@@ -22203,8 +22203,8 @@ np.random.uniform( low, high, size=(r,c)) # generate an array of float, two dime
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Normal-Distribution">Normal Distribution<a class="anchor-link" href="#Normal-Distribution">&#182;</a></h3>
-<pre><code>numpy. random.randn (n_items)       # standard normal (mean=0, stdev=1)
-numpy. random.randn (nrows, ncols)  # Two dimensions
+<pre><code>numpy. random.randn (n_items)       # 1-D standard normal (mean=0, stdev=1)
+numpy. random.randn (nrows, ncols)  # 2-D standard normal (mean=0, stdev=1)
 numpy. random.standard_normal( size=None )                # default to mean = 0, stdev = 1, non-configurable
 numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = stdev, size = dimension</code></pre>
 
@@ -22234,8 +22234,7 @@ numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = 
 <div class="prompt input_prompt">In&nbsp;[195]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -22268,8 +22267,7 @@ numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = 
 <div class="prompt input_prompt">In&nbsp;[196]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -22311,8 +22309,7 @@ numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = 
 <div class="prompt input_prompt">In&nbsp;[197]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -22346,8 +22343,7 @@ numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = 
 <div class="prompt input_prompt">In&nbsp;[198]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -22459,6 +22455,104 @@ numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = 
 <pre>array([[ 11.12645382,  12.01327885,  10.81651695],
        [ 12.41091248,  12.39383072,  11.49647195],
        [  8.70837035,  12.25246312,  11.49084235]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Linear-Spacing">Linear Spacing<a class="anchor-link" href="#Linear-Spacing">&#182;</a></h4>
+<pre><code>numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)
+# endpoint: If True, stop is the last sample, otherwise it is not included</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Include Endpoint</strong><br>
+Step = Gap divide by (number of elements minus 1) (2/(10-1))</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[222]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#default endpont=True</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[222]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 1.        ,  1.22222222,  1.44444444,  1.66666667,  1.88888889,
+        2.11111111,  2.33333333,  2.55555556,  2.77777778,  3.        ])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Does Not Include Endpoint</strong><br>
+Step = Gap divide by (number of elements minus 1) (2/(101))</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[221]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[221]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 1. ,  1.2,  1.4,  1.6,  1.8,  2. ,  2.2,  2.4,  2.6,  2.8])</pre>
 </div>
 
 </div>
@@ -22701,7 +22795,7 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Visualization">Visualization<a class="anchor-link" href="#Visualization">&#182;</a></h1>
+<h1 id="matplotlib">matplotlib<a class="anchor-link" href="#matplotlib">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -22716,7 +22810,7 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
@@ -22842,6 +22936,72 @@ memory usage: 9.5+ KB
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sample Data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;My Good Data&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[88]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0.5,1,&#39;My Good Data&#39;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_438_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -22895,7 +23055,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_435_0.png"
+<img src="index_files/index_442_0.png"
 >
 </div>
 
@@ -22937,7 +23097,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_436_0.png"
+<img src="index_files/index_443_0.png"
 >
 </div>
 
@@ -22972,7 +23132,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_437_0.png"
+<img src="index_files/index_444_0.png"
 >
 </div>
 
@@ -23032,7 +23192,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_439_1.png"
+<img src="index_files/index_446_1.png"
 >
 </div>
 
@@ -23069,7 +23229,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_440_0.png"
+<img src="index_files/index_447_0.png"
 >
 </div>
 
@@ -23116,7 +23276,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_442_0.png"
+<img src="index_files/index_449_0.png"
 >
 </div>
 
@@ -23150,7 +23310,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_443_0.png"
+<img src="index_files/index_450_0.png"
 >
 </div>
 
@@ -23197,7 +23357,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_445_0.png"
+<img src="index_files/index_452_0.png"
 >
 </div>
 
@@ -23257,7 +23417,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_447_1.png"
+<img src="index_files/index_454_1.png"
 >
 </div>
 
@@ -23295,7 +23455,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_448_0.png"
+<img src="index_files/index_455_0.png"
 >
 </div>
 
@@ -23342,7 +23502,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_450_0.png"
+<img src="index_files/index_457_0.png"
 >
 </div>
 
@@ -23406,7 +23566,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_454_0.png"
+<img src="index_files/index_461_0.png"
 >
 </div>
 
@@ -23464,7 +23624,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_456_1.png"
+<img src="index_files/index_463_1.png"
 >
 </div>
 
@@ -23511,7 +23671,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_457_0.png"
+<img src="index_files/index_464_0.png"
 >
 </div>
 
@@ -23558,7 +23718,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_458_0.png"
+<img src="index_files/index_465_0.png"
 >
 </div>
 
@@ -23626,7 +23786,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_461_0.png"
+<img src="index_files/index_468_0.png"
 >
 </div>
 
@@ -23689,7 +23849,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_464_0.png"
+<img src="index_files/index_471_0.png"
 >
 </div>
 
@@ -23750,7 +23910,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_466_0.png"
+<img src="index_files/index_473_0.png"
 >
 </div>
 
@@ -23797,7 +23957,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_467_0.png"
+<img src="index_files/index_474_0.png"
 >
 </div>
 
@@ -23847,7 +24007,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_468_0.png"
+<img src="index_files/index_475_0.png"
 >
 </div>
 
@@ -23905,7 +24065,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_470_0.png"
+<img src="index_files/index_477_0.png"
 >
 </div>
 
@@ -23974,7 +24134,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_472_1.png"
+<img src="index_files/index_479_1.png"
 >
 </div>
 
@@ -24027,7 +24187,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_473_0.png"
+<img src="index_files/index_480_0.png"
 >
 </div>
 
@@ -24090,7 +24250,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_476_0.png"
+<img src="index_files/index_483_0.png"
 >
 </div>
 
@@ -24145,7 +24305,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_478_0.png"
+<img src="index_files/index_485_0.png"
 >
 </div>
 
@@ -24192,7 +24352,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_479_0.png"
+<img src="index_files/index_486_0.png"
 >
 </div>
 
@@ -24247,7 +24407,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_481_0.png"
+<img src="index_files/index_488_0.png"
 >
 </div>
 
@@ -24389,7 +24549,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_486_0.png"
+<img src="index_files/index_493_0.png"
 >
 </div>
 
@@ -35633,7 +35793,7 @@ x3  0.615422 -0.642146  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_982_0.png"
+<img src="index_files/index_989_0.png"
 >
 </div>
 
@@ -35671,7 +35831,7 @@ x3  0.615422 -0.642146  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_983_0.png"
+<img src="index_files/index_990_0.png"
 >
 </div>
 
@@ -36522,7 +36682,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1028_0.png"
+<img src="index_files/index_1035_0.png"
 >
 </div>
 
@@ -36637,7 +36797,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1033_1.png"
+<img src="index_files/index_1040_1.png"
 >
 </div>
 
@@ -36689,7 +36849,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1036_0.png"
+<img src="index_files/index_1043_0.png"
 >
 </div>
 
@@ -36750,7 +36910,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1038_1.png"
+<img src="index_files/index_1045_1.png"
 >
 </div>
 
@@ -36812,7 +36972,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1040_1.png"
+<img src="index_files/index_1047_1.png"
 >
 </div>
 
