@@ -23217,11 +23217,11 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[238]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:75% !important; margin-left:350px; }&lt;/style&gt;&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:70% !important; margin-left:350px; }&lt;/style&gt;&quot;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -23239,7 +23239,7 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 
 
 <div class="output_html rendered_html output_subarea ">
-<style>.container { width:75% !important; margin-left:350px; }</style>
+<style>.container { width:70% !important; margin-left:350px; }</style>
 </div>
 
 </div>
@@ -30367,7 +30367,12 @@ dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dummies">Dummies<a class="anchor-link" href="#Dummies">&#182;</a></h2>
+<h2 id="Dummies">Dummies<a class="anchor-link" href="#Dummies">&#182;</a></h2><ul>
+<li><strong>get_dummies</strong> creates columns for each categories </li>
+<li>The underlying data can be string or pd.Categorical  </li>
+<li>It produces a <strong>new pd.DataFrame</strong></li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -30426,7 +30431,7 @@ dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dummies-on-Series-or-Array-Like">Dummies on Series or Array Like<a class="anchor-link" href="#Dummies-on-Series-or-Array-Like">&#182;</a></h3>
+<h3 id="Dummies-on-Array-Like-Data">Dummies on Array-Like Data<a class="anchor-link" href="#Dummies-on-Array-Like-Data">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -32636,6 +32641,176 @@ dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Concat">Concat<a class="anchor-link" href="#Concat">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;A3&#39;</span><span class="p">,</span><span class="s1">&#39;A4&#39;</span><span class="p">])</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="s1">&#39;B4&#39;</span><span class="p">])</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">,</span><span class="s1">&#39;C4&#39;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">s1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">s2</span><span class="p">})</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[248]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>    A   B
+0  A1  B1
+1  A2  B2
+2  A3  B3
+3  A4  B4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Column-Wise">Column-Wise<a class="anchor-link" href="#Column-Wise">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Multiple-Arrays/Series">Multiple Arrays/Series<a class="anchor-link" href="#Multiple-Arrays/Series">&#182;</a></h4><ul>
+<li>Added series will have 0,1,2,... column names</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[257]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">,</span><span class="n">s3</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[257]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>    0   1   2
+0  A1  B1  C1
+1  A2  B2  C2
+2  A3  B3  C3
+3  A4  B4  C4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="DataFrame-and-Series">DataFrame and Series<a class="anchor-link" href="#DataFrame-and-Series">&#182;</a></h4><ul>
+<li>No change to original data frame column name</li>
+<li>Added columns from series will have 0,1,2,3,.. column name</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[259]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span><span class="n">s3</span><span class="p">,</span><span class="n">s1</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[259]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>    A   B   0   1
+0  A1  B1  C1  A1
+1  A2  B2  C2  A2
+2  A3  B3  C3  A3
+3  A4  B4  C4  A4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Row-Wise">Row-Wise<a class="anchor-link" href="#Row-Wise">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Fundamental-Analysis">Fundamental Analysis<a class="anchor-link" href="#Fundamental-Analysis">&#182;</a></h2>
 </div>
 </div>
@@ -33191,7 +33366,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_868_0.png"
+<img src="index_files/index_877_0.png"
 >
 </div>
 
@@ -33238,7 +33413,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_870_0.png"
+<img src="index_files/index_879_0.png"
 >
 </div>
 
@@ -33317,7 +33492,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_875_0.png"
+<img src="index_files/index_884_0.png"
 >
 </div>
 
@@ -33373,7 +33548,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_877_0.png"
+<img src="index_files/index_886_0.png"
 >
 </div>
 
@@ -33458,7 +33633,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_881_1.png"
+<img src="index_files/index_890_1.png"
 >
 </div>
 
@@ -33518,7 +33693,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_883_1.png"
+<img src="index_files/index_892_1.png"
 >
 </div>
 
@@ -33569,7 +33744,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_885_0.png"
+<img src="index_files/index_894_0.png"
 >
 </div>
 
@@ -33607,7 +33782,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_886_0.png"
+<img src="index_files/index_895_0.png"
 >
 </div>
 
@@ -33654,7 +33829,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_888_0.png"
+<img src="index_files/index_897_0.png"
 >
 </div>
 
@@ -33715,7 +33890,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_891_0.png"
+<img src="index_files/index_900_0.png"
 >
 </div>
 
@@ -33762,7 +33937,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_893_0.png"
+<img src="index_files/index_902_0.png"
 >
 </div>
 
@@ -33806,7 +33981,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_895_0.png"
+<img src="index_files/index_904_0.png"
 >
 </div>
 
@@ -33857,7 +34032,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_898_0.png"
+<img src="index_files/index_907_0.png"
 >
 </div>
 
@@ -33903,7 +34078,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_900_0.png"
+<img src="index_files/index_909_0.png"
 >
 </div>
 
@@ -33950,7 +34125,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_901_1.png"
+<img src="index_files/index_910_1.png"
 >
 </div>
 
@@ -33992,7 +34167,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_903_0.png"
+<img src="index_files/index_912_0.png"
 >
 </div>
 
@@ -34052,7 +34227,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_905_1.png"
+<img src="index_files/index_914_1.png"
 >
 </div>
 
@@ -34099,7 +34274,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_907_0.png"
+<img src="index_files/index_916_0.png"
 >
 </div>
 
@@ -34141,7 +34316,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_909_0.png"
+<img src="index_files/index_918_0.png"
 >
 </div>
 
@@ -34183,7 +34358,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_911_0.png"
+<img src="index_files/index_920_0.png"
 >
 </div>
 
@@ -34278,7 +34453,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_914_1.png"
+<img src="index_files/index_923_1.png"
 >
 </div>
 
@@ -34402,7 +34577,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_920_0.png"
+<img src="index_files/index_929_0.png"
 >
 </div>
 
@@ -34436,7 +34611,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_921_0.png"
+<img src="index_files/index_930_0.png"
 >
 </div>
 
@@ -34479,7 +34654,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_923_0.png"
+<img src="index_files/index_932_0.png"
 >
 </div>
 
@@ -34522,7 +34697,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_925_0.png"
+<img src="index_files/index_934_0.png"
 >
 </div>
 
@@ -34565,7 +34740,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_927_0.png"
+<img src="index_files/index_936_0.png"
 >
 </div>
 
@@ -34616,7 +34791,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_930_0.png"
+<img src="index_files/index_939_0.png"
 >
 </div>
 
@@ -34659,7 +34834,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_932_0.png"
+<img src="index_files/index_941_0.png"
 >
 </div>
 
@@ -34711,7 +34886,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_935_0.png"
+<img src="index_files/index_944_0.png"
 >
 </div>
 
@@ -34782,7 +34957,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_938_1.png"
+<img src="index_files/index_947_1.png"
 >
 </div>
 
@@ -34829,7 +35004,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_939_1.png"
+<img src="index_files/index_948_1.png"
 >
 </div>
 
@@ -34942,7 +35117,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_943_2.png"
+<img src="index_files/index_952_2.png"
 >
 </div>
 
@@ -35021,7 +35196,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_946_2.png"
+<img src="index_files/index_955_2.png"
 >
 </div>
 
@@ -35088,7 +35263,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_948_2.png"
+<img src="index_files/index_957_2.png"
 >
 </div>
 
@@ -35141,7 +35316,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_951_0.png"
+<img src="index_files/index_960_0.png"
 >
 </div>
 
@@ -35176,7 +35351,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_952_0.png"
+<img src="index_files/index_961_0.png"
 >
 </div>
 
@@ -35233,7 +35408,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_954_1.png"
+<img src="index_files/index_963_1.png"
 >
 </div>
 
@@ -35298,7 +35473,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_957_1.png"
+<img src="index_files/index_966_1.png"
 >
 </div>
 
@@ -35343,7 +35518,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_959_0.png"
+<img src="index_files/index_968_0.png"
 >
 </div>
 
@@ -35425,7 +35600,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_964_1.png"
+<img src="index_files/index_973_1.png"
 >
 </div>
 
@@ -35472,7 +35647,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_965_0.png"
+<img src="index_files/index_974_0.png"
 >
 </div>
 
@@ -35519,7 +35694,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_966_0.png"
+<img src="index_files/index_975_0.png"
 >
 </div>
 
@@ -35587,7 +35762,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_969_0.png"
+<img src="index_files/index_978_0.png"
 >
 </div>
 
@@ -35650,7 +35825,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_972_0.png"
+<img src="index_files/index_981_0.png"
 >
 </div>
 
@@ -35711,7 +35886,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_974_0.png"
+<img src="index_files/index_983_0.png"
 >
 </div>
 
@@ -35758,7 +35933,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_975_0.png"
+<img src="index_files/index_984_0.png"
 >
 </div>
 
@@ -35808,7 +35983,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_976_0.png"
+<img src="index_files/index_985_0.png"
 >
 </div>
 
@@ -35866,7 +36041,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_978_0.png"
+<img src="index_files/index_987_0.png"
 >
 </div>
 
@@ -35935,7 +36110,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_980_1.png"
+<img src="index_files/index_989_1.png"
 >
 </div>
 
@@ -35988,7 +36163,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_981_0.png"
+<img src="index_files/index_990_0.png"
 >
 </div>
 
@@ -36051,7 +36226,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_984_0.png"
+<img src="index_files/index_993_0.png"
 >
 </div>
 
@@ -36106,7 +36281,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_986_0.png"
+<img src="index_files/index_995_0.png"
 >
 </div>
 
@@ -36153,7 +36328,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_987_0.png"
+<img src="index_files/index_996_0.png"
 >
 </div>
 
@@ -36208,7 +36383,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_989_0.png"
+<img src="index_files/index_998_0.png"
 >
 </div>
 
@@ -36350,7 +36525,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_994_0.png"
+<img src="index_files/index_1003_0.png"
 >
 </div>
 
@@ -38259,7 +38434,7 @@ x3  0.615422 -0.642146  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1091_0.png"
+<img src="index_files/index_1100_0.png"
 >
 </div>
 
@@ -38297,7 +38472,7 @@ x3  0.615422 -0.642146  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1092_0.png"
+<img src="index_files/index_1101_0.png"
 >
 </div>
 
@@ -39148,7 +39323,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1137_0.png"
+<img src="index_files/index_1146_0.png"
 >
 </div>
 
@@ -39263,7 +39438,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1142_1.png"
+<img src="index_files/index_1151_1.png"
 >
 </div>
 
@@ -39315,7 +39490,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1145_0.png"
+<img src="index_files/index_1154_0.png"
 >
 </div>
 
@@ -39376,7 +39551,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1147_1.png"
+<img src="index_files/index_1156_1.png"
 >
 </div>
 
@@ -39438,7 +39613,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1149_1.png"
+<img src="index_files/index_1158_1.png"
 >
 </div>
 
