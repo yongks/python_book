@@ -15508,7 +15508,7 @@ end of programming
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="For-Loops-with-'range'-object">For Loops with 'range' object<a class="anchor-link" href="#For-Loops-with-'range'-object">&#182;</a></h3>
+<h3 id="Loop-thorugh-'range'">Loop thorugh 'range'<a class="anchor-link" href="#Loop-thorugh-'range'">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15552,7 +15552,7 @@ Odds Number :  9
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="For-Loops-with-'list'-object">For Loops with 'list' object<a class="anchor-link" href="#For-Loops-with-'list'-object">&#182;</a></h3>
+<h3 id="Loop-through-'list'">Loop through 'list'<a class="anchor-link" href="#Loop-through-'list'">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15584,6 +15584,374 @@ Odds Number :  9
 Letter :  b
 Letter :  c
 Letter :  d
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loop-Through-'Dictionary'">Loop Through 'Dictionary'<a class="anchor-link" href="#Loop-Through-'Dictionary'">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x 1
+y 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generators">Generators<a class="anchor-link" href="#Generators">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Generator is <strong>function</strong> with 'yield' instead of 'return'  </li>
+<li>Generator contains one or more yields statement  </li>
+<li>When called, it returns an object (iterator) but <strong>does not start execution</strong> immediately  </li>
+<li>Methods like <strong>iter</strong>() and <strong>next</strong>() are implemented automatically. So we can iterate through the items using <strong>next()</strong>  </li>
+<li>Once the function yields, the <strong>function is paused</strong> and the control is transferred to the caller  </li>
+<li>Local variables and their states are <strong>remembered</strong> between successive calls  </li>
+<li>Finally, when the function <strong>terminates</strong>, <strong>StopIteration</strong> is raised automatically on further calls</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Basic-Example">Basic Example<a class="anchor-link" href="#Basic-Example">&#182;</a></h3><p>Below example give clear understanding of how generator works</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_gen</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is printed first&#39;</span><span class="p">)</span>
+    <span class="c1"># Generator function contains yield statements</span>
+    <span class="k">yield</span> <span class="n">n</span>
+
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is printed second&#39;</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">n</span>
+
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is printed at last&#39;</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">n</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">my_gen</span><span class="p">()</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>generator</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is printed first
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is printed second
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is printed at last
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-25-3f6e2eea332d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>a<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Useful-Generator">Useful Generator<a class="anchor-link" href="#Useful-Generator">&#182;</a></h3><p>Generator is only useful when it uses <strong>for-loop</strong></p>
+<ul>
+<li>for-loop within generator</li>
+<li>for-loop to iterate through a generator</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rev_str</span><span class="p">(</span><span class="n">my_str</span><span class="p">):</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">my_str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">rev_str</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">):</span>
+     <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>o
+l
+l
+e
+h
 </pre>
 </div>
 </div>
@@ -33366,7 +33734,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_877_0.png"
+<img src="index_files/index_891_0.png"
 >
 </div>
 
@@ -33413,7 +33781,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_879_0.png"
+<img src="index_files/index_893_0.png"
 >
 </div>
 
@@ -33492,7 +33860,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_884_0.png"
+<img src="index_files/index_898_0.png"
 >
 </div>
 
@@ -33548,7 +33916,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_886_0.png"
+<img src="index_files/index_900_0.png"
 >
 </div>
 
@@ -33633,7 +34001,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_890_1.png"
+<img src="index_files/index_904_1.png"
 >
 </div>
 
@@ -33693,7 +34061,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_892_1.png"
+<img src="index_files/index_906_1.png"
 >
 </div>
 
@@ -33744,7 +34112,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_894_0.png"
+<img src="index_files/index_908_0.png"
 >
 </div>
 
@@ -33782,7 +34150,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_895_0.png"
+<img src="index_files/index_909_0.png"
 >
 </div>
 
@@ -33829,7 +34197,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_897_0.png"
+<img src="index_files/index_911_0.png"
 >
 </div>
 
@@ -33890,7 +34258,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_900_0.png"
+<img src="index_files/index_914_0.png"
 >
 </div>
 
@@ -33937,7 +34305,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_902_0.png"
+<img src="index_files/index_916_0.png"
 >
 </div>
 
@@ -33981,7 +34349,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_904_0.png"
+<img src="index_files/index_918_0.png"
 >
 </div>
 
@@ -34032,7 +34400,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_907_0.png"
+<img src="index_files/index_921_0.png"
 >
 </div>
 
@@ -34078,7 +34446,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_909_0.png"
+<img src="index_files/index_923_0.png"
 >
 </div>
 
@@ -34125,7 +34493,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_910_1.png"
+<img src="index_files/index_924_1.png"
 >
 </div>
 
@@ -34167,7 +34535,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_912_0.png"
+<img src="index_files/index_926_0.png"
 >
 </div>
 
@@ -34227,7 +34595,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_914_1.png"
+<img src="index_files/index_928_1.png"
 >
 </div>
 
@@ -34274,7 +34642,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_916_0.png"
+<img src="index_files/index_930_0.png"
 >
 </div>
 
@@ -34316,7 +34684,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_918_0.png"
+<img src="index_files/index_932_0.png"
 >
 </div>
 
@@ -34358,7 +34726,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_920_0.png"
+<img src="index_files/index_934_0.png"
 >
 </div>
 
@@ -34453,7 +34821,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_923_1.png"
+<img src="index_files/index_937_1.png"
 >
 </div>
 
@@ -34577,7 +34945,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_929_0.png"
+<img src="index_files/index_943_0.png"
 >
 </div>
 
@@ -34611,7 +34979,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_930_0.png"
+<img src="index_files/index_944_0.png"
 >
 </div>
 
@@ -34654,7 +35022,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_932_0.png"
+<img src="index_files/index_946_0.png"
 >
 </div>
 
@@ -34697,7 +35065,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_934_0.png"
+<img src="index_files/index_948_0.png"
 >
 </div>
 
@@ -34740,7 +35108,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_936_0.png"
+<img src="index_files/index_950_0.png"
 >
 </div>
 
@@ -34791,7 +35159,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_939_0.png"
+<img src="index_files/index_953_0.png"
 >
 </div>
 
@@ -34834,7 +35202,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_941_0.png"
+<img src="index_files/index_955_0.png"
 >
 </div>
 
@@ -34886,7 +35254,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_944_0.png"
+<img src="index_files/index_958_0.png"
 >
 </div>
 
@@ -34957,7 +35325,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_947_1.png"
+<img src="index_files/index_961_1.png"
 >
 </div>
 
@@ -35004,7 +35372,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_948_1.png"
+<img src="index_files/index_962_1.png"
 >
 </div>
 
@@ -35117,7 +35485,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_952_2.png"
+<img src="index_files/index_966_2.png"
 >
 </div>
 
@@ -35196,7 +35564,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_955_2.png"
+<img src="index_files/index_969_2.png"
 >
 </div>
 
@@ -35263,7 +35631,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_957_2.png"
+<img src="index_files/index_971_2.png"
 >
 </div>
 
@@ -35316,7 +35684,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_960_0.png"
+<img src="index_files/index_974_0.png"
 >
 </div>
 
@@ -35351,7 +35719,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_961_0.png"
+<img src="index_files/index_975_0.png"
 >
 </div>
 
@@ -35408,7 +35776,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_963_1.png"
+<img src="index_files/index_977_1.png"
 >
 </div>
 
@@ -35473,7 +35841,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_966_1.png"
+<img src="index_files/index_980_1.png"
 >
 </div>
 
@@ -35518,7 +35886,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_968_0.png"
+<img src="index_files/index_982_0.png"
 >
 </div>
 
@@ -35600,7 +35968,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_973_1.png"
+<img src="index_files/index_987_1.png"
 >
 </div>
 
@@ -35647,7 +36015,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_974_0.png"
+<img src="index_files/index_988_0.png"
 >
 </div>
 
@@ -35694,7 +36062,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_975_0.png"
+<img src="index_files/index_989_0.png"
 >
 </div>
 
@@ -35762,7 +36130,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_978_0.png"
+<img src="index_files/index_992_0.png"
 >
 </div>
 
@@ -35825,7 +36193,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_981_0.png"
+<img src="index_files/index_995_0.png"
 >
 </div>
 
@@ -35886,7 +36254,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_983_0.png"
+<img src="index_files/index_997_0.png"
 >
 </div>
 
@@ -35933,7 +36301,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_984_0.png"
+<img src="index_files/index_998_0.png"
 >
 </div>
 
@@ -35983,7 +36351,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_985_0.png"
+<img src="index_files/index_999_0.png"
 >
 </div>
 
@@ -36041,7 +36409,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_987_0.png"
+<img src="index_files/index_1001_0.png"
 >
 </div>
 
@@ -36110,7 +36478,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_989_1.png"
+<img src="index_files/index_1003_1.png"
 >
 </div>
 
@@ -36163,7 +36531,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_990_0.png"
+<img src="index_files/index_1004_0.png"
 >
 </div>
 
@@ -36226,7 +36594,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_993_0.png"
+<img src="index_files/index_1007_0.png"
 >
 </div>
 
@@ -36281,7 +36649,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_995_0.png"
+<img src="index_files/index_1009_0.png"
 >
 </div>
 
@@ -36328,7 +36696,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_996_0.png"
+<img src="index_files/index_1010_0.png"
 >
 </div>
 
@@ -36383,7 +36751,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_998_0.png"
+<img src="index_files/index_1012_0.png"
 >
 </div>
 
@@ -36525,7 +36893,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1003_0.png"
+<img src="index_files/index_1017_0.png"
 >
 </div>
 
@@ -38434,7 +38802,7 @@ x3  0.615422 -0.642146  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1100_0.png"
+<img src="index_files/index_1114_0.png"
 >
 </div>
 
@@ -38472,7 +38840,7 @@ x3  0.615422 -0.642146  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1101_0.png"
+<img src="index_files/index_1115_0.png"
 >
 </div>
 
@@ -39323,7 +39691,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1146_0.png"
+<img src="index_files/index_1160_0.png"
 >
 </div>
 
@@ -39438,7 +39806,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1151_1.png"
+<img src="index_files/index_1165_1.png"
 >
 </div>
 
@@ -39490,7 +39858,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1154_0.png"
+<img src="index_files/index_1168_0.png"
 >
 </div>
 
@@ -39551,7 +39919,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1156_1.png"
+<img src="index_files/index_1170_1.png"
 >
 </div>
 
@@ -39613,7 +39981,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1158_1.png"
+<img src="index_files/index_1172_1.png"
 >
 </div>
 
