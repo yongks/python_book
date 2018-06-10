@@ -34614,7 +34614,9 @@ memory usage: 168.0+ bytes
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model Selection</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">KFold</span><span class="p">,</span> <span class="n">LeaveOneOut</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">LeaveOneOut</span>
 
 <span class="c1"># Preprocessing</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span>   <span class="k">import</span> <span class="n">Imputer</span>
@@ -34642,15 +34644,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Splitting">Data Splitting<a class="anchor-link" href="#Data-Splitting">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="One-Time-Split">One Time Split<a class="anchor-link" href="#One-Time-Split">&#182;</a></h3>
+<h2 id="High-Level-Process">High Level Process<a class="anchor-link" href="#High-Level-Process">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -34667,7 +34661,15 @@ memory usage: 168.0+ bytes
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h4><p>Generate 100 rows of data, with 3x features (X1,X2,X3), and one dependant variable (Y)</p>
+<h2 id="Data-Splitting">Data Splitting<a class="anchor-link" href="#Data-Splitting">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h3><p>Generate 100 rows of data, with 3x features (X1,X2,X3), and one dependant variable (Y)</p>
 
 </div>
 </div>
@@ -34717,6 +34719,19 @@ memory usage: 168.0+ bytes
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="One-Time-Split">One Time Split<a class="anchor-link" href="#One-Time-Split">&#182;</a></h3><p>sklearn::train_test_split() has two forms:</p>
+<ul>
+<li>Take one DF, split into 2 DF (most of sklearn modeling use this method</li>
+<li>Take two DFs, split into 4 DF</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -36762,7 +36777,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1149_0.png"
+<img src="index_files/index_1150_0.png"
 >
 </div>
 
@@ -37657,7 +37672,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1195_0.png"
+<img src="index_files/index_1196_0.png"
 >
 </div>
 
@@ -37772,7 +37787,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1200_1.png"
+<img src="index_files/index_1201_1.png"
 >
 </div>
 
@@ -37824,7 +37839,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1203_0.png"
+<img src="index_files/index_1204_0.png"
 >
 </div>
 
@@ -37885,7 +37900,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1205_1.png"
+<img src="index_files/index_1206_1.png"
 >
 </div>
 
@@ -37947,7 +37962,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1207_1.png"
+<img src="index_files/index_1208_1.png"
 >
 </div>
 
