@@ -34610,7 +34610,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[264]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model Selection</span>
@@ -34644,6 +34644,92 @@ memory usage: 168.0+ bytes
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Fitting">Model Fitting<a class="anchor-link" href="#Model-Fitting">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/fitting.png" alt="split"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Underfitting">Underfitting<a class="anchor-link" href="#Underfitting">&#182;</a></h3><ul>
+<li>The model does not fit the training data and therefore misses the trends in the data</li>
+<li>The model cannot be generalized to new data, this is usually the result of a very simple model (not enough predictors/independent variables)</li>
+<li>The model will have poor predictive ability</li>
+<li>For example, we fit a linear model (like linear regression) to data that is not linear</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Overfitting">Overfitting<a class="anchor-link" href="#Overfitting">&#182;</a></h3><ul>
+<li>The model has trained “too well” and is now, well, fit too closely to the training dataset</li>
+<li>The model is too complex (i.e. <strong>too many features/variables</strong> compared to the number of observations)</li>
+<li>The model will be very accurate on the training data but will probably be very not accurate on untrained or new data</li>
+<li>The model is not generalized (or not AS generalized), meaning you can generalize the results </li>
+<li>The model learns or describes the “noise” in the training data instead of the actual relationships between variables in the data</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Just-Right">Just Right<a class="anchor-link" href="#Just-Right">&#182;</a></h3><ul>
+<li>It is worth noting the underfitting is not as prevalent as overfitting</li>
+<li>Nevertheless, we want to avoid both of those problems in data analysis</li>
+<li>We want to find the middle ground between under and overfitting our model</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Tuning">Model Tuning<a class="anchor-link" href="#Model-Tuning">&#182;</a></h2><ul>
+<li>A highly complex model tend to overfit</li>
+<li>A too flexible model tend to underfit</li>
+</ul>
+<p>Complexity can be reduced by:</p>
+<ul>
+<li>Less features</li>
+<li>Less degree of polynomial features</li>
+<li>Apply generalization (tuning hyperparameters)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/model_complexity.jpg" alt="split"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="High-Level-Process">High Level Process<a class="anchor-link" href="#High-Level-Process">&#182;</a></h2>
 </div>
 </div>
@@ -34661,7 +34747,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Splitting">Data Splitting<a class="anchor-link" href="#Data-Splitting">&#182;</a></h2>
+<h2 id="Train-Test-Data-Splitting">Train Test Data Splitting<a class="anchor-link" href="#Train-Test-Data-Splitting">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -34676,7 +34762,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[265]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">21</span>  <span class="c1"># number of samples</span>
@@ -34705,7 +34791,7 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[117]:</div>
+<div class="prompt output_prompt">Out[265]:</div>
 
 
 
@@ -34735,7 +34821,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[266]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -34751,18 +34837,18 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[118]:</div>
+<div class="prompt output_prompt">Out[266]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>   x1  x2  x3     y
-0   3  18   9  13.6
-1   5  15   8  25.9
-2   4  21  14  19.8
-3  16   2  20  19.0
-4  17  11  16  22.7</pre>
+0  10  17  12  21.0
+1  12   5   9  16.9
+2  18  13   2  27.0
+3  11  19  17  22.0
+4  18  13  10  24.4</pre>
 </div>
 
 </div>
@@ -34785,7 +34871,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[267]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">traindf</span><span class="p">,</span> <span class="n">testdf</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">mydf</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
@@ -34798,7 +34884,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[268]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">traindf</span><span class="p">))</span>
@@ -34852,7 +34938,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[269]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span><span class="s1">&#39;x2&#39;</span><span class="p">,</span><span class="s1">&#39;x3&#39;</span><span class="p">]</span>
@@ -34876,7 +34962,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[270]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span> <span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
@@ -34929,7 +35015,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[271]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
@@ -34942,7 +35028,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[272]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -34982,14 +35068,14 @@ memory usage: 168.0+ bytes
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>suffle=True</strong></p>
+<p><strong>shuffle=True</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[273]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -35002,7 +35088,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[274]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -35023,13 +35109,13 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[ 0  1  2  3  4  5  6  8  9 11 12 13 14 16 17 18 19 20] [ 7 10 15]
-[ 0  1  2  3  5  6  7  9 10 12 13 14 15 16 17 18 19 20] [ 4  8 11]
-[ 0  1  2  4  5  7  8  9 10 11 12 13 14 15 16 18 19 20] [ 3  6 17]
-[ 0  1  2  3  4  5  6  7  8 10 11 12 14 15 16 17 18 19] [ 9 13 20]
-[ 0  1  2  3  4  5  6  7  8  9 10 11 13 15 16 17 18 20] [12 14 19]
-[ 0  1  2  3  4  6  7  8  9 10 11 12 13 14 15 17 19 20] [ 5 16 18]
-[ 3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] [0 1 2]
+<pre>[ 0  2  4  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] [1 3 5]
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 15 17 18 19 20] [13 14 16]
+[ 0  1  2  3  4  5  6  9 10 11 12 13 14 15 16 17 19 20] [ 7  8 18]
+[ 0  1  2  3  4  5  6  7  8  9 10 12 13 14 16 17 18 20] [11 15 19]
+[ 1  2  3  4  5  6  7  8  9 11 13 14 15 16 17 18 19 20] [ 0 10 12]
+[ 0  1  2  3  5  6  7  8  9 10 11 12 13 14 15 16 18 19] [ 4 17 20]
+[ 0  1  3  4  5  7  8 10 11 12 13 14 15 16 17 18 19 20] [2 6 9]
 </pre>
 </div>
 </div>
@@ -35052,7 +35138,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[275]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loo</span> <span class="o">=</span> <span class="n">LeaveOneOut</span><span class="p">()</span>
@@ -35065,7 +35151,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">loo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -35117,7 +35203,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[277]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span>
@@ -35133,24 +35219,24 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[129]:</div>
+<div class="prompt output_prompt">Out[277]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>    x1  x2  x3
-0    3  18   9
-1    5  15   8
-2    4  21  14
-3   16   2  20
-4   17  11  16
+0   10  17  12
+1   12   5   9
+2   18  13   2
+3   11  19  17
+4   18  13  10
 ..  ..  ..  ..
-16   7  12   2
-17  12  13  13
-18  21   1  12
-19  15   5   5
-20  20  18  19
+16  20  13  18
+17   1  17   1
+18  13  20  18
+19  11   4  15
+20   6   2  10
 
 [21 rows x 3 columns]</pre>
 </div>
@@ -35189,7 +35275,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
@@ -35207,7 +35293,7 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[130]:</div>
+<div class="prompt output_prompt">Out[278]:</div>
 
 
 
@@ -35237,7 +35323,7 @@ memory usage: 168.0+ bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[279]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35253,7 +35339,7 @@ memory usage: 168.0+ bytes
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[131]:</div>
+<div class="prompt output_prompt">Out[279]:</div>
 
 
 
@@ -35284,7 +35370,7 @@ Degree-2 additional features:  x^2</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[280]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35300,7 +35386,7 @@ Degree-2 additional features:  x^2</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[132]:</div>
+<div class="prompt output_prompt">Out[280]:</div>
 
 
 
@@ -35332,7 +35418,7 @@ Degree-3 additional features:  x^3</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[281]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35348,7 +35434,7 @@ Degree-3 additional features:  x^3</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[133]:</div>
+<div class="prompt output_prompt">Out[281]:</div>
 
 
 
@@ -35381,7 +35467,7 @@ Degree-3 additional features:  x^4</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35397,7 +35483,7 @@ Degree-3 additional features:  x^4</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[134]:</div>
+<div class="prompt output_prompt">Out[282]:</div>
 
 
 
@@ -35434,7 +35520,7 @@ Degree-3 additional features:  x^4</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[283]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;x1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">],</span>
@@ -35452,7 +35538,7 @@ Degree-3 additional features:  x^4</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[135]:</div>
+<div class="prompt output_prompt">Out[283]:</div>
 
 
 
@@ -35485,7 +35571,7 @@ Degree-2 additional features:  x1^2,   x2^2,   x1:x2</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[284]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35501,7 +35587,7 @@ Degree-2 additional features:  x1^2,   x2^2,   x1:x2</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[136]:</div>
+<div class="prompt output_prompt">Out[284]:</div>
 
 
 
@@ -35534,7 +35620,7 @@ Degree-3 additional features:  x1^3,     x2^3    x1:x2^2    x2:x1^2</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[285]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35550,7 +35636,7 @@ Degree-3 additional features:  x1^3,     x2^3    x1:x2^2    x2:x1^2</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[137]:</div>
+<div class="prompt output_prompt">Out[285]:</div>
 
 
 
@@ -35592,7 +35678,7 @@ Degree-3 additional features:  x1^3,     x2^3    x1:x2^2    x2:x1^2</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[286]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">nan</span>
@@ -35612,7 +35698,7 @@ Degree-3 additional features:  x1^3,     x2^3    x1:x2^2    x2:x1^2</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[139]:</div>
+<div class="prompt input_prompt">In&nbsp;[287]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">imp</span> <span class="o">=</span> <span class="n">Imputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
@@ -35630,7 +35716,7 @@ Degree-3 additional features:  x1^3,     x2^3    x1:x2^2    x2:x1^2</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[139]:</div>
+<div class="prompt output_prompt">Out[287]:</div>
 
 
 
@@ -35661,7 +35747,7 @@ We can remove this problem by scaling down all the features to a same range.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[288]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="o">=</span><span class="n">mydf</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
@@ -35678,18 +35764,18 @@ We can remove this problem by scaling down all the features to a same range.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[140]:</div>
+<div class="prompt output_prompt">Out[288]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>   x1  x2  x3
-0   3  18   9
-1   5  15   8
-2   4  21  14
-3  16   2  20
-4  17  11  16</pre>
+0  10  17  12
+1  12   5   9
+2  18  13   2
+3  11  19  17
+4  18  13  10</pre>
 </div>
 
 </div>
@@ -35721,7 +35807,7 @@ We can remove this problem by scaling down all the features to a same range.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="prompt input_prompt">In&nbsp;[289]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
@@ -35743,7 +35829,7 @@ We can remove this problem by scaling down all the features to a same range.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="prompt input_prompt">In&nbsp;[290]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35759,17 +35845,17 @@ We can remove this problem by scaling down all the features to a same range.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[142]:</div>
+<div class="prompt output_prompt">Out[290]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.        ,  0.84210526,  0.08333333],
-       [ 0.14285714,  0.68421053,  0.        ],
-       [ 0.07142857,  1.        ,  0.5       ],
-       [ 0.92857143,  0.        ,  1.        ],
-       [ 1.        ,  0.47368421,  0.66666667]])</pre>
+<pre>array([[ 0.        ,  0.85714286,  0.66666667],
+       [ 0.25      ,  0.        ,  0.46666667],
+       [ 1.        ,  0.57142857,  0.        ],
+       [ 0.125     ,  1.        ,  1.        ],
+       [ 1.        ,  0.57142857,  0.53333333]])</pre>
 </div>
 
 </div>
@@ -35792,7 +35878,7 @@ data_max_: maximum value of the feature (before scaling)</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="prompt input_prompt">In&nbsp;[291]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">scaler</span><span class="o">.</span><span class="n">data_min_</span><span class="p">,</span> <span class="n">scaler</span><span class="o">.</span><span class="n">data_max_</span><span class="p">)),</span> 
@@ -35810,16 +35896,16 @@ data_max_: maximum value of the feature (before scaling)</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[143]:</div>
+<div class="prompt output_prompt">Out[291]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>    data_min  data_max
-x1       3.0      17.0
-x2       2.0      21.0
-x3       8.0      20.0</pre>
+x1      10.0      18.0
+x2       5.0      19.0
+x3       2.0      17.0</pre>
 </div>
 
 </div>
@@ -35853,7 +35939,7 @@ x3       8.0      20.0</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="prompt input_prompt">In&nbsp;[292]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -35875,7 +35961,7 @@ x3       8.0      20.0</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="prompt input_prompt">In&nbsp;[293]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -35891,17 +35977,17 @@ x3       8.0      20.0</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[145]:</div>
+<div class="prompt output_prompt">Out[293]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[-0.97332853,  0.6979317 , -0.98782916],
-       [-0.64888568,  0.24275885, -1.21233579],
-       [-0.81110711,  1.15310455,  0.13470398],
-       [ 1.13554995, -1.72965682,  1.48174374],
-       [ 1.29777137, -0.36413828,  0.58371723]])</pre>
+<pre>array([[-1.08972474,  0.75      ,  0.41169348],
+       [-0.5161854 , -1.75      , -0.20584674],
+       [ 1.2044326 , -0.08333333, -1.64677394],
+       [-0.80295507,  1.16666667,  1.4409272 ],
+       [ 1.2044326 , -0.08333333,  0.        ]])</pre>
 </div>
 
 </div>
@@ -35922,7 +36008,7 @@ After the data transformation step above, scaler will have the mean and variance
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="prompt input_prompt">In&nbsp;[294]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">scaler</span><span class="o">.</span><span class="n">mean_</span><span class="p">,</span> <span class="n">scaler</span><span class="o">.</span><span class="n">var_</span><span class="p">)),</span> 
@@ -35940,16 +36026,16 @@ After the data transformation step above, scaler will have the mean and variance
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[146]:</div>
+<div class="prompt output_prompt">Out[294]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>    mean  variance
-x1   9.0     38.00
-x2  13.4     43.44
-x3  13.4     19.84</pre>
+x1  13.8     12.16
+x2  13.4     23.04
+x3  10.0     23.60</pre>
 </div>
 
 </div>
@@ -35997,10 +36083,10 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[295]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span>
 </pre></div>
 
 </div>
@@ -36013,18 +36099,51 @@ x3  13.4     19.84</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[147]:</div>
+<div class="prompt output_prompt">Out[295]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(   x1  x2  x3
- 0   3  18   9
- 1   5  15   8
- 2   4  21  14
- 3  16   2  20
- 4  17  11  16, array([14, 16, -1,  8, -5]))</pre>
+<pre>   x1  x2  x3
+0  10  17  12
+1  12   5   9
+2  18  13   2
+3  11  19  17
+4  18  13  10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[296]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[296]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([14, 16, -1,  8, -5])</pre>
 </div>
 
 </div>
@@ -36043,7 +36162,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="prompt input_prompt">In&nbsp;[297]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_pipe</span> <span class="o">=</span> <span class="n">make_pipeline</span> <span class="p">(</span>
@@ -36064,7 +36183,7 @@ x3  13.4     19.84</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[148]:</div>
+<div class="prompt output_prompt">Out[297]:</div>
 
 
 
@@ -36081,7 +36200,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[298]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_pipe</span>
@@ -36097,7 +36216,7 @@ x3  13.4     19.84</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[149]:</div>
+<div class="prompt output_prompt">Out[298]:</div>
 
 
 
@@ -36123,7 +36242,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[299]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># execute the pipeline</span>
@@ -36155,6 +36274,39 @@ x3  13.4     19.84</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[300]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_pipe</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[300]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>sklearn.pipeline.Pipeline</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -36173,7 +36325,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[301]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -36190,7 +36342,7 @@ x3  13.4     19.84</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[151]:</div>
+<div class="prompt output_prompt">Out[301]:</div>
 
 
 
@@ -36223,7 +36375,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="prompt input_prompt">In&nbsp;[302]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
@@ -36236,7 +36388,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kf</span>
@@ -36252,7 +36404,7 @@ x3  13.4     19.84</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[153]:</div>
+<div class="prompt output_prompt">Out[303]:</div>
 
 
 
@@ -36269,7 +36421,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[154]:</div>
+<div class="prompt input_prompt">In&nbsp;[304]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -36317,7 +36469,7 @@ x3  13.4     19.84</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">&#182;</a></h1>
+<h1 id="Regression">Regression<a class="anchor-link" href="#Regression">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -36325,62 +36477,247 @@ x3  13.4     19.84</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Library">The Library<a class="anchor-link" href="#The-Library">&#182;</a></h2>
+<h2 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-Concept">The Concept<a class="anchor-link" href="#The-Concept">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Linear Regression establishes a relationship between <strong>dependent variable (Y)</strong> and one or more <strong>independent variables (X)</strong> using a best fit straight line (also known as <strong>regression line</strong>).</p>
+<ul>
+<li>The objective of linear regression modeling is to find the most <strong>optimum equation</strong> that <strong>best explain</strong> the data</li>
+<li><strong>Optimum</strong> equation is defined as the one that has the least cost (error)</li>
+</ul>
+<p>Once we had derived the <strong>optimum equation</strong>, we can use the model to predict target $Y'$ base on new variables $X$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Assumptions">Assumptions<a class="anchor-link" href="#Assumptions">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below are conditions for the <strong>least-squares estimator - used by linear regression</strong> to possess desirable properties; in particular, these assumptions imply that the <strong>parameter estimates</strong> will be <strong>unbiased, consistent, and efficient</strong> in the class of linear unbiased estimators.</p>
+<h4 id="Classical-Assumptions">Classical Assumptions<a class="anchor-link" href="#Classical-Assumptions">&#182;</a></h4><ul>
+<li><p>The sample is representative of the population for the inference prediction<br>
+  Question how is the data being gathered, is it convincing that it represents the population  ?</p>
+</li>
+<li><p>Number of observations <strong>must be larger</strong> than number of independent variables<br>
+  Check the length of observations &gt;= column length of data</p>
+</li>
+</ul>
+<h4 id="Assumptions-On-Dependent-Variable">Assumptions On Dependent Variable<a class="anchor-link" href="#Assumptions-On-Dependent-Variable">&#182;</a></h4><ul>
+<li>Must not be a categorical data type  </li>
+</ul>
+<h4 id="Assumptions-On-Independent-Variable">Assumptions On Independent Variable<a class="anchor-link" href="#Assumptions-On-Independent-Variable">&#182;</a></h4><ul>
+<li><p>The independent variables are measured with <strong>no error</strong>, that is observations must be a set of known constants. (Note: If this is not so, modeling may be done instead using errors-in-variables model techniques)</p>
+</li>
+<li><p><strong>Each</strong> independent variable are <strong>linearly correclated with outcome</strong>, when other independent variables are held constant. <strong>Matrix scatter plot and correlation calculation</strong> can validate this. Generally correlation of 0.7 and above are considered good.</p>
+</li>
+<li><p><strong>NO Multicollinearity</strong> amont predictors - Meaning little or not linear correlationamong the predictors, i.e. it is not possible to express any predictor as a linear combination of the others, if so, we wouldn't know which predictor actually influene the outcome.</p>
+</li>
+</ul>
+<h4 id="Assumptions-On-Errors-(residuals)">Assumptions On Errors (residuals)<a class="anchor-link" href="#Assumptions-On-Errors-(residuals)">&#182;</a></h4><ul>
+<li><p>The <strong>errors are random numbers</strong>, with means of <strong>zero</strong></p>
+<ul>
+<li>There should not be a pattern in the residuals distribution  </li>
+<li>If the residuals are <strong>normally distributed</strong> with <strong>mean of zero</strong>, then it is considered a bonus which we can perform statistical significant testing. $e = N(0,\sigma^2)$  </li>
+<li>Normality on redisuals implies that the dependent variable are also normally distributed (if and only if <strong>dependent variable is not stochastic</strong>)  </li>
+</ul>
+</li>
+<li><p>The <strong>errors are uncorrelated</strong> - that is, the variance–covariance matrix of the errors is diagonal and each non-zero element is the variance of the error</p>
+</li>
+<li><p><strong>Homoscedasticity</strong> - The variance of the error is constant across observations. If heteroscedasticity exist, scatter plot of response and predictor will look like below  <img src="./img/heteroscedastic.jpg" alt="Heteroscedasticity"></p>
+<ul>
+<li>The Goldfeld-Quandt Test can test for heteroscedasticity  </li>
+<li>If homoscedasticity is present, a non-linear correction might fix the problem  </li>
+<li>Otherwise, weighted least squares or other methods might instead be used.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Are-These-Assumptions-to-be-followed-strictly-?">Are These Assumptions to be followed strictly ?<a class="anchor-link" href="#Are-These-Assumptions-to-be-followed-strictly-?">&#182;</a></h4><p>In real life, actual data <strong>rarely satisfies</strong> the assumptions, that is:</p>
+<ul>
+<li>Method is used even though the assumptions are not true  </li>
+<li>Variation from the assumptions can sometimes be used as a measure of how far the model is from being useful  </li>
+<li>Many of these assumptions may be relaxed in more advanced treatments  </li>
+</ul>
+<p>Reports of statistical analyses usually include analyses of tests on the sample data and methodology for the fit and usefulness of the model.</p>
+<h4 id="Additional-Notes-On-Independent-variables">Additional Notes On Independent variables<a class="anchor-link" href="#Additional-Notes-On-Independent-variables">&#182;</a></h4><ul>
+<li>Adding more variables to a regression procedure may <strong>overfit</strong> the model and make things worse. The idea is to pick the <strong>best</strong> variables  </li>
+<li><p>Some independent variable(s) are better at predicting the outocme, some contribute little or nothing</p>
+<p>Because of <strong>multicollinearity</strong> and <strong>overfitting</strong>, there is a fair amount of <strong>prep-work</strong> to be performed BEFORE conducting multiple regression analysis - if one is to do it properly.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Equations">Equations<a class="anchor-link" href="#Equations">&#182;</a></h3><h4 id="Terminology">Terminology<a class="anchor-link" href="#Terminology">&#182;</a></h4><p><strong>Simple</strong> Linear Regression (classical) consists of just on predictor.  aka Single Variable Linear Regression.<br>
+<strong>Multiple</strong> Linear Regression (classical)    consists of multiple predictors.  aka. Multiple Variable Linear Regression.</p>
+<p><strong>Multivariate</strong> Regression (aka. <strong>General Linear Regression</strong>) is linear regression where the outocme is a vector (not scalar).   Not the same as multiple variable linear regression.</p>
+<h4 id="Ordinary-Least-Square-Estimatation">Ordinary Least Square Estimatation<a class="anchor-link" href="#Ordinary-Least-Square-Estimatation">&#182;</a></h4><p><strong>Regression Model - Actual Outcome</strong></p>
+<p>$\quad y_i = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ...  \beta_k x_k + e_i$<br>
+$\quad$where:<br>
+$\quad \quad y_i$ = actual outcome value<br>
+$\quad \quad \beta_0$ = intercept, when all independent variables are 0<br>
+$\quad \quad \beta_k$ = parameter for independent variable k
+$\quad \quad e_i$ = error for observation i</p>
+<p><strong>Regression Equation - Predicted Outcome</strong></p>
+<p>$\quad E(y_i) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ...  \beta_k x_k$</p>
+<p>$\quad h_\theta(X)~=~\theta_0~+~\theta_1 \cdot X$  , error terms assumed to be zero<br>
+$\quad$where:<br>
+$\quad \quad h_\theta(x)$ = hypothesis target (dependant variable)<br>
+$\quad \quad \theta_0$ = intercept<br>
+$\quad \quad \theta_1$ = slopes or coefficients<br>
+$\quad \quad X$ = independant variables (predictors)</p>
+<p>$\quad$Take note that each $\theta_0$ and $\theta_1$ represents multi-variate data in matrix form.</p>
+<h4 id="Cost-Function">Cost Function<a class="anchor-link" href="#Cost-Function">&#182;</a></h4><ul>
+<li>The goal is to find some values of θ (known as coefficients), so we can minimize the difference between real values $y$  and predicted values ($h(x)$)  </li>
+<li>Mathematically, this means finding the minimum value of cost function $J$ and derive the  optimum value of $\theta_0$ and $\theta_1$   </li>
+<li>Linear regression uses Total Sum Of Square calculation on Error as Cost Function, denoted by $J$ below:  </li>
+</ul>
+<p>$\quad \quad J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=1}^m ((h_\theta(x^i)-y^i)^2$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OLS-Performance">OLS Performance<a class="anchor-link" href="#OLS-Performance">&#182;</a></h3><h4 id="Fundamental">Fundamental<a class="anchor-link" href="#Fundamental">&#182;</a></h4><p>OLS performance is mainly on error analysis.</p>
+<p><strong>SST</strong> (<strong>total</strong> sample variability) = <strong>SSR</strong> (<strong>explained</strong> variability) + <strong>SSE</strong> (<strong>unexplained</strong> variability) :</p>
+<p><img src="./img/explain_sst.jpg" alt="SST Explained"></p>
+<h4 id="Root-Mean-Square-Error-(RMSE)">Root Mean Square Error (RMSE)<a class="anchor-link" href="#Root-Mean-Square-Error-(RMSE)">&#182;</a></h4><ul>
+<li>RMSE = The square root of the average of the total sum of square error<br>
+$RMSE = \sqrt{\frac{SSE}{n}} = \sqrt \frac{\sum^n_{i=1}{(y_i - \hat y_i)^2}}{n}$  </li>
+<li>It measure <strong>how close</strong> observed data points are to the model’s predicted values  </li>
+<li>It has a <strong>unit of Y</strong>, therefore <strong>cannot used for comparison models with different outcome</strong>  </li>
+<li>It can be used to compare different model with the similar outcome but different predictors, however, adjusted $R^2$ is better in this  </li>
+<li>Low RMSE value indicates better fit  </li>
+<li>Compared to the similar Mean Absolute Error, RMSE amplifies and severely punishes large errors  </li>
+<li>SSE is not usable for performance measurement becuase it increases with number of datapoints.  RMSE does not suffer this as it is divided by number of datapoints  </li>
+<li><strong>Residual Standard Errror (RSE)</strong>  is very similar to <strong>RMSE</strong>, except that RSE use division by degree of freedom  </li>
+</ul>
+<blockquote><p><strong>RMSE</strong> is excellent general measurement to assess <strong>the accuracy</strong> of a model</p>
+</blockquote>
+<h4 id="$r$,-$R^2$-and-$R^2_{adj}$">$r$, $R^2$ and $R^2_{adj}$<a class="anchor-link" href="#$r$,-$R^2$-and-$R^2_{adj}$">&#182;</a></h4><p><strong>r - Correlation Coeeficient</strong></p>
+<ul>
+<li>Correlation, often measured as a correlation coefficient - indicates the <strong>strength</strong> and direction of a linear relationship between two variables (for example model output and observed values)  </li>
+<li>The best known is the Pearson product-moment correlation coefficient (also called Pearson correlation coefficient or the sample correlation coefficient)  </li>
+<li>It is a ratio (has no unit)<br>
+$Pearson Correlation, r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
+{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}} \quad, \quad 0=&lt;r&lt;=1$  </li>
+</ul>
+<blockquote><p><strong>Scatter plot</strong> predicted and actual outcome reveal visually the good-fit of the model, good correlation also means tigther the scatter plots with less variability</p>
+</blockquote>
+<p><strong>R-Squared - Coefficient Determination</strong></p>
+<p>$R^2 = r^2 = \frac{SSR}{SST} = 1-\frac{SSE}{SST}, \quad 0 &lt;= R^2 &lt;= 1$</p>
+<ul>
+<li>$R^2$ is a ratio (unit-less) indicating how much <strong>variations are explained</strong> by regression model  </li>
+<li>$R^2$ compares the fit model to a 'baseline' model (SST)  </li>
+<li><p>High $R^2$ value indicates high SSR and low SSE, which means the model is <strong>more precise</strong></p>
+<ul>
+<li><strong>Perfect Case</strong>  - no errors (SSE=0), $R^2$ will be 1.   </li>
+<li><strong>Worst Case</strong> - no improvement over baseline,  (coefficient=0, SSR=0, aka horizontally flat line), $R^2$ will be 0.  </li>
+</ul>
+</li>
+<li><p>One pitfall of $R^2$ is that it <strong>always increases</strong> when additional variables are added to the model. The increase can be artificial as it doesn't improve the model fit - which is called <strong>over-fitting</strong>.  A <strong>remediation</strong> to this is $R^2_{adj}$</p>
+</li>
+</ul>
+<p><strong>Adjusted R-Squared</strong></p>
+<ul>
+<li><p>Adjusted $R^2$ incorporates the number of coefficients and observations into the calculation<br>
+$R_{adj}^2 = 1- \bigg( \frac{n-1}{n-p}\bigg) \frac{SSE}{SST}$<br>
+$\quad$ p = number of coefficients (including intercept)<br>
+$\quad$ n = number of observations</p>
+</li>
+<li><p>Adjusted $R^2$ will <strong>decrease</strong> when adding predictors that doesn't increase the model fit that make up for the loss of degrees of freedom</p>
+</li>
+<li>Likewise, it will <strong>increase</strong> as predictors are added if the increase in model fit is <strong>worthwhile</strong>  </li>
+</ul>
+<blockquote><p><strong>$R^2_{adj}$</strong> is useful to <strong>compare models with a different number of predictors</strong>, hence good for feature selection</p>
+</blockquote>
+<p><strong>Training Data and Test Data (out of sample)</strong></p>
+<ul>
+<li>A built model based on <strong>training data</strong> always has $R^2$ between 0 &lt;= $R^2$ &lt;= 1  </li>
+<li>However, if the model is <strong>underfit</strong>, <strong>test data</strong> may reveal $R^2$ &lt;= 0  </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Feature-Selection">Feature Selection<a class="anchor-link" href="#Feature-Selection">&#182;</a></h3><ol>
+<li><p>The <strong>strength and importance</strong> of an independent variable <strong>is not measured</strong> by its correlation or coefficient with the dependent variable - It only hold true if there is only single independent variable</p>
+</li>
+<li><p><strong>Multicolinearity</strong> has below independent variable diversion and therefore must be removed:</p>
+<ul>
+<li>It increases the p-value to make it insignificant </li>
+<li>It divert a coef direction (eg. positive becomes negative)  </li>
+</ul>
+</li>
+<li><p>Perform <strong>transformation</strong> (such as log, quadradric) if the plot of independet vs dependent variables shows Heteroscedasticity</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Run-The-Code">Run The Code<a class="anchor-link" href="#Run-The-Code">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[155]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span>    <span class="k">import</span> <span class="n">LinearRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span>         <span class="k">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span>       <span class="k">as</span> <span class="nn">sm</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Math">The Math<a class="anchor-link" href="#The-Math">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-Emulation">Data Emulation<a class="anchor-link" href="#Data-Emulation">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[156]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">200</span>  <span class="c1"># number of samples</span>
 <span class="n">I</span> <span class="o">=</span> <span class="mi">250</span>  <span class="c1"># intercept value</span>
 <span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>  <span class="c1"># Error</span>
-<span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="n">X2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="n">X3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">X1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">X2</span> <span class="o">+</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">X3</span> <span class="o">+</span> <span class="n">E</span> <span class="o">+</span> <span class="n">I</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="n">x3</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">x2</span> <span class="o">+</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="n">E</span> <span class="o">+</span> <span class="n">I</span>
 </pre></div>
 
 </div>
@@ -36399,53 +36736,30 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="s1">&#39;Y&#39;</span><span class="p">:</span><span class="n">Y</span><span class="p">,</span>
-    <span class="s1">&#39;X1&#39;</span><span class="p">:</span><span class="n">X1</span><span class="p">,</span>
-    <span class="s1">&#39;X2&#39;</span><span class="p">:</span><span class="n">X2</span><span class="p">,</span>
-    <span class="s1">&#39;X3&#39;</span><span class="p">:</span><span class="n">X3</span>
+    <span class="s1">&#39;x1&#39;</span><span class="p">:</span><span class="n">x1</span><span class="p">,</span>
+    <span class="s1">&#39;x2&#39;</span><span class="p">:</span><span class="n">x2</span><span class="p">,</span>
+    <span class="s1">&#39;x3&#39;</span><span class="p">:</span><span class="n">x3</span><span class="p">,</span>
+    <span class="s1">&#39;x4&#39;</span><span class="p">:</span><span class="n">x4</span>
 <span class="p">})</span>
 <span class="n">mydf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">mydf</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[157]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>    X1   X2   X3      Y
-0  109  167  134  335.5
-1   45   23  155  306.6
-2  173  137   71  322.0
-3  176  128  112  342.8
-4   39  192   41  321.6</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-Validation">Data Validation<a class="anchor-link" href="#Data-Validation">&#182;</a></h3>
+<h4 id="Data-Validation">Data Validation<a class="anchor-link" href="#Data-Validation">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -36453,16 +36767,8 @@ x3  13.4     19.84</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ensure there is <strong>no col-linearity</strong> among the features used</p>
+<h5 id="Colleration-Check">Colleration Check<a class="anchor-link" href="#Colleration-Check">&#182;</a></h5><p>Ensure there is <strong>no col-linearity</strong> among the features used</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Colleration-Check">Colleration Check<a class="anchor-link" href="#Colleration-Check">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -36477,10 +36783,10 @@ x3  13.4     19.84</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[158]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_corr</span> <span class="o">=</span> <span class="n">mydf</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_corr</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 <span class="n">my_corr</span>
 </pre></div>
 
@@ -36494,17 +36800,17 @@ x3  13.4     19.84</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[158]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>          X1        X2        X3         Y
-X1  1.000000  0.103840 -0.055279  0.240271
-X2  0.103840  1.000000 -0.031845  0.495251
-X3 -0.055279 -0.031845  1.000000  0.782254
-Y   0.240271  0.495251  0.782254  1.000000</pre>
+<pre>          x1        x2        x3        x4
+x1  1.000000  0.089132 -0.003379 -0.030738
+x2  0.089132  1.000000  0.054852  0.089682
+x3 -0.003379  0.054852  1.000000  0.717366
+x4 -0.030738  0.089682  0.717366  1.000000</pre>
 </div>
 
 </div>
@@ -36524,7 +36830,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_corr</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">()</span><span class="o">.</span><span class="n">set_precision</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -36540,77 +36846,77 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[159]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col0 {
+    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col0 {
             background-color:  #023858;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col1 {
-            background-color:  #ebe6f2;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col2 {
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col1 {
+            background-color:  #faf2f8;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col2 {
             background-color:  #fff7fb;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col3 {
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col3 {
             background-color:  #fff7fb;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col0 {
-            background-color:  #e7e3f0;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col1 {
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col0 {
+            background-color:  #eee8f3;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col1 {
             background-color:  #023858;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col2 {
-            background-color:  #fcf4fa;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col3 {
-            background-color:  #b4c4df;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col0 {
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col2 {
+            background-color:  #f7f0f7;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col3 {
+            background-color:  #eee8f3;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col0 {
+            background-color:  #fbf4f9;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col1 {
             background-color:  #fff7fb;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col1 {
-            background-color:  #fff7fb;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col2 {
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col2 {
             background-color:  #023858;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col3 {
-            background-color:  #1379b5;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col0 {
-            background-color:  #c6cce3;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col1 {
-            background-color:  #6fa7ce;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col2 {
-            background-color:  #0568a3;
-        }    #T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col3 {
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col3 {
+            background-color:  #0f76b3;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col0 {
+            background-color:  #fff7fb;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col1 {
+            background-color:  #faf2f8;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col2 {
+            background-color:  #1278b4;
+        }    #T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col3 {
             background-color:  #023858;
         }</style>  
-<table id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7" > 
+<table id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7" > 
 <thead>    <tr> 
         <th class="blank level0" ></th> 
-        <th class="col_heading level0 col0" >X1</th> 
-        <th class="col_heading level0 col1" >X2</th> 
-        <th class="col_heading level0 col2" >X3</th> 
-        <th class="col_heading level0 col3" >Y</th> 
+        <th class="col_heading level0 col0" >x1</th> 
+        <th class="col_heading level0 col1" >x2</th> 
+        <th class="col_heading level0 col2" >x3</th> 
+        <th class="col_heading level0 col3" >x4</th> 
     </tr></thead> 
 <tbody>    <tr> 
-        <th id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7level0_row0" class="row_heading level0 row0" >X1</th> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col0" class="data row0 col0" >1</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col1" class="data row0 col1" >0.1</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col2" class="data row0 col2" >-0.055</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row0_col3" class="data row0 col3" >0.24</td> 
+        <th id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7level0_row0" class="row_heading level0 row0" >x1</th> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col0" class="data row0 col0" >1</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col1" class="data row0 col1" >0.089</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col2" class="data row0 col2" >-0.0034</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row0_col3" class="data row0 col3" >-0.031</td> 
     </tr>    <tr> 
-        <th id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7level0_row1" class="row_heading level0 row1" >X2</th> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col0" class="data row1 col0" >0.1</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col1" class="data row1 col1" >1</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col2" class="data row1 col2" >-0.032</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row1_col3" class="data row1 col3" >0.5</td> 
+        <th id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7level0_row1" class="row_heading level0 row1" >x2</th> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col0" class="data row1 col0" >0.089</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col1" class="data row1 col1" >1</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col2" class="data row1 col2" >0.055</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row1_col3" class="data row1 col3" >0.09</td> 
     </tr>    <tr> 
-        <th id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7level0_row2" class="row_heading level0 row2" >X3</th> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col0" class="data row2 col0" >-0.055</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col1" class="data row2 col1" >-0.032</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col2" class="data row2 col2" >1</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row2_col3" class="data row2 col3" >0.78</td> 
+        <th id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7level0_row2" class="row_heading level0 row2" >x3</th> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col0" class="data row2 col0" >-0.0034</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col1" class="data row2 col1" >0.055</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col2" class="data row2 col2" >1</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row2_col3" class="data row2 col3" >0.72</td> 
     </tr>    <tr> 
-        <th id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7level0_row3" class="row_heading level0 row3" >Y</th> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col0" class="data row3 col0" >0.24</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col1" class="data row3 col1" >0.5</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col2" class="data row3 col2" >0.78</td> 
-        <td id="T_a7fbe8c0_6c55_11e8_86ac_dc5360477bd7row3_col3" class="data row3 col3" >1</td> 
+        <th id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7level0_row3" class="row_heading level0 row3" >x4</th> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col0" class="data row3 col0" >-0.031</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col1" class="data row3 col1" >0.09</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col2" class="data row3 col2" >0.72</td> 
+        <td id="T_3c4b87b4_710a_11e8_a73f_dc5360477bd7row3_col3" class="data row3 col3" >1</td> 
     </tr></tbody> 
 </table> 
 </div>
@@ -36632,7 +36938,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_corr</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">()</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;0pt&#39;</span><span class="p">})</span>
@@ -36648,93 +36954,93 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[160]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col0 {
+    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col0 {
             background-color:  #023858;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col1 {
-            background-color:  #ebe6f2;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col1 {
+            background-color:  #faf2f8;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col2 {
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col2 {
             background-color:  #fff7fb;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col3 {
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col3 {
             background-color:  #fff7fb;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col0 {
-            background-color:  #e7e3f0;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col0 {
+            background-color:  #eee8f3;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col1 {
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col1 {
             background-color:  #023858;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col2 {
-            background-color:  #fcf4fa;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col2 {
+            background-color:  #f7f0f7;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col3 {
-            background-color:  #b4c4df;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col3 {
+            background-color:  #eee8f3;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col0 {
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col0 {
+            background-color:  #fbf4f9;
+            font-size:  0pt;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col1 {
             background-color:  #fff7fb;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col1 {
-            background-color:  #fff7fb;
-            font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col2 {
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col2 {
             background-color:  #023858;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col3 {
-            background-color:  #1379b5;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col3 {
+            background-color:  #0f76b3;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col0 {
-            background-color:  #c6cce3;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col0 {
+            background-color:  #fff7fb;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col1 {
-            background-color:  #6fa7ce;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col1 {
+            background-color:  #faf2f8;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col2 {
-            background-color:  #0568a3;
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col2 {
+            background-color:  #1278b4;
             font-size:  0pt;
-        }    #T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col3 {
+        }    #T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col3 {
             background-color:  #023858;
             font-size:  0pt;
         }</style>  
-<table id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7" > 
+<table id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7" > 
 <thead>    <tr> 
         <th class="blank level0" ></th> 
-        <th class="col_heading level0 col0" >X1</th> 
-        <th class="col_heading level0 col1" >X2</th> 
-        <th class="col_heading level0 col2" >X3</th> 
-        <th class="col_heading level0 col3" >Y</th> 
+        <th class="col_heading level0 col0" >x1</th> 
+        <th class="col_heading level0 col1" >x2</th> 
+        <th class="col_heading level0 col2" >x3</th> 
+        <th class="col_heading level0 col3" >x4</th> 
     </tr></thead> 
 <tbody>    <tr> 
-        <th id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7level0_row0" class="row_heading level0 row0" >X1</th> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col0" class="data row0 col0" >1</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col1" class="data row0 col1" >0.10384</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col2" class="data row0 col2" >-0.0552788</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row0_col3" class="data row0 col3" >0.240271</td> 
+        <th id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7level0_row0" class="row_heading level0 row0" >x1</th> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col0" class="data row0 col0" >1</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col1" class="data row0 col1" >0.0891317</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col2" class="data row0 col2" >-0.00337879</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row0_col3" class="data row0 col3" >-0.0307377</td> 
     </tr>    <tr> 
-        <th id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7level0_row1" class="row_heading level0 row1" >X2</th> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col0" class="data row1 col0" >0.10384</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col1" class="data row1 col1" >1</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col2" class="data row1 col2" >-0.0318449</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row1_col3" class="data row1 col3" >0.495251</td> 
+        <th id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7level0_row1" class="row_heading level0 row1" >x2</th> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col0" class="data row1 col0" >0.0891317</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col1" class="data row1 col1" >1</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col2" class="data row1 col2" >0.0548518</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row1_col3" class="data row1 col3" >0.0896824</td> 
     </tr>    <tr> 
-        <th id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7level0_row2" class="row_heading level0 row2" >X3</th> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col0" class="data row2 col0" >-0.0552788</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col1" class="data row2 col1" >-0.0318449</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col2" class="data row2 col2" >1</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row2_col3" class="data row2 col3" >0.782254</td> 
+        <th id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7level0_row2" class="row_heading level0 row2" >x3</th> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col0" class="data row2 col0" >-0.00337879</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col1" class="data row2 col1" >0.0548518</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col2" class="data row2 col2" >1</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row2_col3" class="data row2 col3" >0.717366</td> 
     </tr>    <tr> 
-        <th id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7level0_row3" class="row_heading level0 row3" >Y</th> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col0" class="data row3 col0" >0.240271</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col1" class="data row3 col1" >0.495251</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col2" class="data row3 col2" >0.782254</td> 
-        <td id="T_a801663a_6c55_11e8_b7d3_dc5360477bd7row3_col3" class="data row3 col3" >1</td> 
+        <th id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7level0_row3" class="row_heading level0 row3" >x4</th> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col0" class="data row3 col0" >-0.0307377</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col1" class="data row3 col1" >0.0896824</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col2" class="data row3 col2" >0.717366</td> 
+        <td id="T_3c5411fa_710a_11e8_ab8d_dc5360477bd7row3_col3" class="data row3 col3" >1</td> 
     </tr></tbody> 
 </table> 
 </div>
@@ -36749,16 +37055,16 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Matrix-Scatter-Plot">Matrix Scatter Plot<a class="anchor-link" href="#Matrix-Scatter-Plot">&#182;</a></h4>
+<h5 id="Matrix-Scatter-Plot">Matrix Scatter Plot<a class="anchor-link" href="#Matrix-Scatter-Plot">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">mydf</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">diagonal</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">diagonal</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">);</span>
 </pre></div>
 
 </div>
@@ -36777,7 +37083,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1150_0.png"
+<img src="index_files/index_1163_0.png"
 >
 </div>
 
@@ -36789,7 +37095,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span>
@@ -36812,19 +37118,13 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-162-21c373d82d1e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>matshow<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">.</span>corr<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      2</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>xticks<span class="ansi-yellow-intense-fg ansi-bold">(</span>range<span class="ansi-yellow-intense-fg ansi-bold">(</span>len<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">.</span>columns<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> X<span class="ansi-yellow-intense-fg ansi-bold">.</span>columns<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      3</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>yticks<span class="ansi-yellow-intense-fg ansi-bold">(</span>range<span class="ansi-yellow-intense-fg ansi-bold">(</span>len<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">.</span>columns<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> X<span class="ansi-yellow-intense-fg ansi-bold">.</span>columns<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      4</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>colorbar<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      5</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>show<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;numpy.ndarray&#39; object has no attribute &#39;corr&#39;</pre>
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_1164_0.png"
+>
 </div>
+
 </div>
 
 </div>
@@ -36835,7 +37135,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Modeling-(scikit-learn)">Modeling (scikit-learn)<a class="anchor-link" href="#Modeling-(scikit-learn)">&#182;</a></h2>
+<h4 id="Data-Preparation">Data Preparation<a class="anchor-link" href="#Data-Preparation">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -36843,26 +37143,18 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-Preparation">Data Preparation<a class="anchor-link" href="#Data-Preparation">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Preparing-Features-and-Dependent-Value">Preparing Features and Dependent Value<a class="anchor-link" href="#Preparing-Features-and-Dependent-Value">&#182;</a></h4>
+<h5 id="Preparing-Features-and-Dependent-Value">Preparing Features and Dependent Value<a class="anchor-link" href="#Preparing-Features-and-Dependent-Value">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span><span class="s1">&#39;X3&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span><span class="s1">&#39;x2&#39;</span><span class="p">,</span><span class="s1">&#39;x3&#39;</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">mydf</span><span class="p">[</span><span class="n">feature_cols</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">mydf</span><span class="o">.</span><span class="n">Y</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">mydf</span><span class="o">.</span><span class="n">Y</span> 
 </pre></div>
 
 </div>
@@ -36874,13 +37166,13 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Splitting-Data-Into-Training-and-Test-Sets">Splitting Data Into Training and Test Sets<a class="anchor-link" href="#Splitting-Data-Into-Training-and-Test-Sets">&#182;</a></h4>
+<h5 id="Splitting-Data-Into-Training-and-Test-Sets">Splitting Data Into Training and Test Sets<a class="anchor-link" href="#Splitting-Data-Into-Training-and-Test-Sets">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[164]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trainX</span><span class="p">,</span><span class="n">testX</span><span class="p">,</span><span class="n">trainY</span><span class="p">,</span><span class="n">testY</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
@@ -36890,18 +37182,41 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-11-18935983abcd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>trainX<span class="ansi-yellow-intense-fg ansi-bold">,</span>testX<span class="ansi-yellow-intense-fg ansi-bold">,</span>trainY<span class="ansi-yellow-intense-fg ansi-bold">,</span>testY <span class="ansi-yellow-intense-fg ansi-bold">=</span> train_test_split<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">,</span>Y<span class="ansi-yellow-intense-fg ansi-bold">,</span>test_size<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">0.2</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;train_test_split&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-The-Model">Create The Model<a class="anchor-link" href="#Create-The-Model">&#182;</a></h3>
+<h4 id="Create-The-Model">Create The Model<a class="anchor-link" href="#Create-The-Model">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>   <span class="c1"># create linear regression object</span>
@@ -36912,38 +37227,18 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[165]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Analyze-The-Model">Analyze The Model<a class="anchor-link" href="#Analyze-The-Model">&#182;</a></h3><h4 id="Intercept">Intercept<a class="anchor-link" href="#Intercept">&#182;</a></h4>
+<h4 id="Analyze-The-Model">Analyze The Model<a class="anchor-link" href="#Analyze-The-Model">&#182;</a></h4><h5 id="Intercept">Intercept<a class="anchor-link" href="#Intercept">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm</span><span class="o">.</span><span class="n">intercept_</span>
@@ -36953,38 +37248,18 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[166]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>261.86338364195512</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Coef">Coef<a class="anchor-link" href="#Coef">&#182;</a></h4>
+<h5 id="Coef">Coef<a class="anchor-link" href="#Coef">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm</span><span class="o">.</span><span class="n">coef_</span>
@@ -36994,30 +37269,10 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[167]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([ 0.09500028,  0.18333512,  0.31170093])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">lm</span><span class="o">.</span><span class="n">coef_</span><span class="p">)),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">,</span><span class="s1">&#39;coef&#39;</span><span class="p">]</span> <span class="p">)</span>
@@ -37027,41 +37282,18 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[168]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>  features      coef
-0       X1  0.095000
-1       X2  0.183335
-2       X3  0.311701</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="R-Squared">R-Squared<a class="anchor-link" href="#R-Squared">&#182;</a></h4>
+<h5 id="R-Squared">R-Squared<a class="anchor-link" href="#R-Squared">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trainPred</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">trainX</span> <span class="p">)</span>
@@ -37074,7 +37306,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r2_score</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainPred</span> <span class="p">)</span>
@@ -37084,41 +37316,21 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[170]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.94111943006081211</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Model-Performance">Model Performance<a class="anchor-link" href="#Model-Performance">&#182;</a></h3><h4 id="Run-Prediction-On-Train-Data">Run Prediction On Train Data<a class="anchor-link" href="#Run-Prediction-On-Train-Data">&#182;</a></h4>
+<h4 id="Model-Performance">Model Performance<a class="anchor-link" href="#Model-Performance">&#182;</a></h4><h5 id="Prediction-on-Train-Data">Prediction on Train Data<a class="anchor-link" href="#Prediction-on-Train-Data">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trainPred</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">trainX</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trainY_</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">trainX</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -37130,39 +37342,20 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Mean-Absolute-Error-(MAE)">Mean Absolute Error (MAE)<a class="anchor-link" href="#Mean-Absolute-Error-(MAE)">&#182;</a></h4>
+<p><strong>Mean Absolute Error (MAE)</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[503]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainPred</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainY_</span> <span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[503]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>4.741974639673403</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -37171,39 +37364,20 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Mean-Squared-Error-(MSE)">Mean Squared Error (MSE)<a class="anchor-link" href="#Mean-Squared-Error-(MSE)">&#182;</a></h4>
+<p><strong>Mean Squared Error (MSE)</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainPred</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainY_</span> <span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[172]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>29.23153044093781</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -37212,39 +37386,20 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Root-Mean-Squared-Error-(RMSE)">Root Mean Squared Error (RMSE)<a class="anchor-link" href="#Root-Mean-Squared-Error-(RMSE)">&#182;</a></h4>
+<p><strong>Root Mean Squared Error (RMSE)</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[505]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainPred</span> <span class="p">)</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">trainY</span><span class="p">,</span> <span class="n">trainY_</span> <span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[505]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5.4462895226560715</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -37253,16 +37408,16 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Test-Prediction">Test Prediction<a class="anchor-link" href="#Test-Prediction">&#182;</a></h3>
+<h5 id="Prediction-on-Test-Data">Prediction on Test Data<a class="anchor-link" href="#Prediction-on-Test-Data">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[506]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testPred</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">testX</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testY_</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">testX</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -37272,43 +37427,36 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[507]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span> <span class="n">testY</span><span class="p">,</span> <span class="n">testPred</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span> <span class="n">testY</span><span class="p">,</span> <span class="n">testY_</span> <span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[507]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5.1577186218748112</pre>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">testY</span><span class="p">,</span> <span class="n">testY_</span> <span class="p">)</span>
+</pre></div>
 
 </div>
-
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[508]:</div>
+<div class="prompt input_prompt">In&nbsp;[331]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">testY</span><span class="p">,</span> <span class="n">testPred</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">testY</span><span class="p">,</span> <span class="n">testY_</span> <span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -37321,46 +37469,13 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[508]:</div>
+<div class="prompt output_prompt">Out[331]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>37.01823207145128</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[509]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">mean_squared_error</span><span class="p">(</span> <span class="n">testY</span><span class="p">,</span> <span class="n">testPred</span> <span class="p">)</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[509]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>6.084261012764926</pre>
+<pre>6.4844871580983785</pre>
 </div>
 
 </div>
@@ -37388,7 +37503,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[510]:</div>
+<div class="prompt input_prompt">In&nbsp;[332]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">traindf</span><span class="p">,</span> <span class="n">testdf</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">mydf</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
@@ -37404,16 +37519,17 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-The-Model---Equation-Method">Create The Model - Equation Method<a class="anchor-link" href="#Create-The-Model---Equation-Method">&#182;</a></h3>
+<h3 id="Create-The-Model---Equation-Method">Create The Model - Equation Method<a class="anchor-link" href="#Create-The-Model---Equation-Method">&#182;</a></h3><p>This method assume all data (dependend and independent variables) are in <strong>single dataframe</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[511]:</div>
+<div class="prompt input_prompt">In&nbsp;[335]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;Y ~ X1 + X2 + X3&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">traindf</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;Y ~ x1 + x2 + x3&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">traindf</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -37431,7 +37547,7 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[512]:</div>
+<div class="prompt input_prompt">In&nbsp;[336]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
@@ -37453,27 +37569,27 @@ Y   0.240271  0.495251  0.782254  1.000000</pre>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                            OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                      Y   R-squared:                       0.938
-Model:                            OLS   Adj. R-squared:                  0.937
-Method:                 Least Squares   F-statistic:                     793.5
-Date:                Sat, 17 Mar 2018   Prob (F-statistic):           3.32e-94
-Time:                        21:19:09   Log-Likelihood:                -503.10
-No. Observations:                 160   AIC:                             1014.
-Df Residuals:                     156   BIC:                             1026.
+Dep. Variable:                      Y   R-squared:                       0.947
+Model:                            OLS   Adj. R-squared:                  0.946
+Method:                 Least Squares   F-statistic:                     936.2
+Date:                Fri, 15 Jun 2018   Prob (F-statistic):           1.74e-99
+Time:                        10:32:45   Log-Likelihood:                -492.05
+No. Observations:                 160   AIC:                             992.1
+Df Residuals:                     156   BIC:                             1004.
 Df Model:                           3                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P&gt;|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Intercept    258.9487      1.456    177.853      0.000     256.073     261.825
-X1             0.1119      0.008     13.950      0.000       0.096       0.128
-X2             0.1984      0.008     24.342      0.000       0.182       0.214
-X3             0.2964      0.008     36.061      0.000       0.280       0.313
+Intercept    260.2819      1.375    189.257      0.000     257.565     262.999
+x1             0.0922      0.008     12.155      0.000       0.077       0.107
+x2             0.1943      0.007     27.428      0.000       0.180       0.208
+x3             0.3013      0.007     43.734      0.000       0.288       0.315
 ==============================================================================
-Omnibus:                       97.615   Durbin-Watson:                   2.009
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               10.758
-Skew:                           0.049   Prob(JB):                      0.00461
-Kurtosis:                       1.733   Cond. No.                         601.
+Omnibus:                       21.242   Durbin-Watson:                   2.038
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):                8.749
+Skew:                           0.341   Prob(JB):                       0.0126
+Kurtosis:                       2.080   Cond. No.                         613.
 ==============================================================================
 
 Warnings:
@@ -37490,14 +37606,15 @@ Warnings:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-The-Model---Array-Method">Create The Model - Array Method<a class="anchor-link" href="#Create-The-Model---Array-Method">&#182;</a></h3><p><strong>intercept</strong> is not included in OLS modeling by default. Hence need to use add_constant() to training dataset in order to display intercept estimate.</p>
+<h3 id="Create-The-Model---Array-Method">Create The Model - Array Method<a class="anchor-link" href="#Create-The-Model---Array-Method">&#182;</a></h3><p>This method assume independent and dependent variables are in seperate dataframe<br>
+<strong>intercept</strong> is not included in OLS modeling by default. Hence need to use <strong>add_constant()</strong> to training dataset in order to display intercept estimate.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[513]:</div>
+<div class="prompt input_prompt">In&nbsp;[337]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trainX</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">trainX</span><span class="p">)</span>     <span class="c1"># this add new column of all value 1</span>
@@ -37519,7 +37636,7 @@ Warnings:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[514]:</div>
+<div class="prompt input_prompt">In&nbsp;[338]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">fit2</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
@@ -37541,80 +37658,33 @@ Warnings:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                            OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                      Y   R-squared:                       0.930
-Model:                            OLS   Adj. R-squared:                  0.929
-Method:                 Least Squares   F-statistic:                     690.0
-Date:                Sat, 17 Mar 2018   Prob (F-statistic):           8.70e-90
-Time:                        21:19:09   Log-Likelihood:                -503.17
-No. Observations:                 160   AIC:                             1014.
-Df Residuals:                     156   BIC:                             1027.
+Dep. Variable:                      Y   R-squared:                       0.943
+Model:                            OLS   Adj. R-squared:                  0.942
+Method:                 Least Squares   F-statistic:                     862.1
+Date:                Fri, 15 Jun 2018   Prob (F-statistic):           7.58e-97
+Time:                        10:32:45   Log-Likelihood:                -493.22
+No. Observations:                 160   AIC:                             994.4
+Df Residuals:                     156   BIC:                             1007.
 Df Model:                           3                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P&gt;|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const        259.9068      1.514    171.650      0.000     256.916     262.898
-X1             0.1072      0.008     13.340      0.000       0.091       0.123
-X2             0.2033      0.008     24.608      0.000       0.187       0.220
-X3             0.2866      0.008     34.458      0.000       0.270       0.303
+const        259.8796      1.386    187.517      0.000     257.142     262.617
+x1             0.0980      0.008     12.885      0.000       0.083       0.113
+x2             0.1898      0.007     26.031      0.000       0.175       0.204
+x3             0.3026      0.007     41.776      0.000       0.288       0.317
 ==============================================================================
-Omnibus:                       93.027   Durbin-Watson:                   2.109
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               10.619
-Skew:                           0.048   Prob(JB):                      0.00494
-Kurtosis:                       1.742   Cond. No.                         622.
+Omnibus:                       27.839   Durbin-Watson:                   1.976
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               10.915
+Skew:                           0.413   Prob(JB):                      0.00426
+Kurtosis:                       2.023   Cond. No.                         609.
 ==============================================================================
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[515]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">rng</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-<span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[515]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([  9.34044009,  15.40648987,   1.0022875 ,   7.04665145,
-         3.93511782,   2.8467719 ,   4.72520423,   7.91121454,
-         8.93534948,  11.77633468,   9.38389029,  14.70439001,
-         5.08904499,  18.56234873,   1.54775186,  14.4093502 ,
-         9.34609605,  12.17379657,   3.80773877,   4.96202978,
-        17.01489137,  20.36523151,   7.26848356,  14.84645231,
-        18.52778305,  18.89213327,   2.70088423,   1.78109566,
-         4.39660839,  18.56285007,   2.96693668,   9.4221525 ,
-        20.1577906 ,  11.6633057 ,  14.83754228,   7.31031262,
-        14.73001855,  17.69251344,   1.36576555,  16.0028863 ,
-        20.77722178,  15.96331309,   6.60887984,  16.78558657,
-         3.06452013,   9.95787052,  19.17191006,   6.87228297,
-         6.75550677,   3.60057144])</pre>
-</div>
-
 </div>
 
 </div>
@@ -37648,7 +37718,7 @@ Warnings:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[516]:</div>
+<div class="prompt input_prompt">In&nbsp;[340]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
@@ -37672,7 +37742,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1196_0.png"
+<img src="index_files/index_1207_0.png"
 >
 </div>
 
@@ -37702,7 +37772,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[517]:</div>
+<div class="prompt input_prompt">In&nbsp;[341]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
@@ -37719,7 +37789,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[517]:</div>
+<div class="prompt output_prompt">Out[341]:</div>
 
 
 
@@ -37749,7 +37819,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[518]:</div>
+<div class="prompt input_prompt">In&nbsp;[342]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -37768,13 +37838,13 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[518]:</div>
+<div class="prompt output_prompt">Out[342]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x26be877a588&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x20c40764588&gt;]</pre>
 </div>
 
 </div>
@@ -37787,7 +37857,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1201_1.png"
+<img src="index_files/index_1212_1.png"
 >
 </div>
 
@@ -37801,7 +37871,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example-2---Linear-Regression-with-Polynomial-Basis-Functions">Example 2 - Linear Regression with Polynomial Basis Functions<a class="anchor-link" href="#Example-2---Linear-Regression-with-Polynomial-Basis-Functions">&#182;</a></h3>
+<h3 id="Example-2---Linear-Regression-with-Polynomial-Basic-Functions">Example 2 - Linear Regression with Polynomial Basic Functions<a class="anchor-link" href="#Example-2---Linear-Regression-with-Polynomial-Basic-Functions">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -37815,7 +37885,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[519]:</div>
+<div class="prompt input_prompt">In&nbsp;[343]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
@@ -37839,7 +37909,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1204_0.png"
+<img src="index_files/index_1215_0.png"
 >
 </div>
 
@@ -37860,7 +37930,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[520]:</div>
+<div class="prompt input_prompt">In&nbsp;[344]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">poly_model</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">LinearRegression</span><span class="p">())</span>
@@ -37881,13 +37951,13 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[520]:</div>
+<div class="prompt output_prompt">Out[344]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x26be8b294e0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x20c411f2278&gt;]</pre>
 </div>
 
 </div>
@@ -37900,7 +37970,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1206_1.png"
+<img src="index_files/index_1217_1.png"
 >
 </div>
 
@@ -37921,7 +37991,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[521]:</div>
+<div class="prompt input_prompt">In&nbsp;[345]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">poly</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -37943,13 +38013,13 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[521]:</div>
+<div class="prompt output_prompt">Out[345]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x26be848ec50&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x20c41105668&gt;]</pre>
 </div>
 
 </div>
@@ -37962,7 +38032,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1208_1.png"
+<img src="index_files/index_1219_1.png"
 >
 </div>
 
@@ -37971,6 +38041,14 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -38004,7 +38082,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="prompt input_prompt">In&nbsp;[346]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="k">import</span> <span class="n">RFE</span>
@@ -38018,7 +38096,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="prompt input_prompt">In&nbsp;[347]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">estimator</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>       <span class="c1"># we are using linear model</span>
@@ -38030,10 +38108,63 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-347-0c48fa9d44fe&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">      1</span> estimator <span class="ansi-yellow-intense-fg ansi-bold">=</span> SVR<span class="ansi-yellow-intense-fg ansi-bold">(</span>kernel<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39;linear&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>       <span class="ansi-red-intense-fg ansi-bold"># we are using linear model</span>
+<span class="ansi-green-fg">      2</span> selector <span class="ansi-yellow-intense-fg ansi-bold">=</span> RFE <span class="ansi-yellow-intense-fg ansi-bold">(</span>estimator<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> step<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>  <span class="ansi-red-intense-fg ansi-bold"># we want just 2 features</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>selector <span class="ansi-yellow-intense-fg ansi-bold">=</span> selector<span class="ansi-yellow-intense-fg ansi-bold">.</span>fit<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">,</span>Y<span class="ansi-yellow-intense-fg ansi-bold">)</span>           <span class="ansi-red-intense-fg ansi-bold"># execute</span>
+
+<span class="ansi-green-intense-fg ansi-bold">C:\ProgramData\Anaconda3\lib\site-packages\sklearn\feature_selection\rfe.py</span> in <span class="ansi-cyan-fg">fit</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y)</span>
+<span class="ansi-green-fg">    132</span>             The target values<span class="ansi-yellow-intense-fg ansi-bold">.</span>
+<span class="ansi-green-fg">    133</span>         &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 134</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_fit<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">,</span> y<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    135</span> 
+<span class="ansi-green-fg">    136</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> _fit<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> X<span class="ansi-yellow-intense-fg ansi-bold">,</span> y<span class="ansi-yellow-intense-fg ansi-bold">,</span> step_score<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">C:\ProgramData\Anaconda3\lib\site-packages\sklearn\feature_selection\rfe.py</span> in <span class="ansi-cyan-fg">_fit</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, step_score)</span>
+<span class="ansi-green-fg">    140</span>         <span class="ansi-red-intense-fg ansi-bold"># self.scores_ will not be calculated when calling _fit through fit</span>
+<span class="ansi-green-fg">    141</span> 
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 142</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>X<span class="ansi-yellow-intense-fg ansi-bold">,</span> y <span class="ansi-yellow-intense-fg ansi-bold">=</span> check_X_y<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">,</span> y<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;csc&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    143</span>         <span class="ansi-red-intense-fg ansi-bold"># Initialization</span>
+<span class="ansi-green-fg">    144</span>         n_features <span class="ansi-yellow-intense-fg ansi-bold">=</span> X<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-green-intense-fg ansi-bold">C:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py</span> in <span class="ansi-cyan-fg">check_X_y</span><span class="ansi-blue-intense-fg ansi-bold">(X, y, accept_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, multi_output, ensure_min_samples, ensure_min_features, y_numeric, warn_on_dtype, estimator)</span>
+<span class="ansi-green-fg">    581</span>         y <span class="ansi-yellow-intense-fg ansi-bold">=</span> y<span class="ansi-yellow-intense-fg ansi-bold">.</span>astype<span class="ansi-yellow-intense-fg ansi-bold">(</span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>float64<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    582</span> 
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 583</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>check_consistent_length<span class="ansi-yellow-intense-fg ansi-bold">(</span>X<span class="ansi-yellow-intense-fg ansi-bold">,</span> y<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    584</span> 
+<span class="ansi-green-fg">    585</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> X<span class="ansi-yellow-intense-fg ansi-bold">,</span> y
+
+<span class="ansi-green-intense-fg ansi-bold">C:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py</span> in <span class="ansi-cyan-fg">check_consistent_length</span><span class="ansi-blue-intense-fg ansi-bold">(*arrays)</span>
+<span class="ansi-green-fg">    202</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> len<span class="ansi-yellow-intense-fg ansi-bold">(</span>uniques<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    203</span>         raise ValueError(&#34;Found input variables with inconsistent numbers of&#34;
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 204</span><span class="ansi-yellow-intense-fg ansi-bold">                          &#34; samples: %r&#34; % [int(l) for l in lengths])
+</span><span class="ansi-green-fg">    205</span> 
+<span class="ansi-green-fg">    206</span> 
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: Found input variables with inconsistent numbers of samples: [5, 200]</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[175]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selector</span><span class="o">.</span><span class="n">support_</span>
@@ -38043,30 +38174,10 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[175]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([False,  True,  True], dtype=bool)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selector</span><span class="o">.</span><span class="n">ranking_</span>
@@ -38076,57 +38187,16 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[176]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([2, 1, 1])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selector</span><span class="o">.</span><span class="n">estimator_</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[177]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>SVR(C=1.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.1, gamma=&#39;auto&#39;,
-  kernel=&#39;linear&#39;, max_iter=-1, shrinking=True, tol=0.001, verbose=False)</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
