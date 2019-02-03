@@ -13656,6 +13656,194 @@ ihgfed
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pattern-Matching">Pattern Matching<a class="anchor-link" href="#Pattern-Matching">&#182;</a></h3><h4 id="Containing-(in)">Containing (in)<a class="anchor-link" href="#Containing-(in)">&#182;</a></h4><p>Does the string contain ... ?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;aa&#39;</span><span class="p">,</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="s1">&#39;aaabc&#39;</span><span class="p">,</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span><span class="s1">&#39;abcddd&#39;</span><span class="p">,</span><span class="s1">&#39;abcdee&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s</span> <span class="p">)</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;a&#39;, &#39;aa&#39;, &#39;aaa&#39;, &#39;aaabc&#39;, &#39;abcd&#39;, &#39;abcddd&#39;, &#39;abcdee&#39;]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;[&#39;a&#39;, &#39;aa&#39;, &#39;aaa&#39;, &#39;aaabc&#39;, &#39;abcd&#39;, &#39;abcddd&#39;, &#39;abcdee&#39;]&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quite unexpectedly <code>'abc'</code> is not detected in the first list.<br>
+Use <code>str</code> to convert the list into a long string</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;aaa&#39;</span> <span class="ow">in</span> <span class="n">s</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;abc&#39;</span> <span class="ow">in</span> <span class="n">s</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;abc&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Extraction">Extraction<a class="anchor-link" href="#Extraction">&#182;</a></h4><p>Extract all matching items within list</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;abc&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="n">newlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">newlist</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;aaabc&#39;, &#39;abcd&#39;, &#39;abcddd&#39;, &#39;abcdee&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong>list comprehension</strong> shorthand to achieve the same above</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">if</span> <span class="s1">&#39;abc&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;aaabc&#39;, &#39;abcd&#39;, &#39;abcddd&#39;, &#39;abcdee&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Concatenating-Strings">Concatenating Strings<a class="anchor-link" href="#Concatenating-Strings">&#182;</a></h3>
 </div>
 </div>
@@ -13869,7 +14057,7 @@ ihgfed
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;It is true&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Ixct is true&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;It is fake&#39;</span><span class="p">)</span>
     
@@ -14421,8 +14609,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-List">Creating List<a class="anchor-link" href="#Creating-List">&#182;</a></h3><p><strong>Creating Empty List</strong></p>
-
+<h3 id="Creating-List">Creating List<a class="anchor-link" href="#Creating-List">&#182;</a></h3><h4 id="Empty-List">Empty List<a class="anchor-link" href="#Empty-List">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14477,8 +14664,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Creating List using Literal Assignment Method</strong></p>
-<ul>
+<h4 id="Literal-Assignment-Method">Literal Assignment Method<a class="anchor-link" href="#Literal-Assignment-Method">&#182;</a></h4><ul>
 <li><strong>Multiple data types</strong> is allowed in a list</li>
 </ul>
 
@@ -15314,6 +15500,189 @@ food :  1761565257672
 <pre>[1]
 [1, 2]
 [1, 2, 3]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-Is-Iterable">List Is Iterable<a class="anchor-link" href="#List-Is-Iterable">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="For-Loop">For Loop<a class="anchor-link" href="#For-Loop">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span><span class="s1">&#39;bcde&#39;</span><span class="p">,</span><span class="s1">&#39;bcdee&#39;</span><span class="p">,</span><span class="s1">&#39;cdefg&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;abc&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>abc
+abcd
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">old_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span><span class="s1">&#39;bcde&#39;</span><span class="p">,</span><span class="s1">&#39;bcdee&#39;</span><span class="p">,</span><span class="s1">&#39;cdefg&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">old_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;abc&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span> <span class="n">new_list</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;abc&#39;, &#39;abcd&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="List-Comprehension">List Comprehension<a class="anchor-link" href="#List-Comprehension">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Iterate through existing list, and <strong>build new list</strong> based on condition<br>
+<code>new_list = [expression(i) for i in old_list]</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span><span class="s1">&#39;bcde&#39;</span><span class="p">,</span><span class="s1">&#39;bcdee&#39;</span><span class="p">,</span><span class="s1">&#39;cdefg&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;ABC&#39;, &#39;ABCD&#39;, &#39;BCDE&#39;, &#39;BCDEE&#39;, &#39;CDEFG&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Extend list comprehension can be extended with <strong><code>if</code></strong> condition**<br>
+<code>new_list = [expression(i) for i in old_list if filter(i)]</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">old_list</span>    <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span><span class="s1">&#39;bcde&#39;</span><span class="p">,</span><span class="s1">&#39;bcdee&#39;</span><span class="p">,</span><span class="s1">&#39;cdefg&#39;</span><span class="p">]</span>
+<span class="n">matching</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">old_list</span> <span class="k">if</span> <span class="s1">&#39;bcd&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">matching</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;ABCD&#39;, &#39;BCDE&#39;, &#39;BCDEE&#39;]
 </pre>
 </div>
 </div>
@@ -32422,6 +32791,702 @@ max    0.684213  0.800183  0.586002</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas-str">Pandas str<a class="anchor-link" href="#Pandas-str">&#182;</a></h2><p>Pandas includes features to address both this need for <strong>vectorized string</strong> operations and for correctly handling <strong>missing data</strong> via the <strong><code>str</code></strong> attribute of Pandas Series and Index objects containing strings.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Built In Method</strong> using <code>list comprehension</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;yong&#39;</span><span class="p">,</span> <span class="s1">&#39;MARY&#39;</span><span class="p">,</span> <span class="s1">&#39;gUIDO&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Peter&#39;, &#39;Paul&#39;, &#39;Yong&#39;, &#39;Mary&#39;, &#39;Guido&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Pandas <code>str</code> Method</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">names</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Peter
+1     Paul
+2     Yong
+3     Mary
+4    Guido
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nearly all Python's built-in string methods are mirrored by a Pandas vectorized string method. Here is a list of Pandas str methods that mirror Python string methods:</p>
+<p>len()   lower() translate() islower()
+ljust() upper() startswith()    isupper()
+rjust() find()  endswith()  isnumeric()
+center()    rfind() isalnum()   isdecimal()
+zfill() index() isalpha()   split()
+strip() rindex()    isdigit()   rsplit()
+rstrip()    capitalize()    isspace()   partition()
+lstrip()    swapcase()  istitle()   rpartition()</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    5
+1    4
+2    4
+3    4
+4    5
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    PETER
+1     PAUL
+2     YONG
+3     MARY
+4    GUIDO
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Splitting">Splitting<a class="anchor-link" href="#Splitting">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a_b_c&#39;</span><span class="p">,</span> <span class="s1">&#39;c_d_e&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;f_g_h_i_j&#39;</span><span class="p">])</span>
+<span class="n">s</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[49]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0        a_b_c
+1        c_d_e
+2          NaN
+3    f_g_h_i_j
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="str.split()">str.split()<a class="anchor-link" href="#str.split()">&#182;</a></h4><p>By default, split will split the string into <strong>array</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0          [a, b, c]
+1          [c, d, e]
+2                NaN
+3    [f, g, h, i, j]
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After split, <strong>select rows</strong> to return</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+[&#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="str.split(-expand=True,-n=-)">str.split( expand=True, n= )<a class="anchor-link" href="#str.split(-expand=True,-n=-)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><code>split</code></strong> and <strong><code>expand=True</code></strong> will return a <strong>dataframe</strong> instead of series</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     0    1    2     3     4
+0    a    b    c  None  None
+1    c    d    e  None  None
+2  NaN  NaN  NaN   NaN   NaN
+3    f    g    h     i     j
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is possible to limit the number of columns splitted</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     0        1
+0    a      b_c
+1    c      d_e
+2  NaN      NaN
+3    f  g_h_i_j
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="str.rsplit()">str.rsplit()<a class="anchor-link" href="#str.rsplit()">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><code>rsplit</code></strong> stands for <strong>reverse split</strong>, it works the same way, except it is reversed</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>         0    1
+0      a_b    c
+1      c_d    e
+2      NaN  NaN
+3  f_g_h_i    j
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Matching">Matching<a class="anchor-link" href="#Matching">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monte</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Graham Chapman&#39;</span><span class="p">,</span> <span class="s1">&#39;John Cleese&#39;</span><span class="p">,</span> <span class="s1">&#39;Terry Gilliam&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Eric Idle&#39;</span><span class="p">,</span> <span class="s1">&#39;Terry Jones&#39;</span><span class="p">,</span> <span class="s1">&#39;Michael Palin&#39;</span><span class="p">])</span>
+<span class="n">monte</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Graham Chapman
+1       John Cleese
+2     Terry Gilliam
+3         Eric Idle
+4       Terry Jones
+5     Michael Palin
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="startwith">startwith<a class="anchor-link" href="#startwith">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    False
+1    False
+2     True
+3    False
+4     True
+5    False
+dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    [Graham, Chapman]
+1       [John, Cleese]
+2     [Terry, Gilliam]
+3         [Eric, Idle]
+4       [Terry, Jones]
+5     [Michael, Palin]
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Slicing">Slicing<a class="anchor-link" href="#Slicing">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Gra
+1    Joh
+2    Ter
+3    Eri
+4    Ter
+5    Mic
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Graham Chapma
+1       John Clees
+2     Terry Gillia
+3         Eric Idl
+4       Terry Jone
+5     Michael Pali
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="matplotlib">matplotlib<a class="anchor-link" href="#matplotlib">&#182;</a></h1>
 </div>
 </div>
@@ -32634,7 +33699,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_979_0.png"
+<img src="index_files/index_1026_0.png"
 >
 </div>
 
@@ -32681,7 +33746,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_981_0.png"
+<img src="index_files/index_1028_0.png"
 >
 </div>
 
@@ -32760,7 +33825,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_986_0.png"
+<img src="index_files/index_1033_0.png"
 >
 </div>
 
@@ -32816,7 +33881,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_988_0.png"
+<img src="index_files/index_1035_0.png"
 >
 </div>
 
@@ -32901,7 +33966,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_992_1.png"
+<img src="index_files/index_1039_1.png"
 >
 </div>
 
@@ -32961,7 +34026,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_994_1.png"
+<img src="index_files/index_1041_1.png"
 >
 </div>
 
@@ -33012,7 +34077,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_996_0.png"
+<img src="index_files/index_1043_0.png"
 >
 </div>
 
@@ -33050,7 +34115,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_997_0.png"
+<img src="index_files/index_1044_0.png"
 >
 </div>
 
@@ -33097,7 +34162,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_999_0.png"
+<img src="index_files/index_1046_0.png"
 >
 </div>
 
@@ -33158,7 +34223,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1002_0.png"
+<img src="index_files/index_1049_0.png"
 >
 </div>
 
@@ -33205,7 +34270,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1004_0.png"
+<img src="index_files/index_1051_0.png"
 >
 </div>
 
@@ -33249,7 +34314,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1006_0.png"
+<img src="index_files/index_1053_0.png"
 >
 </div>
 
@@ -33300,7 +34365,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1009_0.png"
+<img src="index_files/index_1056_0.png"
 >
 </div>
 
@@ -33346,7 +34411,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1011_0.png"
+<img src="index_files/index_1058_0.png"
 >
 </div>
 
@@ -33393,7 +34458,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1012_1.png"
+<img src="index_files/index_1059_1.png"
 >
 </div>
 
@@ -33435,7 +34500,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1014_0.png"
+<img src="index_files/index_1061_0.png"
 >
 </div>
 
@@ -33495,7 +34560,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1016_1.png"
+<img src="index_files/index_1063_1.png"
 >
 </div>
 
@@ -33542,7 +34607,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1018_0.png"
+<img src="index_files/index_1065_0.png"
 >
 </div>
 
@@ -33584,7 +34649,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1020_0.png"
+<img src="index_files/index_1067_0.png"
 >
 </div>
 
@@ -33626,7 +34691,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1022_0.png"
+<img src="index_files/index_1069_0.png"
 >
 </div>
 
@@ -33721,7 +34786,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1025_1.png"
+<img src="index_files/index_1072_1.png"
 >
 </div>
 
@@ -33845,7 +34910,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1031_0.png"
+<img src="index_files/index_1078_0.png"
 >
 </div>
 
@@ -33879,7 +34944,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1032_0.png"
+<img src="index_files/index_1079_0.png"
 >
 </div>
 
@@ -33922,7 +34987,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1034_0.png"
+<img src="index_files/index_1081_0.png"
 >
 </div>
 
@@ -33965,7 +35030,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1036_0.png"
+<img src="index_files/index_1083_0.png"
 >
 </div>
 
@@ -34008,7 +35073,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1038_0.png"
+<img src="index_files/index_1085_0.png"
 >
 </div>
 
@@ -34059,7 +35124,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1041_0.png"
+<img src="index_files/index_1088_0.png"
 >
 </div>
 
@@ -34102,7 +35167,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1043_0.png"
+<img src="index_files/index_1090_0.png"
 >
 </div>
 
@@ -34154,7 +35219,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1046_0.png"
+<img src="index_files/index_1093_0.png"
 >
 </div>
 
@@ -34225,7 +35290,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1049_1.png"
+<img src="index_files/index_1096_1.png"
 >
 </div>
 
@@ -34272,7 +35337,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1050_1.png"
+<img src="index_files/index_1097_1.png"
 >
 </div>
 
@@ -34385,7 +35450,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1054_2.png"
+<img src="index_files/index_1101_2.png"
 >
 </div>
 
@@ -34464,7 +35529,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1057_2.png"
+<img src="index_files/index_1104_2.png"
 >
 </div>
 
@@ -34531,7 +35596,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1059_2.png"
+<img src="index_files/index_1106_2.png"
 >
 </div>
 
@@ -34584,7 +35649,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1062_0.png"
+<img src="index_files/index_1109_0.png"
 >
 </div>
 
@@ -34619,7 +35684,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1063_0.png"
+<img src="index_files/index_1110_0.png"
 >
 </div>
 
@@ -34676,7 +35741,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1065_1.png"
+<img src="index_files/index_1112_1.png"
 >
 </div>
 
@@ -34741,7 +35806,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1068_1.png"
+<img src="index_files/index_1115_1.png"
 >
 </div>
 
@@ -34786,7 +35851,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1070_0.png"
+<img src="index_files/index_1117_0.png"
 >
 </div>
 
@@ -34868,7 +35933,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1075_1.png"
+<img src="index_files/index_1122_1.png"
 >
 </div>
 
@@ -34915,7 +35980,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1076_0.png"
+<img src="index_files/index_1123_0.png"
 >
 </div>
 
@@ -34962,7 +36027,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1077_0.png"
+<img src="index_files/index_1124_0.png"
 >
 </div>
 
@@ -35030,7 +36095,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1080_0.png"
+<img src="index_files/index_1127_0.png"
 >
 </div>
 
@@ -35093,7 +36158,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1083_0.png"
+<img src="index_files/index_1130_0.png"
 >
 </div>
 
@@ -35154,7 +36219,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1085_0.png"
+<img src="index_files/index_1132_0.png"
 >
 </div>
 
@@ -35201,7 +36266,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1086_0.png"
+<img src="index_files/index_1133_0.png"
 >
 </div>
 
@@ -35251,7 +36316,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1087_0.png"
+<img src="index_files/index_1134_0.png"
 >
 </div>
 
@@ -35309,7 +36374,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1089_0.png"
+<img src="index_files/index_1136_0.png"
 >
 </div>
 
@@ -35378,7 +36443,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1091_1.png"
+<img src="index_files/index_1138_1.png"
 >
 </div>
 
@@ -35431,7 +36496,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1092_0.png"
+<img src="index_files/index_1139_0.png"
 >
 </div>
 
@@ -35494,7 +36559,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1095_0.png"
+<img src="index_files/index_1142_0.png"
 >
 </div>
 
@@ -35549,7 +36614,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1097_0.png"
+<img src="index_files/index_1144_0.png"
 >
 </div>
 
@@ -35596,7 +36661,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1098_0.png"
+<img src="index_files/index_1145_0.png"
 >
 </div>
 
@@ -35651,7 +36716,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1100_0.png"
+<img src="index_files/index_1147_0.png"
 >
 </div>
 
@@ -35793,7 +36858,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1105_0.png"
+<img src="index_files/index_1152_0.png"
 >
 </div>
 
@@ -36512,7 +37577,7 @@ It has useful data (array) in the form of properties:</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1140_2.png"
+<img src="index_files/index_1187_2.png"
 >
 </div>
 
@@ -39246,7 +40311,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1267_0.png"
+<img src="index_files/index_1314_0.png"
 >
 </div>
 
@@ -39284,7 +40349,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1268_0.png"
+<img src="index_files/index_1315_0.png"
 >
 </div>
 
@@ -39905,7 +40970,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1311_0.png"
+<img src="index_files/index_1358_0.png"
 >
 </div>
 
@@ -40020,7 +41085,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1316_1.png"
+<img src="index_files/index_1363_1.png"
 >
 </div>
 
@@ -40072,7 +41137,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1319_0.png"
+<img src="index_files/index_1366_0.png"
 >
 </div>
 
@@ -40133,7 +41198,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1321_1.png"
+<img src="index_files/index_1368_1.png"
 >
 </div>
 
@@ -40195,7 +41260,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1323_1.png"
+<img src="index_files/index_1370_1.png"
 >
 </div>
 
