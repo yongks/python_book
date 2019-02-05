@@ -25719,7 +25719,20 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Pandas-Data-Types">Pandas Data Types<a class="anchor-link" href="#Pandas-Data-Types">&#182;</a></h2><table>
+<h2 id="Pandas-Objects">Pandas Objects<a class="anchor-link" href="#Pandas-Objects">&#182;</a></h2><h3 id="Pandas-Data-Types">Pandas Data Types<a class="anchor-link" href="#Pandas-Data-Types">&#182;</a></h3><ul>
+<li>pandas.Timestamp</li>
+<li>pandas.Timedelta</li>
+<li>pandas.Period</li>
+<li>pandas.Interval</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pandas-Data-Structure">Pandas Data Structure<a class="anchor-link" href="#Pandas-Data-Structure">&#182;</a></h3><table>
 <thead><tr>
 <th style="text-align:left">Type</th>
 <th style="text-align:left">Dimension</th>
@@ -25762,6 +25775,456 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Timestamp">Timestamp<a class="anchor-link" href="#Timestamp">&#182;</a></h2><p>This is equivalent to python standard library datetime. Refer to API documentation:<br>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html#pandas.Timestamp">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html#pandas.Timestamp</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Constructor">Constructor<a class="anchor-link" href="#Constructor">&#182;</a></h3><p><strong>Numbers Input</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="c1">#date-like numbers</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>        <span class="c1"># date-like numbers</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">45</span><span class="p">))</span>  <span class="c1"># datetime-like numbers</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2017-01-01 00:00:00
+2017-01-01 00:00:00
+2017-12-11 05:45:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>String Input</strong><br>
+Observe that pandas support many string input format</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2017-12-11&#39;</span><span class="p">))</span>      <span class="c1"># date-like string</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2017-12-11-0545&#39;</span><span class="p">))</span> <span class="c1"># datetime-like string</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2017-01-01 05:45&#39;</span><span class="p">))</span><span class="c1"># datetime-like string</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2017-01-01T0545&#39;</span><span class="p">))</span> <span class="c1"># datetime-like ISO string</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2017-12-11 00:00:00
+2017-12-11 05:45:00
+2017-01-01 05:45:00
+2017-01-01 05:45:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Class-Methods">Class Methods<a class="anchor-link" href="#Class-Methods">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Attributes">Attributes<a class="anchor-link" href="#Attributes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">month</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">day</span>   <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">hour</span>  <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+1
+0
+0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Instance-Methods">Instance Methods<a class="anchor-link" href="#Instance-Methods">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>  <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">isoweekday</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>6
+7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-To">Convert To<a class="anchor-link" href="#Convert-To">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong><code>to_pydatetime()</code></strong> to convert into standard library <strong><code>datetime.datetime</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">52</span><span class="p">)</span>
+<span class="n">ts</span><span class="o">.</span><span class="n">to_pydatetime</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[147]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.datetime(2017, 1, 1, 0, 0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong><code>to_datetime64()</code></strong> to convert into <strong><code>numpy.datetime64</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">52</span><span class="p">)</span>
+<span class="n">ts</span><span class="o">.</span><span class="n">to_datetime64</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[151]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.datetime64(&#39;2017-01-01T00:00:00.000000000&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Formatting">Formatting<a class="anchor-link" href="#Formatting">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong><code>strftime()</code></strong> to customize string format. For complete directive, see below:<br>
+<a href="https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior">https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">52</span><span class="p">)</span>
+<span class="n">ts</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[161]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;01/10&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong><code>isoformat()</code></strong> to format ISO string (<strong>without timezone</strong>)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[204]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;2017-01-10T07:30:52&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Transform">Transform<a class="anchor-link" href="#Transform">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">ts</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># ceiling to day</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2017-01-11 00:00:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Series">Series<a class="anchor-link" href="#Series">&#182;</a></h2>
 </div>
 </div>
@@ -25769,7 +26232,7 @@ random.choice( a, size=None, replace=True, p=None)  # a=array-like, return &lt;s
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-Series">Creating Series<a class="anchor-link" href="#Creating-Series">&#182;</a></h3>
+<h3 id="Constructor">Constructor<a class="anchor-link" href="#Constructor">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -26516,23 +26979,24 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Series-Properties">Series Properties<a class="anchor-link" href="#Series-Properties">&#182;</a></h3>
+<h3 id="Series-Attributes">Series Attributes<a class="anchor-link" href="#Series-Attributes">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id=".index">.index<a class="anchor-link" href="#.index">&#182;</a></h4>
+<h4 id="index"><code>index</code><a class="anchor-link" href="#index">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[221]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">index</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span> 
+<span class="n">s</span><span class="o">.</span><span class="n">index</span>
 </pre></div>
 
     </div>
@@ -26545,7 +27009,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[221]:</div>
 
 
 
@@ -26563,7 +27027,140 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Series-Functions">Series Functions<a class="anchor-link" href="#Series-Functions">&#182;</a></h3>
+<h4 id="dtype"><code>dtype</code><a class="anchor-link" href="#dtype">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[222]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span> 
+<span class="n">s</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[222]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dtype(&#39;int64&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="array"><code>array</code><a class="anchor-link" href="#array">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">array</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">array</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">array</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;PandasArray&gt;
+[1, 2, 3, 4, 5]
+Length: 5, dtype: int64
+&lt;class &#39;pandas.core.arrays.numpy_.PandasArray&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Dimensions">Dimensions<a class="anchor-link" href="#Dimensions">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">ndim</span>  <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s</span><span class="o">.</span><span class="n">size</span>  <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a    1
+b    2
+c    3
+d    4
+e    5
+dtype: int64
+(5,)
+1
+5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Instance-Methods">Instance Methods<a class="anchor-link" href="#Instance-Methods">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -26642,6 +27239,169 @@ dtype: int64</pre>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>Index([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;], dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-Structure">Convert Structure<a class="anchor-link" href="#Convert-Structure">&#182;</a></h4><p><strong>Use <code>to_numpy()</code> to convert into <code>numpy.ndarray</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">npa</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">npa</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">npa</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1 2 3 4 5]
+&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Use <code>to_list()</code> to convert into standard python <code>list</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ll</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ll</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
+&lt;class &#39;list&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-Data-Types">Convert Data Types<a class="anchor-link" href="#Convert-Data-Types">&#182;</a></h4><p>Use <strong><code>astype()</code></strong> to convert to another numpy supproted datatypes</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[257]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span>
+<span class="n">ser</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[257]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    1
+1    2
+dtype: int32</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[260]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ser</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int8&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[260]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    1
+1    2
+dtype: int8</pre>
 </div>
 
 </div>
@@ -27459,7 +28219,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[208]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span>
@@ -27482,7 +28242,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[98]:</div>
+    <div class="prompt output_prompt">Out[208]:</div>
 
 
 
@@ -27505,7 +28265,65 @@ dtype: datetime64[ns]</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="DateTime-Properties">DateTime Properties<a class="anchor-link" href="#DateTime-Properties">&#182;</a></h4><p>A Series::DateTime object support below properties:</p>
+<h4 id="Convert-To">Convert To<a class="anchor-link" href="#Convert-To">&#182;</a></h4><p>Use <strong><code>to_pydatetime</code></strong> to convert into <strong><code>numpy.array</code></strong> of standard library <strong><code>datetime.datetime</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[219]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pdt</span>  <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_pydatetime</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">pdt</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">pdt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[219]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([datetime.datetime(2000, 1, 1, 0, 0),
+       datetime.datetime(1999, 12, 15, 12, 34, 55),
+       datetime.datetime(2020, 3, 8, 5, 7, 12),
+       datetime.datetime(2018, 1, 1, 0, 0),
+       datetime.datetime(2003, 3, 4, 5, 6, 7)], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Timestamp-Attributes">Timestamp Attributes<a class="anchor-link" href="#Timestamp-Attributes">&#182;</a></h4><p>A Series::DateTime object support below properties:</p>
 <ul>
 <li>date  </li>
 <li>month  </li>
@@ -36234,6 +37052,7 @@ dtype: object</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Pandas-DateTime">Pandas DateTime<a class="anchor-link" href="#Pandas-DateTime">&#182;</a></h2><p>pandas contains <strong>extensive capabilities and features</strong> for working with time series data for all domains. Using the NumPy <strong>datetime64 and timedelta64</strong> dtypes</p>
+<p><strong><code>panda.Timestamp</code></strong>, a subclass of <strong>datetime.datetime</strong>, is pandas’ scalar type for timezone-naive or timezone-aware datetime data. It mimics datetime.datime</p>
 
 </div>
 </div>
@@ -36256,14 +37075,14 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">([</span><span class="s1">&#39;2011-01-03&#39;</span><span class="p">,</span>      <span class="c1"># from string</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">([</span><span class="s1">&#39;2011-01-03&#39;</span><span class="p">,</span>      <span class="c1"># from string</span>
                 <span class="n">date</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span>        <span class="c1"># from date</span>
                 <span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">30</span><span class="p">)]</span><span class="c1"># from datetime</span>
               <span class="p">)</span>
-<span class="n">ds</span>
+<span class="n">dti</span>
 </pre></div>
 
     </div>
@@ -36276,7 +37095,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[101]:</div>
+    <div class="prompt output_prompt">Out[127]:</div>
 
 
 
@@ -36285,6 +37104,39 @@ dtype: object</pre>
 <pre>DatetimeIndex([&#39;2011-01-03 00:00:00&#39;, &#39;2018-04-13 00:00:00&#39;,
                &#39;2018-03-01 07:30:00&#39;],
               dtype=&#39;datetime64[ns]&#39;, freq=None)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dti</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[128]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Timestamp(&#39;2018-04-13 00:00:00&#39;)</pre>
 </div>
 
 </div>
@@ -36594,7 +37446,58 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Instance-Method">Instance Method<a class="anchor-link" href="#Instance-Method">&#182;</a></h3><h4 id="Convert-to-Series-to_series">Convert to Series <code>to_series</code><a class="anchor-link" href="#Convert-to-Series-to_series">&#182;</a></h4><p>This creates <strong>index and data</strong> with the same value</p>
+<h3 id="Instance-Method">Instance Method<a class="anchor-link" href="#Instance-Method">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-to-datetime.datetime">Convert to datetime.datetime<a class="anchor-link" href="#Convert-to-datetime.datetime">&#182;</a></h4><p>Use <strong><code>to_pydatetime</code></strong> to convert into python standard datetime object</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dti</span><span class="o">.</span><span class="n">to_pydatetime</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[121]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([datetime.datetime(2018, 2, 1, 0, 0),
+       datetime.datetime(2018, 2, 2, 0, 0),
+       datetime.datetime(2018, 2, 3, 0, 0),
+       datetime.datetime(2018, 2, 4, 0, 0)], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-to-Series-to_series">Convert to Series <code>to_series</code><a class="anchor-link" href="#Convert-to-Series-to_series">&#182;</a></h4><p>This creates <strong>index and data</strong> with the same value</p>
 
 </div>
 </div>
@@ -36632,6 +37535,19 @@ Freq: M, dtype: datetime64[ns]
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -37100,7 +38016,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1128_0.png"
+<img src="index_files/index_1174_0.png"
 >
 </div>
 
@@ -37146,7 +38062,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1130_0.png"
+<img src="index_files/index_1176_0.png"
 >
 </div>
 
@@ -37222,7 +38138,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1135_0.png"
+<img src="index_files/index_1181_0.png"
 >
 </div>
 
@@ -37277,7 +38193,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1137_0.png"
+<img src="index_files/index_1183_0.png"
 >
 </div>
 
@@ -37359,7 +38275,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1141_1.png"
+<img src="index_files/index_1187_1.png"
 >
 </div>
 
@@ -37418,7 +38334,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1143_1.png"
+<img src="index_files/index_1189_1.png"
 >
 </div>
 
@@ -37468,7 +38384,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1145_0.png"
+<img src="index_files/index_1191_0.png"
 >
 </div>
 
@@ -37506,7 +38422,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1146_0.png"
+<img src="index_files/index_1192_0.png"
 >
 </div>
 
@@ -37552,7 +38468,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1148_0.png"
+<img src="index_files/index_1194_0.png"
 >
 </div>
 
@@ -37611,7 +38527,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1151_0.png"
+<img src="index_files/index_1197_0.png"
 >
 </div>
 
@@ -37657,7 +38573,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1153_0.png"
+<img src="index_files/index_1199_0.png"
 >
 </div>
 
@@ -37700,7 +38616,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1155_0.png"
+<img src="index_files/index_1201_0.png"
 >
 </div>
 
@@ -37749,7 +38665,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1158_0.png"
+<img src="index_files/index_1204_0.png"
 >
 </div>
 
@@ -37794,7 +38710,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1160_0.png"
+<img src="index_files/index_1206_0.png"
 >
 </div>
 
@@ -37841,7 +38757,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1161_1.png"
+<img src="index_files/index_1207_1.png"
 >
 </div>
 
@@ -37882,7 +38798,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1163_0.png"
+<img src="index_files/index_1209_0.png"
 >
 </div>
 
@@ -37954,7 +38870,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1166_1.png"
+<img src="index_files/index_1212_1.png"
 >
 </div>
 
@@ -38000,7 +38916,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1168_0.png"
+<img src="index_files/index_1214_0.png"
 >
 </div>
 
@@ -38041,7 +38957,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1170_0.png"
+<img src="index_files/index_1216_0.png"
 >
 </div>
 
@@ -38082,7 +38998,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1172_0.png"
+<img src="index_files/index_1218_0.png"
 >
 </div>
 
@@ -38176,7 +39092,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1175_1.png"
+<img src="index_files/index_1221_1.png"
 >
 </div>
 
@@ -38296,7 +39212,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1181_0.png"
+<img src="index_files/index_1227_0.png"
 >
 </div>
 
@@ -38330,7 +39246,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1182_0.png"
+<img src="index_files/index_1228_0.png"
 >
 </div>
 
@@ -38372,7 +39288,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1184_0.png"
+<img src="index_files/index_1230_0.png"
 >
 </div>
 
@@ -38414,7 +39330,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1186_0.png"
+<img src="index_files/index_1232_0.png"
 >
 </div>
 
@@ -38456,7 +39372,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1188_0.png"
+<img src="index_files/index_1234_0.png"
 >
 </div>
 
@@ -38505,7 +39421,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1191_0.png"
+<img src="index_files/index_1237_0.png"
 >
 </div>
 
@@ -38547,7 +39463,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1193_0.png"
+<img src="index_files/index_1239_0.png"
 >
 </div>
 
@@ -38597,7 +39513,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1196_0.png"
+<img src="index_files/index_1242_0.png"
 >
 </div>
 
@@ -38666,7 +39582,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1199_1.png"
+<img src="index_files/index_1245_1.png"
 >
 </div>
 
@@ -38713,7 +39629,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1200_1.png"
+<img src="index_files/index_1246_1.png"
 >
 </div>
 
@@ -38824,7 +39740,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1204_2.png"
+<img src="index_files/index_1250_2.png"
 >
 </div>
 
@@ -38901,7 +39817,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1207_2.png"
+<img src="index_files/index_1253_2.png"
 >
 </div>
 
@@ -38967,7 +39883,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1209_2.png"
+<img src="index_files/index_1255_2.png"
 >
 </div>
 
@@ -39018,7 +39934,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1212_0.png"
+<img src="index_files/index_1258_0.png"
 >
 </div>
 
@@ -39053,7 +39969,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1213_0.png"
+<img src="index_files/index_1259_0.png"
 >
 </div>
 
@@ -39109,7 +40025,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1215_1.png"
+<img src="index_files/index_1261_1.png"
 >
 </div>
 
@@ -39172,7 +40088,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1218_1.png"
+<img src="index_files/index_1264_1.png"
 >
 </div>
 
@@ -39216,7 +40132,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1220_0.png"
+<img src="index_files/index_1266_0.png"
 >
 </div>
 
@@ -39294,7 +40210,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1225_1.png"
+<img src="index_files/index_1271_1.png"
 >
 </div>
 
@@ -39341,7 +40257,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1226_0.png"
+<img src="index_files/index_1272_0.png"
 >
 </div>
 
@@ -39388,7 +40304,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1227_0.png"
+<img src="index_files/index_1273_0.png"
 >
 </div>
 
@@ -39454,7 +40370,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1230_0.png"
+<img src="index_files/index_1276_0.png"
 >
 </div>
 
@@ -39515,7 +40431,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1233_0.png"
+<img src="index_files/index_1279_0.png"
 >
 </div>
 
@@ -39575,7 +40491,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1235_0.png"
+<img src="index_files/index_1281_0.png"
 >
 </div>
 
@@ -39622,7 +40538,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1236_0.png"
+<img src="index_files/index_1282_0.png"
 >
 </div>
 
@@ -39672,7 +40588,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1237_0.png"
+<img src="index_files/index_1283_0.png"
 >
 </div>
 
@@ -39729,7 +40645,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1239_0.png"
+<img src="index_files/index_1285_0.png"
 >
 </div>
 
@@ -39797,7 +40713,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1241_1.png"
+<img src="index_files/index_1287_1.png"
 >
 </div>
 
@@ -39850,7 +40766,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1242_0.png"
+<img src="index_files/index_1288_0.png"
 >
 </div>
 
@@ -39911,7 +40827,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1245_0.png"
+<img src="index_files/index_1291_0.png"
 >
 </div>
 
@@ -39965,7 +40881,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1247_0.png"
+<img src="index_files/index_1293_0.png"
 >
 </div>
 
@@ -40012,7 +40928,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1248_0.png"
+<img src="index_files/index_1294_0.png"
 >
 </div>
 
@@ -40066,7 +40982,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1250_0.png"
+<img src="index_files/index_1296_0.png"
 >
 </div>
 
@@ -40206,7 +41122,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1255_0.png"
+<img src="index_files/index_1301_0.png"
 >
 </div>
 
@@ -40904,7 +41820,7 @@ It has useful data (array) in the form of properties:</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1290_2.png"
+<img src="index_files/index_1336_2.png"
 >
 </div>
 
@@ -43569,7 +44485,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1417_0.png"
+<img src="index_files/index_1463_0.png"
 >
 </div>
 
@@ -43607,7 +44523,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1418_0.png"
+<img src="index_files/index_1464_0.png"
 >
 </div>
 
@@ -44207,7 +45123,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1461_0.png"
+<img src="index_files/index_1507_0.png"
 >
 </div>
 
@@ -44319,7 +45235,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1466_1.png"
+<img src="index_files/index_1512_1.png"
 >
 </div>
 
@@ -44369,7 +45285,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1469_0.png"
+<img src="index_files/index_1515_0.png"
 >
 </div>
 
@@ -44429,7 +45345,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1471_1.png"
+<img src="index_files/index_1517_1.png"
 >
 </div>
 
@@ -44490,7 +45406,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1473_1.png"
+<img src="index_files/index_1519_1.png"
 >
 </div>
 
