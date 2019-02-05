@@ -22043,6 +22043,7 @@ Use when the column name contain special character</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">__version__</span>
 
+<span class="c1">## other modules</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">date</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">time</span>
@@ -22056,14 +22057,14 @@ Use when the column name contain special character</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="NumPy-Data-Objects">NumPy Data Objects<a class="anchor-link" href="#NumPy-Data-Objects">&#182;</a></h2>
+<h2 id="Data-Types">Data Types<a class="anchor-link" href="#Data-Types">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Supported-Data-Types">Supported Data Types<a class="anchor-link" href="#Supported-Data-Types">&#182;</a></h3><p>NumPy supports a much greater variety of numerical types than Python does. This makes numpy <strong>much more powerful</strong>
+<h3 id="NumPy-Data-Types">NumPy Data Types<a class="anchor-link" href="#NumPy-Data-Types">&#182;</a></h3><p>NumPy supports a much greater variety of numerical types than Python does. This makes numpy <strong>much more powerful</strong>
 <a href="https://www.numpy.org/devdocs/user/basics.types.html">https://www.numpy.org/devdocs/user/basics.types.html</a></p>
 <p>Integer: np.int8, np.int16, np.int32, np.uint8, np.uint16, np.uint32<br>
 Float: np.float32, np.float64</p>
@@ -22361,14 +22362,15 @@ NumPy only has one object: <strong>datetime64</strong> object .</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Constructor-from-String">Constructor from String<a class="anchor-link" href="#Constructor-from-String">&#182;</a></h4><p>Note that the input string <strong>cannot be ISO8601 compliance</strong>, meaning any timezone related information at the end of the string (such as Z or +8) will result in <strong>error</strong>.</p>
+<h4 id="Constructor">Constructor<a class="anchor-link" href="#Constructor">&#182;</a></h4><p><strong>From String</strong><br>
+Note that the input string <strong>cannot be ISO8601 compliance</strong>, meaning any timezone related information at the end of the string (such as Z or +8) will result in <strong>error</strong>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="prompt input_prompt">In&nbsp;[286]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2005-02&#39;</span><span class="p">)</span>
@@ -22384,7 +22386,7 @@ NumPy only has one object: <strong>datetime64</strong> object .</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[200]:</div>
+    <div class="prompt output_prompt">Out[286]:</div>
 
 
 
@@ -22468,7 +22470,8 @@ NumPy only has one object: <strong>datetime64</strong> object .</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Constructor-from-datetime">Constructor from datetime<a class="anchor-link" href="#Constructor-from-datetime">&#182;</a></h4>
+<p><strong>From datetime</strong></p>
+
 </div>
 </div>
 </div>
@@ -22541,7 +22544,49 @@ NumPy only has one object: <strong>datetime64</strong> object .</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ndarray">ndarray<a class="anchor-link" href="#ndarray">&#182;</a></h2>
+<h4 id="Instance-Method">Instance Method<a class="anchor-link" href="#Instance-Method">&#182;</a></h4><p>Convert to <strong>datetime</strong> using <strong><code>astype()</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt64</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">&quot;2019-01-31&quot;</span> <span class="p">)</span>
+<span class="n">dt64</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">datetime</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[279]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.date(2019, 1, 31)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Numpy-Array">Numpy Array<a class="anchor-link" href="#Numpy-Array">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -22564,15 +22609,14 @@ NumPy only has one object: <strong>datetime64</strong> object .</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Constructor">Constructor<a class="anchor-link" href="#Constructor">&#182;</a></h3><p>By default, numpy.array autodetect its data types based on most common denominator</p>
-<h4 id="1D-Array">1D Array<a class="anchor-link" href="#1D-Array">&#182;</a></h4>
+<h4 id="int,-float">int, float<a class="anchor-link" href="#int,-float">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>From Array</strong><br>
-Notice example below <strong>auto detected</strong> as int32 data type</p>
+<p>Notice example below <strong>auto detected</strong> as int32 data type</p>
 
 </div>
 </div>
@@ -22764,6 +22808,147 @@ NumPy will <strong>auto convert</strong> the data into specifeid types. Observe 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="datetime64">datetime64<a class="anchor-link" href="#datetime64">&#182;</a></h4><p>Provide <strong>array of string in YYYY-MM-DD</strong> format will generate array of datetime64</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[310]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;2007-07-13&#39;</span><span class="p">,</span> <span class="s1">&#39;2006-01-13&#39;</span><span class="p">,</span> <span class="s1">&#39;2010-08-13&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64&#39;</span><span class="p">)</span>
+<span class="n">ar</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[310]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;2007-07-13&#39;, &#39;2006-01-13&#39;, &#39;2010-08-13&#39;], dtype=&#39;datetime64[D]&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[315]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span><span class="o">.</span><span class="n">dtype</span>  <span class="c1"># array dtype</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[315]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dtype(&#39;&lt;M8[D]&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[319]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">ar</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># underlying date type</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[319]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.datetime64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[320]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[320]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.datetime64(&#39;2006-01-13&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="2D-Array">2D Array<a class="anchor-link" href="#2D-Array">&#182;</a></h4>
 </div>
 </div>
@@ -22806,6 +22991,248 @@ NumPy will <strong>auto convert</strong> the data into specifeid types. Observe 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dimensions">Dimensions<a class="anchor-link" href="#Dimensions">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Differentiating-Dimensions">Differentiating Dimensions<a class="anchor-link" href="#Differentiating-Dimensions">&#182;</a></h4><p>1-D array is array of single list<br>
+2-D array is array made of list containing lists (each row is a list)<br>
+2-D single row array is array with list containing just one list</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1-D-Array">1-D Array<a class="anchor-link" href="#1-D-Array">&#182;</a></h4><p>Observe that the <strong>shape of the array</strong> is (5,). It seems like an array with 5 rows, <strong>empty columns</strong> !<br>
+What it really means is 5 items <strong>single dimension</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[241]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0 1 2 3 4]
+(5,)
+1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2-D-Array">2-D Array<a class="anchor-link" href="#2-D-Array">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">)])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0  1  2  3  4]
+ [ 5  6  7  8  9]
+ [10 11 12 13 14]]
+(3, 5)
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2-D-Array---Single-Row">2-D Array - Single Row<a class="anchor-link" href="#2-D-Array---Single-Row">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[243]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0 1 2 3 4]]
+(1, 5)
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2-D-Array-:-Single-Column">2-D Array : Single Column<a class="anchor-link" href="#2-D-Array-:-Single-Column">&#182;</a></h4><p>Using array slicing method with <strong>newaxis</strong> at <strong>COLUMN</strong>, will turn 1D array into 2D of <strong>single column</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[244]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0]
+ [1]
+ [2]
+ [3]
+ [4]]
+(5, 1)
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using array slicing method with <strong>newaxis</strong> at <strong>ROW</strong>, will turn 1D array into 2D of <strong>single row</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,:]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0 1 2 3 4]]
+(1, 5)
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Class-Method">Class Method<a class="anchor-link" href="#Class-Method">&#182;</a></h3>
 </div>
 </div>
@@ -22813,7 +23240,8 @@ NumPy will <strong>auto convert</strong> the data into specifeid types. Observe 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="arange()">arange()<a class="anchor-link" href="#arange()">&#182;</a></h4>
+<h4 id="arange()"><code>arange()</code><a class="anchor-link" href="#arange()">&#182;</a></h4><p>Generate array with a sequence of numbers</p>
+
 </div>
 </div>
 </div>
@@ -22853,7 +23281,7 @@ NumPy will <strong>auto convert</strong> the data into specifeid types. Observe 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ones()">ones()<a class="anchor-link" href="#ones()">&#182;</a></h4>
+<h4 id="ones()"><code>ones()</code><a class="anchor-link" href="#ones()">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -22927,7 +23355,7 @@ NumPy will <strong>auto convert</strong> the data into specifeid types. Observe 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="zeros()">zeros()<a class="anchor-link" href="#zeros()">&#182;</a></h4>
+<h4 id="zeros()"><code>zeros()</code><a class="anchor-link" href="#zeros()">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -23001,7 +23429,7 @@ NumPy will <strong>auto convert</strong> the data into specifeid types. Observe 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="where()">where()<a class="anchor-link" href="#where()">&#182;</a></h4><p>On <strong>1D array</strong> <code>numpy.where()</code> returns the items matching the criteria</p>
+<h4 id="where()"><code>where()</code><a class="anchor-link" href="#where()">&#182;</a></h4><p>On <strong>1D array</strong> <code>numpy.where()</code> returns the items matching the criteria</p>
 
 </div>
 </div>
@@ -23154,7 +23582,7 @@ Perform <strong>and</strong> operation on two boolean array,  generate new resul
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[219]:</div>
+<div class="prompt input_prompt">In&nbsp;[285]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -23198,7 +23626,91 @@ Perform <strong>and</strong> operation on two boolean array,  generate new resul
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="reshape()">reshape()<a class="anchor-link" href="#reshape()">&#182;</a></h4>
+<h4 id="astype()-conversion"><code>astype()</code> conversion<a class="anchor-link" href="#astype()-conversion">&#182;</a></h4><p><strong>Convert to from datetime64 to datetime</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[337]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;2007-07-13&#39;</span><span class="p">,</span> <span class="s1">&#39;2006-01-13&#39;</span><span class="p">,</span> <span class="s1">&#39;2010-08-13&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">ar1</span><span class="p">)</span> <span class="p">)</span>  <span class="c1">## a numpy array</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ar1</span><span class="o">.</span><span class="n">dtype</span> <span class="p">)</span>  <span class="c1">## dtype is a numpy data type</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;numpy.ndarray&#39;&gt;
+datetime64[D]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After convert to datetime (non-numpy object, the dtype becomes <strong>generic 'object'</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[340]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar2</span> <span class="o">=</span> <span class="n">ar1</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">datetime</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">ar2</span><span class="p">)</span> <span class="p">)</span>  <span class="c1">## still a numpy array</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ar2</span><span class="o">.</span><span class="n">dtype</span> <span class="p">)</span>  <span class="c1">## dtype becomes generic &#39;object&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;numpy.ndarray&#39;&gt;
+object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="reshape()"><code>reshape()</code><a class="anchor-link" href="#reshape()">&#182;</a></h4>
 <pre><code>reshape ( row numbers, col numbers )</code></pre>
 
 </div>
@@ -23879,7 +24391,7 @@ Perform <strong>and</strong> operation on two boolean array,  generate new resul
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Attributes">Attributes<a class="anchor-link" href="#Attributes">&#182;</a></h3><h4 id="dtype">dtype<a class="anchor-link" href="#dtype">&#182;</a></h4><p>ndarray contain a property called <strong>dtype</strong>, whcih tell us the type of underlying items</p>
+<h3 id="Attributes">Attributes<a class="anchor-link" href="#Attributes">&#182;</a></h3><h4 id="dtype"><code>dtype</code><a class="anchor-link" href="#dtype">&#182;</a></h4><p>ndarray contain a property called <strong>dtype</strong>, whcih tell us the type of underlying items</p>
 
 </div>
 </div>
@@ -23954,7 +24466,7 @@ Perform <strong>and</strong> operation on two boolean array,  generate new resul
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="dim">dim<a class="anchor-link" href="#dim">&#182;</a></h4><p><strong><code>dim</code></strong> returns the number of dimensions of the NumPy array. Example below shows 2-D array</p>
+<h4 id="dim"><code>dim</code><a class="anchor-link" href="#dim">&#182;</a></h4><p><strong><code>dim</code></strong> returns the number of dimensions of the NumPy array. Example below shows 2-D array</p>
 
 </div>
 </div>
@@ -23998,7 +24510,7 @@ Perform <strong>and</strong> operation on two boolean array,  generate new resul
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="shape">shape<a class="anchor-link" href="#shape">&#182;</a></h4><p><strong><code>shape</code></strong> return a type of <strong>(rows, cols)</strong></p>
+<h4 id="shape"><code>shape</code><a class="anchor-link" href="#shape">&#182;</a></h4><p><strong><code>shape</code></strong> return a type of <strong>(rows, cols)</strong></p>
 
 </div>
 </div>
@@ -24079,38 +24591,25 @@ Perform <strong>and</strong> operation on two boolean array,  generate new resul
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dimension-and-Reshaping">Dimension and Reshaping<a class="anchor-link" href="#Dimension-and-Reshaping">&#182;</a></h2>
+<h3 id="Operations">Operations<a class="anchor-link" href="#Operations">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Differentiating-Dimensions">Differentiating Dimensions<a class="anchor-link" href="#Differentiating-Dimensions">&#182;</a></h3><p>1-D array is array of single list<br>
-2-D array is array made of list containing lists (each row is a list)<br>
-2-D single row array is array with list containing just one list</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1-D-Array">1-D Array<a class="anchor-link" href="#1-D-Array">&#182;</a></h4><p>Observe that the <strong>shape of the array</strong> is (5,). It seems like an array with 5 rows, <strong>empty columns</strong> !<br>
-What it really means is 5 items <strong>single dimension</strong>.</p>
+<h4 id="Arithmetic">Arithmetic<a class="anchor-link" href="#Arithmetic">&#182;</a></h4><p><strong>Sample Date</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[241]:</div>
+<div class="prompt input_prompt">In&nbsp;[341]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ar</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -24127,9 +24626,7 @@ What it really means is 5 items <strong>single dimension</strong>.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[0 1 2 3 4]
-(5,)
-1
+<pre>[0 1 2 3 4 5 6 7 8 9]
 </pre>
 </div>
 </div>
@@ -24141,201 +24638,8 @@ What it really means is 5 items <strong>single dimension</strong>.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2-D-Array">2-D Array<a class="anchor-link" href="#2-D-Array">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[242]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">)])</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
-</pre></div>
+<p><strong><code>*</code></strong></p>
 
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 0  1  2  3  4]
- [ 5  6  7  8  9]
- [10 11 12 13 14]]
-(3, 5)
-2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2-D-Array---Single-Row">2-D Array - Single Row<a class="anchor-link" href="#2-D-Array---Single-Row">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[243]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[0 1 2 3 4]]
-(1, 5)
-2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2-D-Array-:-Single-Column">2-D Array : Single Column<a class="anchor-link" href="#2-D-Array-:-Single-Column">&#182;</a></h4><p>Using array slicing method with <strong>newaxis</strong> at <strong>COLUMN</strong>, will turn 1D array into 2D of <strong>single column</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[244]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[0]
- [1]
- [2]
- [3]
- [4]]
-(5, 1)
-2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using array slicing method with <strong>newaxis</strong> at <strong>ROW</strong>, will turn 1D array into 2D of <strong>single row</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[245]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,:]</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[0 1 2 3 4]]
-(1, 5)
-2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Operations">Operations<a class="anchor-link" href="#Operations">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Arithmetic">Arithmetic<a class="anchor-link" href="#Arithmetic">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="*">*<a class="anchor-link" href="#*">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -24376,7 +24680,8 @@ What it really means is 5 items <strong>single dimension</strong>.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="+-and--">+ and -<a class="anchor-link" href="#+-and--">&#182;</a></h4>
+<p><code>**+ and -**</code></p>
+
 </div>
 </div>
 </div>
@@ -24417,58 +24722,18 @@ What it really means is 5 items <strong>single dimension</strong>.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="on-boolean---&gt;-number">on boolean --&gt; number<a class="anchor-link" href="#on-boolean---&gt;-number">&#182;</a></h4>
+<h4 id="Comparison">Comparison<a class="anchor-link" href="#Comparison">&#182;</a></h4><p><strong>Sample Data</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="prompt input_prompt">In&nbsp;[341]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="kc">True</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[248]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([ 0,  0, -1])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id=".transpose()">.transpose()<a class="anchor-link" href="#.transpose()">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[249]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;ar :</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">ar</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;ar transposed :</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">ar</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ar</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -24485,15 +24750,7 @@ What it really means is 5 items <strong>single dimension</strong>.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>ar :
- [[0 1 2 3 4]
- [0 1 2 3 4]]
-ar transposed :
- [[0 0]
- [1 1]
- [2 2]
- [3 3]
- [4 4]]
+<pre>[0 1 2 3 4 5 6 7 8 9]
 </pre>
 </div>
 </div>
@@ -24505,27 +24762,8 @@ ar transposed :
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Comparison">Comparison<a class="anchor-link" href="#Comparison">&#182;</a></h3><h4 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[250]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
+<p><strong><code>==</code></strong></p>
 
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="==">==<a class="anchor-link" href="#==">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -24563,7 +24801,8 @@ ar transposed :
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&gt;,-&gt;=,-&lt;,-&lt;=">&gt;, &gt;=, &lt;, &lt;=<a class="anchor-link" href="#&gt;,-&gt;=,-&lt;,-&lt;=">&#182;</a></h4>
+<p><strong><code>&gt;, &gt;=, &lt;, &lt;=</code></strong></p>
+
 </div>
 </div>
 </div>
@@ -36313,7 +36552,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1101_0.png"
+<img src="index_files/index_1109_0.png"
 >
 </div>
 
@@ -36359,7 +36598,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1103_0.png"
+<img src="index_files/index_1111_0.png"
 >
 </div>
 
@@ -36435,7 +36674,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1108_0.png"
+<img src="index_files/index_1116_0.png"
 >
 </div>
 
@@ -36490,7 +36729,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1110_0.png"
+<img src="index_files/index_1118_0.png"
 >
 </div>
 
@@ -36572,7 +36811,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1114_1.png"
+<img src="index_files/index_1122_1.png"
 >
 </div>
 
@@ -36631,7 +36870,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1116_1.png"
+<img src="index_files/index_1124_1.png"
 >
 </div>
 
@@ -36681,7 +36920,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1118_0.png"
+<img src="index_files/index_1126_0.png"
 >
 </div>
 
@@ -36719,7 +36958,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1119_0.png"
+<img src="index_files/index_1127_0.png"
 >
 </div>
 
@@ -36765,7 +37004,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1121_0.png"
+<img src="index_files/index_1129_0.png"
 >
 </div>
 
@@ -36824,7 +37063,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1124_0.png"
+<img src="index_files/index_1132_0.png"
 >
 </div>
 
@@ -36870,7 +37109,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1126_0.png"
+<img src="index_files/index_1134_0.png"
 >
 </div>
 
@@ -36913,7 +37152,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1128_0.png"
+<img src="index_files/index_1136_0.png"
 >
 </div>
 
@@ -36962,7 +37201,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1131_0.png"
+<img src="index_files/index_1139_0.png"
 >
 </div>
 
@@ -37007,7 +37246,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1133_0.png"
+<img src="index_files/index_1141_0.png"
 >
 </div>
 
@@ -37054,7 +37293,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1134_1.png"
+<img src="index_files/index_1142_1.png"
 >
 </div>
 
@@ -37095,7 +37334,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1136_0.png"
+<img src="index_files/index_1144_0.png"
 >
 </div>
 
@@ -37167,7 +37406,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1139_1.png"
+<img src="index_files/index_1147_1.png"
 >
 </div>
 
@@ -37213,7 +37452,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1141_0.png"
+<img src="index_files/index_1149_0.png"
 >
 </div>
 
@@ -37254,7 +37493,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1143_0.png"
+<img src="index_files/index_1151_0.png"
 >
 </div>
 
@@ -37295,7 +37534,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1145_0.png"
+<img src="index_files/index_1153_0.png"
 >
 </div>
 
@@ -37389,7 +37628,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1148_1.png"
+<img src="index_files/index_1156_1.png"
 >
 </div>
 
@@ -37509,7 +37748,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1154_0.png"
+<img src="index_files/index_1162_0.png"
 >
 </div>
 
@@ -37543,7 +37782,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1155_0.png"
+<img src="index_files/index_1163_0.png"
 >
 </div>
 
@@ -37585,7 +37824,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1157_0.png"
+<img src="index_files/index_1165_0.png"
 >
 </div>
 
@@ -37627,7 +37866,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1159_0.png"
+<img src="index_files/index_1167_0.png"
 >
 </div>
 
@@ -37669,7 +37908,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1161_0.png"
+<img src="index_files/index_1169_0.png"
 >
 </div>
 
@@ -37718,7 +37957,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1164_0.png"
+<img src="index_files/index_1172_0.png"
 >
 </div>
 
@@ -37760,7 +37999,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1166_0.png"
+<img src="index_files/index_1174_0.png"
 >
 </div>
 
@@ -37810,7 +38049,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1169_0.png"
+<img src="index_files/index_1177_0.png"
 >
 </div>
 
@@ -37879,7 +38118,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1172_1.png"
+<img src="index_files/index_1180_1.png"
 >
 </div>
 
@@ -37926,7 +38165,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1173_1.png"
+<img src="index_files/index_1181_1.png"
 >
 </div>
 
@@ -38037,7 +38276,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1177_2.png"
+<img src="index_files/index_1185_2.png"
 >
 </div>
 
@@ -38114,7 +38353,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1180_2.png"
+<img src="index_files/index_1188_2.png"
 >
 </div>
 
@@ -38180,7 +38419,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1182_2.png"
+<img src="index_files/index_1190_2.png"
 >
 </div>
 
@@ -38231,7 +38470,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1185_0.png"
+<img src="index_files/index_1193_0.png"
 >
 </div>
 
@@ -38266,7 +38505,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1186_0.png"
+<img src="index_files/index_1194_0.png"
 >
 </div>
 
@@ -38322,7 +38561,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1188_1.png"
+<img src="index_files/index_1196_1.png"
 >
 </div>
 
@@ -38385,7 +38624,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1191_1.png"
+<img src="index_files/index_1199_1.png"
 >
 </div>
 
@@ -38429,7 +38668,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1193_0.png"
+<img src="index_files/index_1201_0.png"
 >
 </div>
 
@@ -38507,7 +38746,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1198_1.png"
+<img src="index_files/index_1206_1.png"
 >
 </div>
 
@@ -38554,7 +38793,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1199_0.png"
+<img src="index_files/index_1207_0.png"
 >
 </div>
 
@@ -38601,7 +38840,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1200_0.png"
+<img src="index_files/index_1208_0.png"
 >
 </div>
 
@@ -38667,7 +38906,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1203_0.png"
+<img src="index_files/index_1211_0.png"
 >
 </div>
 
@@ -38728,7 +38967,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1206_0.png"
+<img src="index_files/index_1214_0.png"
 >
 </div>
 
@@ -38788,7 +39027,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1208_0.png"
+<img src="index_files/index_1216_0.png"
 >
 </div>
 
@@ -38835,7 +39074,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1209_0.png"
+<img src="index_files/index_1217_0.png"
 >
 </div>
 
@@ -38885,7 +39124,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1210_0.png"
+<img src="index_files/index_1218_0.png"
 >
 </div>
 
@@ -38942,7 +39181,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1212_0.png"
+<img src="index_files/index_1220_0.png"
 >
 </div>
 
@@ -39010,7 +39249,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1214_1.png"
+<img src="index_files/index_1222_1.png"
 >
 </div>
 
@@ -39063,7 +39302,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1215_0.png"
+<img src="index_files/index_1223_0.png"
 >
 </div>
 
@@ -39124,7 +39363,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1218_0.png"
+<img src="index_files/index_1226_0.png"
 >
 </div>
 
@@ -39178,7 +39417,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1220_0.png"
+<img src="index_files/index_1228_0.png"
 >
 </div>
 
@@ -39225,7 +39464,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1221_0.png"
+<img src="index_files/index_1229_0.png"
 >
 </div>
 
@@ -39279,7 +39518,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1223_0.png"
+<img src="index_files/index_1231_0.png"
 >
 </div>
 
@@ -39419,7 +39658,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1228_0.png"
+<img src="index_files/index_1236_0.png"
 >
 </div>
 
@@ -40117,7 +40356,7 @@ It has useful data (array) in the form of properties:</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1263_2.png"
+<img src="index_files/index_1271_2.png"
 >
 </div>
 
@@ -42782,7 +43021,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1390_0.png"
+<img src="index_files/index_1398_0.png"
 >
 </div>
 
@@ -42820,7 +43059,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1391_0.png"
+<img src="index_files/index_1399_0.png"
 >
 </div>
 
@@ -43420,7 +43659,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1434_0.png"
+<img src="index_files/index_1442_0.png"
 >
 </div>
 
@@ -43532,7 +43771,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1439_1.png"
+<img src="index_files/index_1447_1.png"
 >
 </div>
 
@@ -43582,7 +43821,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1442_0.png"
+<img src="index_files/index_1450_0.png"
 >
 </div>
 
@@ -43642,7 +43881,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1444_1.png"
+<img src="index_files/index_1452_1.png"
 >
 </div>
 
@@ -43703,7 +43942,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1446_1.png"
+<img src="index_files/index_1454_1.png"
 >
 </div>
 
