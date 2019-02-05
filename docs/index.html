@@ -28685,7 +28685,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="prompt input_prompt">In&nbsp;[289]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span>
@@ -28708,7 +28708,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[208]:</div>
+    <div class="prompt output_prompt">Out[289]:</div>
 
 
 
@@ -28731,14 +28731,15 @@ dtype: datetime64[ns]</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-To">Convert To<a class="anchor-link" href="#Convert-To">&#182;</a></h4><p>Use <strong><code>to_pydatetime</code></strong> to convert into <strong><code>numpy.array</code></strong> of standard library <strong><code>datetime.datetime</code></strong></p>
+<h4 id="Convert-To">Convert To<a class="anchor-link" href="#Convert-To">&#182;</a></h4><p><strong>datetime.datetime</strong><br>
+Use <strong><code>st.to_pydatetime</code></strong> to convert into <strong><code>numpy.array</code></strong> of standard library <strong><code>datetime.datetime</code></strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[219]:</div>
+<div class="prompt input_prompt">In&nbsp;[290]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pdt</span>  <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_pydatetime</span><span class="p">()</span>
@@ -28767,7 +28768,7 @@ dtype: datetime64[ns]</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[219]:</div>
+    <div class="prompt output_prompt">Out[290]:</div>
 
 
 
@@ -28778,6 +28779,69 @@ dtype: datetime64[ns]</pre>
        datetime.datetime(2020, 3, 8, 5, 7, 12),
        datetime.datetime(2018, 1, 1, 0, 0),
        datetime.datetime(2003, 3, 4, 5, 6, 7)], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>datetime.date</strong><br>
+Use <strong><code>st.dt.date</code></strong> to convert into <strong><code>pandas.Series</code></strong> of standard library <strong><code>datetime.date</code></strong><br>
+Is it possible to have a pandas.Series of datetime.datetime ? No, because Pandas want it as its own Timestamp.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sdt</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">sdt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">sdt</span><span class="p">))</span>
+<span class="n">sdt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;datetime.date&#39;&gt;
+&lt;class &#39;pandas.core.series.Series&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[303]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    2000-01-01
+1    1999-12-15
+2    2020-03-08
+3    2018-01-01
+4    2003-03-04
+dtype: object</pre>
 </div>
 
 </div>
@@ -38184,7 +38248,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1183_0.png"
+<img src="index_files/index_1185_0.png"
 >
 </div>
 
@@ -38230,7 +38294,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1185_0.png"
+<img src="index_files/index_1187_0.png"
 >
 </div>
 
@@ -38306,7 +38370,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1190_0.png"
+<img src="index_files/index_1192_0.png"
 >
 </div>
 
@@ -38361,7 +38425,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1192_0.png"
+<img src="index_files/index_1194_0.png"
 >
 </div>
 
@@ -38443,7 +38507,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1196_1.png"
+<img src="index_files/index_1198_1.png"
 >
 </div>
 
@@ -38502,7 +38566,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1198_1.png"
+<img src="index_files/index_1200_1.png"
 >
 </div>
 
@@ -38552,7 +38616,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1200_0.png"
+<img src="index_files/index_1202_0.png"
 >
 </div>
 
@@ -38590,7 +38654,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1201_0.png"
+<img src="index_files/index_1203_0.png"
 >
 </div>
 
@@ -38636,7 +38700,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1203_0.png"
+<img src="index_files/index_1205_0.png"
 >
 </div>
 
@@ -38695,7 +38759,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1206_0.png"
+<img src="index_files/index_1208_0.png"
 >
 </div>
 
@@ -38741,7 +38805,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1208_0.png"
+<img src="index_files/index_1210_0.png"
 >
 </div>
 
@@ -38784,7 +38848,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1210_0.png"
+<img src="index_files/index_1212_0.png"
 >
 </div>
 
@@ -38833,7 +38897,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1213_0.png"
+<img src="index_files/index_1215_0.png"
 >
 </div>
 
@@ -38878,7 +38942,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1215_0.png"
+<img src="index_files/index_1217_0.png"
 >
 </div>
 
@@ -38925,7 +38989,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1216_1.png"
+<img src="index_files/index_1218_1.png"
 >
 </div>
 
@@ -38966,7 +39030,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1218_0.png"
+<img src="index_files/index_1220_0.png"
 >
 </div>
 
@@ -39038,7 +39102,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1221_1.png"
+<img src="index_files/index_1223_1.png"
 >
 </div>
 
@@ -39084,7 +39148,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1223_0.png"
+<img src="index_files/index_1225_0.png"
 >
 </div>
 
@@ -39125,7 +39189,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1225_0.png"
+<img src="index_files/index_1227_0.png"
 >
 </div>
 
@@ -39166,7 +39230,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1227_0.png"
+<img src="index_files/index_1229_0.png"
 >
 </div>
 
@@ -39260,7 +39324,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1230_1.png"
+<img src="index_files/index_1232_1.png"
 >
 </div>
 
@@ -39380,7 +39444,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1236_0.png"
+<img src="index_files/index_1238_0.png"
 >
 </div>
 
@@ -39414,7 +39478,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1237_0.png"
+<img src="index_files/index_1239_0.png"
 >
 </div>
 
@@ -39456,7 +39520,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1239_0.png"
+<img src="index_files/index_1241_0.png"
 >
 </div>
 
@@ -39498,7 +39562,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1241_0.png"
+<img src="index_files/index_1243_0.png"
 >
 </div>
 
@@ -39540,7 +39604,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1243_0.png"
+<img src="index_files/index_1245_0.png"
 >
 </div>
 
@@ -39589,7 +39653,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1246_0.png"
+<img src="index_files/index_1248_0.png"
 >
 </div>
 
@@ -39631,7 +39695,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1248_0.png"
+<img src="index_files/index_1250_0.png"
 >
 </div>
 
@@ -39681,7 +39745,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1251_0.png"
+<img src="index_files/index_1253_0.png"
 >
 </div>
 
@@ -39750,7 +39814,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1254_1.png"
+<img src="index_files/index_1256_1.png"
 >
 </div>
 
@@ -39797,7 +39861,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1255_1.png"
+<img src="index_files/index_1257_1.png"
 >
 </div>
 
@@ -39908,7 +39972,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1259_2.png"
+<img src="index_files/index_1261_2.png"
 >
 </div>
 
@@ -39985,7 +40049,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1262_2.png"
+<img src="index_files/index_1264_2.png"
 >
 </div>
 
@@ -40051,7 +40115,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1264_2.png"
+<img src="index_files/index_1266_2.png"
 >
 </div>
 
@@ -40102,7 +40166,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1267_0.png"
+<img src="index_files/index_1269_0.png"
 >
 </div>
 
@@ -40137,7 +40201,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1268_0.png"
+<img src="index_files/index_1270_0.png"
 >
 </div>
 
@@ -40193,7 +40257,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1270_1.png"
+<img src="index_files/index_1272_1.png"
 >
 </div>
 
@@ -40256,7 +40320,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1273_1.png"
+<img src="index_files/index_1275_1.png"
 >
 </div>
 
@@ -40300,7 +40364,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1275_0.png"
+<img src="index_files/index_1277_0.png"
 >
 </div>
 
@@ -40378,7 +40442,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1280_1.png"
+<img src="index_files/index_1282_1.png"
 >
 </div>
 
@@ -40425,7 +40489,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1281_0.png"
+<img src="index_files/index_1283_0.png"
 >
 </div>
 
@@ -40472,7 +40536,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1282_0.png"
+<img src="index_files/index_1284_0.png"
 >
 </div>
 
@@ -40538,7 +40602,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1285_0.png"
+<img src="index_files/index_1287_0.png"
 >
 </div>
 
@@ -40599,7 +40663,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1288_0.png"
+<img src="index_files/index_1290_0.png"
 >
 </div>
 
@@ -40659,7 +40723,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1290_0.png"
+<img src="index_files/index_1292_0.png"
 >
 </div>
 
@@ -40706,7 +40770,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1291_0.png"
+<img src="index_files/index_1293_0.png"
 >
 </div>
 
@@ -40756,7 +40820,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1292_0.png"
+<img src="index_files/index_1294_0.png"
 >
 </div>
 
@@ -40813,7 +40877,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1294_0.png"
+<img src="index_files/index_1296_0.png"
 >
 </div>
 
@@ -40881,7 +40945,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1296_1.png"
+<img src="index_files/index_1298_1.png"
 >
 </div>
 
@@ -40934,7 +40998,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1297_0.png"
+<img src="index_files/index_1299_0.png"
 >
 </div>
 
@@ -40995,7 +41059,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1300_0.png"
+<img src="index_files/index_1302_0.png"
 >
 </div>
 
@@ -41049,7 +41113,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1302_0.png"
+<img src="index_files/index_1304_0.png"
 >
 </div>
 
@@ -41096,7 +41160,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1303_0.png"
+<img src="index_files/index_1305_0.png"
 >
 </div>
 
@@ -41150,7 +41214,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1305_0.png"
+<img src="index_files/index_1307_0.png"
 >
 </div>
 
@@ -41290,7 +41354,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1310_0.png"
+<img src="index_files/index_1312_0.png"
 >
 </div>
 
@@ -41988,7 +42052,7 @@ It has useful data (array) in the form of properties:</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1345_2.png"
+<img src="index_files/index_1347_2.png"
 >
 </div>
 
@@ -44653,7 +44717,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1472_0.png"
+<img src="index_files/index_1474_0.png"
 >
 </div>
 
@@ -44691,7 +44755,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1473_0.png"
+<img src="index_files/index_1475_0.png"
 >
 </div>
 
@@ -45291,7 +45355,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1516_0.png"
+<img src="index_files/index_1518_0.png"
 >
 </div>
 
@@ -45403,7 +45467,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1521_1.png"
+<img src="index_files/index_1523_1.png"
 >
 </div>
 
@@ -45453,7 +45517,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1524_0.png"
+<img src="index_files/index_1526_0.png"
 >
 </div>
 
@@ -45513,7 +45577,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1526_1.png"
+<img src="index_files/index_1528_1.png"
 >
 </div>
 
@@ -45574,7 +45638,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1528_1.png"
+<img src="index_files/index_1530_1.png"
 >
 </div>
 
