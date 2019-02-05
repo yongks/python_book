@@ -15406,7 +15406,7 @@ False
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="'and'-operator">'and' operator<a class="anchor-link" href="#'and'-operator">&#182;</a></h3><ul>
+<h3 id="and-operator"><code>and</code> operator<a class="anchor-link" href="#and-operator">&#182;</a></h3><ul>
 <li><strong>and</strong> can return different data types  </li>
 <li>If evaluated result is <strong>True</strong>, the last <strong>True Value</strong> is returned (because python need to evaluate up to the last value)  </li>
 <li>If evaluated result is <strong>False</strong>, the first <strong>False Value</strong> will be returned (because python return it immediately when detecting False value)</li>
@@ -15451,7 +15451,7 @@ False
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="'not'-operator">'not' operator<a class="anchor-link" href="#'not'-operator">&#182;</a></h3>
+<h3 id="not-operator"><code>not</code> operator<a class="anchor-link" href="#not-operator">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15491,7 +15491,7 @@ False
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="'or'-operator">'or' operator<a class="anchor-link" href="#'or'-operator">&#182;</a></h3><ul>
+<h3 id="or-operator"><code>or</code> operator<a class="anchor-link" href="#or-operator">&#182;</a></h3><ul>
 <li><strong>or</strong> can return different data type  </li>
 <li>If evaluated result is True, first <strong>True Value</strong> will be returned  (right hand side value <strong>need not be evaluated</strong>)  </li>
 <li>If evaluated result is False, last <strong>Fasle Value</strong> will be returned (need to evalute all items before concluding False)</li>
@@ -19867,7 +19867,7 @@ GMT+8:  "2007-04-05T12:30+08     #notice +08</code></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Today">Today<a class="anchor-link" href="#Today">&#182;</a></h4><p>This is <strong>local date</strong> (not UTC)</p>
+<h4 id="today"><code>today</code><a class="anchor-link" href="#today">&#182;</a></h4><p>This is <strong>local date</strong> (not UTC)</p>
 
 </div>
 </div>
@@ -19939,13 +19939,14 @@ GMT+8:  "2007-04-05T12:30+08     #notice +08</code></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-iso-string-to-date">Convert iso string to date<a class="anchor-link" href="#Convert-iso-string-to-date">&#182;</a></h4>
+<h4 id="Convert-From-ISO-fromisoformat">Convert From ISO <code>fromisoformat</code><a class="anchor-link" href="#Convert-From-ISO-fromisoformat">&#182;</a></h4><p><code>strptime</code> is <strong>not available for date</strong> conversion. It is only for datetime conversion</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">date</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="s1">&#39;2011-11-11&#39;</span><span class="p">)</span>
@@ -19961,18 +19962,15 @@ GMT+8:  "2007-04-05T12:30+08     #notice +08</code></p>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-18-113a9ed929af&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>date<span class="ansi-yellow-intense-fg ansi-bold">.</span>fromisoformat<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;2011-11-11&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: type object &#39;datetime.date&#39; has no attribute &#39;fromisoformat&#39;</pre>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.date(2011, 11, 11)</pre>
 </div>
+
 </div>
 
 </div>
@@ -19990,7 +19988,51 @@ GMT+8:  "2007-04-05T12:30+08     #notice +08</code></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Weekday">Weekday<a class="anchor-link" href="#Weekday">&#182;</a></h4><p>For <code>weekday()</code>, Zero being Monday<br>
+<h4 id="replace()"><code>replace()</code><a class="anchor-link" href="#replace()">&#182;</a></h4><ul>
+<li>Replace year/month/day with specified parameter, non specified params will remain unchange.  </li>
+<li>Example below change only month. You can change year or day in combination</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2019-02-05
+2019-08-05
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="weekday()"><code>weekday()</code><a class="anchor-link" href="#weekday()">&#182;</a></h4><p>For <code>weekday()</code>, Zero being Monday<br>
 For <code>isoweekday()</code>, Zero being Sunday</p>
 
 </div>
@@ -20098,51 +20140,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Replace">Replace<a class="anchor-link" href="#Replace">&#182;</a></h4><ul>
-<li>Replace year/month/day with specified parameter, non specified params will remain unchange.  </li>
-<li>Example below change only month. You can change year or day in combination</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2019-02-05
-2019-08-05
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Formating-with-iso">Formating with iso<a class="anchor-link" href="#Formating-with-iso">&#182;</a></h4><p><code>isoformat()</code> return <strong>ISO 8601 String (YYYY-MM-DD)</strong></p>
+<h4 id="Formating-with-isoformat()">Formating with <code>isoformat()</code><a class="anchor-link" href="#Formating-with-isoformat()">&#182;</a></h4><p><code>isoformat()</code> return <strong>ISO 8601 String (YYYY-MM-DD)</strong></p>
 
 </div>
 </div>
@@ -20183,48 +20181,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>isocalendar</code> return a 3-tuple, <strong>(ISO year, ISO week number, ISO weekday)</strong>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">isocalendar</span><span class="p">()</span> <span class="c1">## return tuple </span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(2019, 6, 2)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Formating-with-strftime">Formating with strftime<a class="anchor-link" href="#Formating-with-strftime">&#182;</a></h4><p>For complete directive, see below:<br>
+<h4 id="Formating-with-strftime">Formating with <code>strftime</code><a class="anchor-link" href="#Formating-with-strftime">&#182;</a></h4><p>For complete directive, see below:<br>
 <a href="https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior">https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior</a></p>
 
 </div>
@@ -20255,6 +20212,47 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&#39;02/05&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="isocalendar()"><code>isocalendar()</code><a class="anchor-link" href="#isocalendar()">&#182;</a></h4><p><code>isocalendar</code> return a 3-tuple, <strong>(ISO year, ISO week number, ISO weekday)</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">isocalendar</span><span class="p">()</span> <span class="c1">## return tuple </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(2019, 6, 2)</pre>
 </div>
 
 </div>
@@ -20349,7 +20347,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Class-Method">Class Method<a class="anchor-link" href="#Class-Method">&#182;</a></h3><h4 id="Now-and-Today">Now and Today<a class="anchor-link" href="#Now-and-Today">&#182;</a></h4><p>Both <code>now()</code> and <code>today()</code> return current <strong>local</strong>  datetime</p>
+<h3 id="Class-Method">Class Method<a class="anchor-link" href="#Class-Method">&#182;</a></h3><h4 id="now-and-today"><code>now</code> and <code>today</code><a class="anchor-link" href="#now-and-today">&#182;</a></h4><p>Both <code>now()</code> and <code>today()</code> return current <strong>local</strong>  datetime</p>
 
 </div>
 </div>
@@ -20454,7 +20452,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="utc-Now">utc Now<a class="anchor-link" href="#utc-Now">&#182;</a></h4>
+<h4 id="utcnow"><code>utcnow</code><a class="anchor-link" href="#utcnow">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -20494,7 +20492,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Covert-from-date-and-time">Covert from date and time<a class="anchor-link" href="#Covert-from-date-and-time">&#182;</a></h4><p>Apply <code>datetime.combine()</code> module method on both <strong>date and time</strong>  object to get <strong>datetime</strong></p>
+<h4 id="combine()-date-and-time"><code>combine()</code> date and time<a class="anchor-link" href="#combine()-date-and-time">&#182;</a></h4><p>Apply <code>datetime.combine()</code> module method on both <strong>date and time</strong>  object to get <strong>datetime</strong></p>
 
 </div>
 </div>
@@ -20535,7 +20533,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-from-String">Convert from String<a class="anchor-link" href="#Convert-from-String">&#182;</a></h4><p>Use <strong><code>strptime</code></strong> to convert string into <strong>datetime</strong> object</p>
+<h4 id="Convert-from-String-strptime()">Convert from String <code>strptime()</code><a class="anchor-link" href="#Convert-from-String-strptime()">&#182;</a></h4><p>Use <strong><code>strptime</code></strong> to convert string into <strong>datetime</strong> object</p>
 
 <pre><code>%I : 12-hour
 %H : 24-hour
@@ -20616,10 +20614,76 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;09-Mar-2018&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%Y&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[78]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.datetime(2018, 3, 9, 0, 0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;2/5/2018 4:49 PM&#39;</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %I:%M %p&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[79]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.datetime(2018, 2, 5, 16, 49)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-from-ISO-String">Convert from ISO String<a class="anchor-link" href="#Convert-from-ISO-String">&#182;</a></h4><ul>
+<h4 id="Convert-from-ISO-fromisoformat">Convert from ISO <code>fromisoformat</code><a class="anchor-link" href="#Convert-from-ISO-fromisoformat">&#182;</a></h4><ul>
 <li><code>fromisoformat()</code> is intend to be reverse of <code>isoformat()</code>  </li>
 <li>It actually <strong>not ISO compliance</strong>: when Z or +8 is included at the nd of the string, error occur</li>
 </ul>
@@ -20664,7 +20728,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Instance-Method">Instance Method<a class="anchor-link" href="#Instance-Method">&#182;</a></h3><h4 id="weekday">weekday<a class="anchor-link" href="#weekday">&#182;</a></h4>
+<h3 id="Instance-Method">Instance Method<a class="anchor-link" href="#Instance-Method">&#182;</a></h3><h4 id="weekday"><code>weekday</code><a class="anchor-link" href="#weekday">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -20704,7 +20768,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="replace">replace<a class="anchor-link" href="#replace">&#182;</a></h4>
+<h4 id="replace"><code>replace</code><a class="anchor-link" href="#replace">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -20744,7 +20808,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-to-time">Convert to time<a class="anchor-link" href="#Convert-to-time">&#182;</a></h4>
+<h4 id="convert-to-.time()">convert to <code>.time()</code><a class="anchor-link" href="#convert-to-.time()">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -20784,7 +20848,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-to-date">Convert to date<a class="anchor-link" href="#Convert-to-date">&#182;</a></h4>
+<h4 id="convert-to-.date()">convert to <code>.date()</code><a class="anchor-link" href="#convert-to-.date()">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -20824,17 +20888,17 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Convert-to-String">Convert to String<a class="anchor-link" href="#Convert-to-String">&#182;</a></h4><p>Use <code>strftime()</code> or <code>isoformat()</code></p>
+<h4 id="Convert-to-String">Convert to String<a class="anchor-link" href="#Convert-to-String">&#182;</a></h4><p><strong><code>str</code></strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%S.</span><span class="si">%f</span><span class="s1">Z&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -20847,13 +20911,13 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;2019-02-05T02:30:05.132221Z&#39;</pre>
+<pre>&#39;2019-02-05 15:10:11.093005&#39;</pre>
 </div>
 
 </div>
@@ -20861,6 +20925,88 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Use <code>strftime()</code></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%Y&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;05-Feb-2019&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%S.</span><span class="si">%f</span><span class="s1">Z&#39;</span><span class="p">)</span>  <span class="c1">## ISO 8601 UTC</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;2019-02-05T07:13:54.691364Z&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Use <code>isoformat()</code></strong></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -20993,7 +21139,7 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Class-Method">Class Method<a class="anchor-link" href="#Class-Method">&#182;</a></h3><h4 id="Current-Time">Current Time<a class="anchor-link" href="#Current-Time">&#182;</a></h4><p>There is unfortunately no single function to extract the current time. Use <strong>time()</strong> function of an <strong>datetime</strong> object</p>
+<h3 id="Class-Method">Class Method<a class="anchor-link" href="#Class-Method">&#182;</a></h3><h4 id="now()"><code>now()</code><a class="anchor-link" href="#now()">&#182;</a></h4><p>There is unfortunately no single function to extract the current time. Use <strong>time()</strong> function of an <strong>datetime</strong> object</p>
 
 </div>
 </div>
@@ -21025,42 +21171,6 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <pre>datetime.time(9, 52, 3, 374617)</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">.</span><span class="n">tzinfo</span><span class="p">()</span> <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-42-f2ea4a5d8c6b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span> datetime<span class="ansi-yellow-intense-fg ansi-bold">.</span>now<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>time<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>tzinfo<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;NoneType&#39; object is not callable</pre>
-</div>
 </div>
 
 </div>
@@ -21160,227 +21270,6 @@ For <code>isoweekday()</code>, Zero being Sunday</p>
 <pre>delt+now :  2020-02-05 01:54:00.895460
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Parsing">Parsing<a class="anchor-link" href="#Parsing">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;09-Mar-2018&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%Y&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[78]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>datetime.datetime(2018, 3, 9, 0, 0)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;2/5/2018 4:49 PM&#39;</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %I:%M %p&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[79]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>datetime.datetime(2018, 2, 5, 16, 49)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="String-Formating">String Formating<a class="anchor-link" href="#String-Formating">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="str(),-standard-string-format">str(), standard string format<a class="anchor-link" href="#str(),-standard-string-format">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[83]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;2019-02-05 01:13:27.282921&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="date/datetime--to--string">date/datetime -to- string<a class="anchor-link" href="#date/datetime--to--string">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-<span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%Y&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[88]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;05-Feb-2019&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%Y&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[90]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;05-Feb-2019&#39;</pre>
-</div>
-
 </div>
 
 </div>
@@ -27033,7 +26922,8 @@ dtype: bool</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Series-String-Operator">Series String Operator<a class="anchor-link" href="#Series-String-Operator">&#182;</a></h3><ul>
+<h3 id="Series-String-Accessor">Series String Accessor<a class="anchor-link" href="#Series-String-Accessor">&#182;</a></h3><p>If the underlying data is <strong>str</strong> type, then pandas exposed various properties and methos through <strong><code>str</code> accessor</strong>.</p>
+<ul>
 <li>This chapter focus on various functions that can be applied to entire Series data  
 <pre><code>SeriesObj.str.operatorFunction()</code></pre>
 </li>
@@ -27555,7 +27445,8 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Series-DateTime-Operator">Series DateTime Operator<a class="anchor-link" href="#Series-DateTime-Operator">&#182;</a></h3>
+<h3 id="Series-DateTime-Accessor">Series DateTime Accessor<a class="anchor-link" href="#Series-DateTime-Accessor">&#182;</a></h3><p>If the underlying data is <strong>datetime64</strong> type, then pandas exposed various properties and methos through <strong><code>dt</code> accessor</strong>.</p>
+
 </div>
 </div>
 </div>
@@ -27568,19 +27459,45 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span>
-    <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-    <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1999</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">55</span><span class="p">),</span>
-    <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>
-    <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-    <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2003</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">datetime</span><span class="p">(</span><span class="mi">1999</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">55</span><span class="p">),</span>
+    <span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>
+    <span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">datetime</span><span class="p">(</span><span class="mi">2003</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
 <span class="p">])</span>
+<span class="n">s</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[98]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0   2000-01-01 00:00:00
+1   1999-12-15 12:34:55
+2   2020-03-08 05:07:12
+3   2018-01-01 00:00:00
+4   2003-03-04 05:06:07
+dtype: datetime64[ns]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -27588,7 +27505,7 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Date-Related-Extraction">Date Related Extraction<a class="anchor-link" href="#Date-Related-Extraction">&#182;</a></h4><p>A Series::DateTime object support below properties:</p>
+<h4 id="DateTime-Properties">DateTime Properties<a class="anchor-link" href="#DateTime-Properties">&#182;</a></h4><p>A Series::DateTime object support below properties:</p>
 <ul>
 <li>date  </li>
 <li>month  </li>
@@ -27599,15 +27516,19 @@ dtype: object</pre>
 <li>weekday  </li>
 <li>weekday_name  </li>
 <li>quarter  </li>
-<li>daysinmonth</li>
+<li>daysinmonth  </li>
+<li>hour</li>
+<li>minute</li>
 </ul>
+<p>Full list below:<br>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/series.html#datetimelike-properties">https://pandas.pydata.org/pandas-docs/stable/reference/series.html#datetimelike-properties</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
@@ -27623,7 +27544,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[99]:</div>
 
 
 
@@ -27870,13 +27791,6 @@ dtype: int64</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Time-Related-Extration">Time Related Extration<a class="anchor-link" href="#Time-Related-Extration">&#182;</a></h4>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -36316,6 +36230,640 @@ dtype: object</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas-DateTime">Pandas DateTime<a class="anchor-link" href="#Pandas-DateTime">&#182;</a></h2><p>pandas contains <strong>extensive capabilities and features</strong> for working with time series data for all domains. Using the NumPy <strong>datetime64 and timedelta64</strong> dtypes</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DatetimeIndex">DatetimeIndex<a class="anchor-link" href="#DatetimeIndex">&#182;</a></h2><h3 id="Creating">Creating<a class="anchor-link" href="#Creating">&#182;</a></h3><p>Source can be <strong>string, date, datetime object</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-From">Convert From<a class="anchor-link" href="#Convert-From">&#182;</a></h4><p>When the input is <strong>list-like</strong>, <strong><code>to_datetime</code></strong> convert to <strong>DateTimeIndex</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">([</span><span class="s1">&#39;2011-01-03&#39;</span><span class="p">,</span>      <span class="c1"># from string</span>
+                <span class="n">date</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span>        <span class="c1"># from date</span>
+                <span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">30</span><span class="p">)]</span><span class="c1"># from datetime</span>
+              <span class="p">)</span>
+<span class="n">ds</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[101]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2011-01-03 00:00:00&#39;, &#39;2018-04-13 00:00:00&#39;,
+               &#39;2018-03-01 07:30:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=None)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Generate-Sequence">Generate Sequence<a class="anchor-link" href="#Generate-Sequence">&#182;</a></h4><p>Use <strong><code>date_range()</code></strong> to generate sequence of datetime data</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generate <strong>sequence of HOURS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Specify start, Periods, Frequency</span>
+<span class="c1">## Start from Date Only</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-01-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[66]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2018-01-01 00:00:00&#39;, &#39;2018-01-01 01:00:00&#39;,
+               &#39;2018-01-01 02:00:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;H&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Start from DateTime</span>
+<span class="n">dti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">periods</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Specify start, End and Frequency</span>
+<span class="n">dti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2018-01-03-1230&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2018-01-03-18:30&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dti</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>DatetimeIndex([&#39;2018-01-03 12:30:00&#39;, &#39;2018-01-03 13:30:00&#39;,
+               &#39;2018-01-03 14:30:00&#39;, &#39;2018-01-03 15:30:00&#39;,
+               &#39;2018-01-03 16:30:00&#39;, &#39;2018-01-03 17:30:00&#39;,
+               &#39;2018-01-03 18:30:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;H&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generate <strong>sequence of DAYS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">periods</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[68]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2018-01-02&#39;, &#39;2018-01-03&#39;, &#39;2018-01-04&#39;], dtype=&#39;datetime64[ns]&#39;, freq=&#39;D&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-01-01-1230&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[63]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2018-01-01 12:30:00&#39;, &#39;2018-01-02 12:30:00&#39;,
+               &#39;2018-01-03 12:30:00&#39;, &#39;2018-01-04 12:30:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;D&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generate <strong>sequence of Start of Month</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;MS&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[69]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2018-01-01&#39;, &#39;2018-02-01&#39;, &#39;2018-03-01&#39;, &#39;2018-04-01&#39;], dtype=&#39;datetime64[ns]&#39;, freq=&#39;MS&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;MS&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[70]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2018-02-01 12:30:00&#39;, &#39;2018-03-01 12:30:00&#39;,
+               &#39;2018-04-01 12:30:00&#39;, &#39;2018-05-01 12:30:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;MS&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generate <strong>sequence of End of Month</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-02&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+<span class="n">dti</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[59]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DatetimeIndex([&#39;2018-02-28&#39;, &#39;2018-03-31&#39;, &#39;2018-04-30&#39;, &#39;2018-05-31&#39;], dtype=&#39;datetime64[ns]&#39;, freq=&#39;M&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Instance-Method">Instance Method<a class="anchor-link" href="#Instance-Method">&#182;</a></h3><h4 id="Convert-to-Series-to_series">Convert to Series <code>to_series</code><a class="anchor-link" href="#Convert-to-Series-to_series">&#182;</a></h4><p>This creates <strong>index and data</strong> with the same value</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-02&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+<span class="n">dts</span> <span class="o">=</span> <span class="n">dti</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">dts</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018-02-28   2018-02-28
+2018-03-31   2018-03-31
+2018-04-30   2018-04-30
+2018-05-31   2018-05-31
+Freq: M, dtype: datetime64[ns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Convert-to-DataFrame-to_frame()">Convert to DataFrame <code>to_frame()</code><a class="anchor-link" href="#Convert-to-DataFrame-to_frame()">&#182;</a></h4><p>This convert to <strong>single column</strong> dataframe with index as the same value</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dtf</span> <span class="o">=</span> <span class="n">dti</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">dtf</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[111]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2018-01-01 12:30:00</th>
+      <td>2018-01-01 12:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 13:30:00</th>
+      <td>2018-01-01 13:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 14:30:00</th>
+      <td>2018-01-01 14:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 15:30:00</th>
+      <td>2018-01-01 15:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 16:30:00</th>
+      <td>2018-01-01 16:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 17:30:00</th>
+      <td>2018-01-01 17:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 18:30:00</th>
+      <td>2018-01-01 18:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 19:30:00</th>
+      <td>2018-01-01 19:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 20:30:00</th>
+      <td>2018-01-01 20:30:00</td>
+    </tr>
+    <tr>
+      <th>2018-01-01 21:30:00</th>
+      <td>2018-01-01 21:30:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dtf</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+DatetimeIndex: 10 entries, 2018-01-01 12:30:00 to 2018-01-01 21:30:00
+Freq: H
+Data columns (total 1 columns):
+0    10 non-null datetime64[ns]
+dtypes: datetime64[ns](1)
+memory usage: 160.0 bytes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[112]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Int64Index([1, 1, 1, 1, 1, 1, 1, 1, 1, 1], dtype=&#39;int64&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Properties">Properties<a class="anchor-link" href="#Properties">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-02&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">dti</span><span class="o">.</span><span class="n">weekday</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">dti</span><span class="o">.</span><span class="n">month</span>   <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Int64Index([3, 4, 5, 6], dtype=&#39;int64&#39;)
+Int64Index([2, 2, 2, 2], dtype=&#39;int64&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -36552,7 +37100,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1109_0.png"
+<img src="index_files/index_1128_0.png"
 >
 </div>
 
@@ -36598,7 +37146,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1111_0.png"
+<img src="index_files/index_1130_0.png"
 >
 </div>
 
@@ -36674,7 +37222,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1116_0.png"
+<img src="index_files/index_1135_0.png"
 >
 </div>
 
@@ -36729,7 +37277,7 @@ memory usage: 9.5+ KB
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1118_0.png"
+<img src="index_files/index_1137_0.png"
 >
 </div>
 
@@ -36811,7 +37359,7 @@ Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> t
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1122_1.png"
+<img src="index_files/index_1141_1.png"
 >
 </div>
 
@@ -36870,7 +37418,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1124_1.png"
+<img src="index_files/index_1143_1.png"
 >
 </div>
 
@@ -36920,7 +37468,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1126_0.png"
+<img src="index_files/index_1145_0.png"
 >
 </div>
 
@@ -36958,7 +37506,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1127_0.png"
+<img src="index_files/index_1146_0.png"
 >
 </div>
 
@@ -37004,7 +37552,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1129_0.png"
+<img src="index_files/index_1148_0.png"
 >
 </div>
 
@@ -37063,7 +37611,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1132_0.png"
+<img src="index_files/index_1151_0.png"
 >
 </div>
 
@@ -37109,7 +37657,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1134_0.png"
+<img src="index_files/index_1153_0.png"
 >
 </div>
 
@@ -37152,7 +37700,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1136_0.png"
+<img src="index_files/index_1155_0.png"
 >
 </div>
 
@@ -37201,7 +37749,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1139_0.png"
+<img src="index_files/index_1158_0.png"
 >
 </div>
 
@@ -37246,7 +37794,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1141_0.png"
+<img src="index_files/index_1160_0.png"
 >
 </div>
 
@@ -37293,7 +37841,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1142_1.png"
+<img src="index_files/index_1161_1.png"
 >
 </div>
 
@@ -37334,7 +37882,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1144_0.png"
+<img src="index_files/index_1163_0.png"
 >
 </div>
 
@@ -37406,7 +37954,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1147_1.png"
+<img src="index_files/index_1166_1.png"
 >
 </div>
 
@@ -37452,7 +38000,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1149_0.png"
+<img src="index_files/index_1168_0.png"
 >
 </div>
 
@@ -37493,7 +38041,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1151_0.png"
+<img src="index_files/index_1170_0.png"
 >
 </div>
 
@@ -37534,7 +38082,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1153_0.png"
+<img src="index_files/index_1172_0.png"
 >
 </div>
 
@@ -37628,7 +38176,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1156_1.png"
+<img src="index_files/index_1175_1.png"
 >
 </div>
 
@@ -37748,7 +38296,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1162_0.png"
+<img src="index_files/index_1181_0.png"
 >
 </div>
 
@@ -37782,7 +38330,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1163_0.png"
+<img src="index_files/index_1182_0.png"
 >
 </div>
 
@@ -37824,7 +38372,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1165_0.png"
+<img src="index_files/index_1184_0.png"
 >
 </div>
 
@@ -37866,7 +38414,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1167_0.png"
+<img src="index_files/index_1186_0.png"
 >
 </div>
 
@@ -37908,7 +38456,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1169_0.png"
+<img src="index_files/index_1188_0.png"
 >
 </div>
 
@@ -37957,7 +38505,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1172_0.png"
+<img src="index_files/index_1191_0.png"
 >
 </div>
 
@@ -37999,7 +38547,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1174_0.png"
+<img src="index_files/index_1193_0.png"
 >
 </div>
 
@@ -38049,7 +38597,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1177_0.png"
+<img src="index_files/index_1196_0.png"
 >
 </div>
 
@@ -38118,7 +38666,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1180_1.png"
+<img src="index_files/index_1199_1.png"
 >
 </div>
 
@@ -38165,7 +38713,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1181_1.png"
+<img src="index_files/index_1200_1.png"
 >
 </div>
 
@@ -38276,7 +38824,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1185_2.png"
+<img src="index_files/index_1204_2.png"
 >
 </div>
 
@@ -38353,7 +38901,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1188_2.png"
+<img src="index_files/index_1207_2.png"
 >
 </div>
 
@@ -38419,7 +38967,7 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1190_2.png"
+<img src="index_files/index_1209_2.png"
 >
 </div>
 
@@ -38470,7 +39018,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1193_0.png"
+<img src="index_files/index_1212_0.png"
 >
 </div>
 
@@ -38505,7 +39053,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1194_0.png"
+<img src="index_files/index_1213_0.png"
 >
 </div>
 
@@ -38561,7 +39109,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1196_1.png"
+<img src="index_files/index_1215_1.png"
 >
 </div>
 
@@ -38624,7 +39172,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1199_1.png"
+<img src="index_files/index_1218_1.png"
 >
 </div>
 
@@ -38668,7 +39216,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1201_0.png"
+<img src="index_files/index_1220_0.png"
 >
 </div>
 
@@ -38746,7 +39294,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1206_1.png"
+<img src="index_files/index_1225_1.png"
 >
 </div>
 
@@ -38793,7 +39341,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1207_0.png"
+<img src="index_files/index_1226_0.png"
 >
 </div>
 
@@ -38840,7 +39388,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1208_0.png"
+<img src="index_files/index_1227_0.png"
 >
 </div>
 
@@ -38906,7 +39454,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1211_0.png"
+<img src="index_files/index_1230_0.png"
 >
 </div>
 
@@ -38967,7 +39515,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1214_0.png"
+<img src="index_files/index_1233_0.png"
 >
 </div>
 
@@ -39027,7 +39575,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1216_0.png"
+<img src="index_files/index_1235_0.png"
 >
 </div>
 
@@ -39074,7 +39622,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1217_0.png"
+<img src="index_files/index_1236_0.png"
 >
 </div>
 
@@ -39124,7 +39672,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1218_0.png"
+<img src="index_files/index_1237_0.png"
 >
 </div>
 
@@ -39181,7 +39729,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1220_0.png"
+<img src="index_files/index_1239_0.png"
 >
 </div>
 
@@ -39249,7 +39797,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1222_1.png"
+<img src="index_files/index_1241_1.png"
 >
 </div>
 
@@ -39302,7 +39850,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1223_0.png"
+<img src="index_files/index_1242_0.png"
 >
 </div>
 
@@ -39363,7 +39911,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1226_0.png"
+<img src="index_files/index_1245_0.png"
 >
 </div>
 
@@ -39417,7 +39965,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1228_0.png"
+<img src="index_files/index_1247_0.png"
 >
 </div>
 
@@ -39464,7 +40012,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1229_0.png"
+<img src="index_files/index_1248_0.png"
 >
 </div>
 
@@ -39518,7 +40066,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1231_0.png"
+<img src="index_files/index_1250_0.png"
 >
 </div>
 
@@ -39658,7 +40206,7 @@ memory usage: 168.0+ bytes
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1236_0.png"
+<img src="index_files/index_1255_0.png"
 >
 </div>
 
@@ -40356,7 +40904,7 @@ It has useful data (array) in the form of properties:</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1271_2.png"
+<img src="index_files/index_1290_2.png"
 >
 </div>
 
@@ -43021,7 +43569,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1398_0.png"
+<img src="index_files/index_1417_0.png"
 >
 </div>
 
@@ -43059,7 +43607,7 @@ x4 -0.030738  0.089682  0.717366  1.000000</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1399_0.png"
+<img src="index_files/index_1418_0.png"
 >
 </div>
 
@@ -43659,7 +44207,7 @@ Warnings:
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1442_0.png"
+<img src="index_files/index_1461_0.png"
 >
 </div>
 
@@ -43771,7 +44319,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1447_1.png"
+<img src="index_files/index_1466_1.png"
 >
 </div>
 
@@ -43821,7 +44369,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1450_0.png"
+<img src="index_files/index_1469_0.png"
 >
 </div>
 
@@ -43881,7 +44429,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1452_1.png"
+<img src="index_files/index_1471_1.png"
 >
 </div>
 
@@ -43942,7 +44490,7 @@ X needs to be at least 2D. Increase the dimension with newaxis</p>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_1454_1.png"
+<img src="index_files/index_1473_1.png"
 >
 </div>
 
