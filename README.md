@@ -1,3 +1,3 @@
-## Read this Python cookbook here:
+## Read this Python cookbook
 
 https://yongks.github.io/python_book/
